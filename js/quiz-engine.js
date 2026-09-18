@@ -40,15 +40,22 @@ function makeOptions(card, pool){
 
   // 1) Same topic/section first — most plausible near-misses.
   tryAdd(pool.filter(c => c.id!==card.id && c.section===card.section));
-  // 2) Same difficulty level anywhere in the deck.
+  // 2) For diagram-labeling cards ("Ábra: ..."), prefer OTHER diagrams'
+  //    labels next — short label-style answers (organelle names, letters,
+  //    table entries) read far more plausibly next to each other than
+  //    next to an unrelated full-sentence flashcard answer.
+  if(distractors.length < 3 && card.section.startsWith('Ábra:')){
+    tryAdd(pool.filter(c => c.id!==card.id && c.section.startsWith('Ábra:') && c.section!==card.section));
+  }
+  // 3) Same difficulty level anywhere in the deck.
   if(distractors.length < 3){
     tryAdd(pool.filter(c => c.id!==card.id && c.difficulty===card.difficulty));
   }
-  // 3) Same length bucket / yes-no shape, anywhere in the deck.
+  // 4) Same length bucket / yes-no shape, anywhere in the deck.
   if(distractors.length < 3){
     tryAdd(pool.filter(c => c.id!==card.id));
   }
-  // 4) Last resort: anything unused at all, so we always have 4 options.
+  // 5) Last resort: anything unused at all, so we always have 4 options.
   if(distractors.length < 3){
     for(const c of shuffleArr(pool.filter(c => c.id!==card.id))){
       if(distractors.length >= 3) break;

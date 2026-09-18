@@ -103,7 +103,7 @@
             <div class="eyebrow" id="flashTagFront">Témakör</div>
             <img class="card-image" id="flashImage" style="display:none; width:100%; height:auto; max-height:180px; margin-bottom:8px;" alt="Ábra a kérdéshez">
             <div class="content" id="flashFront">Kérdés</div>
-            <div class="flash-hint">Kattints a megfordításhoz</div>
+            <div class="flash-hint">Kattints a megfordításhoz, húzd balra/jobbra a lapozáshoz</div>
           </div>
           <div class="flash-face back">
             <div class="eyebrow">Válasz</div>
@@ -114,8 +114,7 @@
       <div class="flash-controls">
         <button class="icon-btn" onclick="flashPrev()" title="Előző">←</button>
         <div class="know-btns">
-          <button class="know-btn learning" id="btnLearning" onclick="markFlash('learning')">Még gyakorlom</button>
-          <button class="know-btn known" id="btnKnown" onclick="markFlash('known')">Már tudom</button>
+          <button class="know-btn learning" id="btnLearning" onclick="toggleFlashLearning()">Még nem tudom</button>
         </div>
         <button class="icon-btn" onclick="flashNext()" title="Következő">→</button>
       </div>

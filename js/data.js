@@ -19,7 +19,7 @@ function loadProgress(){
     const raw = localStorage.getItem(LS_KEY);
     if(raw) return JSON.parse(raw);
   }catch(e){}
-  return { known:{}, learning:{} };
+  return { learning:{} };
 }
 function saveProgress(){
   try{ localStorage.setItem(LS_KEY, JSON.stringify(progress)); }catch(e){}

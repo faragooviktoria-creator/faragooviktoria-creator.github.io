@@ -20,9 +20,12 @@ js/
   exam.js           Exam mode
   app.js            boots the app (loads data, then wires up the UI)
 data/
-  cards.json        391 question/answer/flashcard entries
+  cards.json        452 question/answer/flashcard entries (deduplicated,
+                     course-logistics/meta questions removed)
 images/
-  cell-diagram-*.jpg  19 diagrams referenced by specific cards
+  cell-diagram-*.jpg    19 diagrams from the original PDF content
+  diagram-*.jpg         11 labeling diagrams (organelle/structure identification),
+                        each backing several "what does number/letter N mean?" cards
 ```
 
 Load order in `index.html` matters, since these are plain scripts (no bundler):
@@ -54,3 +57,15 @@ or the VS Code "Live Server" extension, or any static file server.
   it's plain JSON, one object per card: `{ "section", "q", "a", "difficulty", "id", "img"? }`.
 - `img` is optional and is a relative path into `images/`.
 - No rebuild step: just refresh the page.
+
+## Diagram-labeling questions
+
+11 of the source diagrams (membrane structure, the full cell with 14 parts,
+the mitochondrion, the protein-secretion pathway, tissue types, cell types,
+etc.) were split into individual "what does number/letter N point to?"
+questions — one card per label, all sharing the same image. These live in
+sections named `Ábra: ...` in `data/cards.json`. The multiple-choice
+distractor logic (`js/quiz-engine.js`) prefers pulling wrong answers from
+other labels on the *same* diagram first, then from other diagrams, so the
+options stay visually/contextually plausible instead of mixing in unrelated
+sentence-style flashcard answers.

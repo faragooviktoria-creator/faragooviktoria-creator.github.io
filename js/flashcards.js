@@ -18,7 +18,7 @@ function beginFlash(pool){
 
 function currentFlashDeck(){
   if(flashState.onlyLearning){
-    const filtered = flashState.deck.filter(c=>progress.learning[c.id] && !progress.known[c.id]);
+    const filtered = flashState.deck.filter(c=>progress.learning[c.id]);
     return filtered.length ? filtered : flashState.deck;
   }
   return flashState.deck;
@@ -38,10 +38,10 @@ function renderFlash(){
   document.getElementById('flashCounter').textContent = `${flashState.index+1} / ${deck.length}`;
 
   document.getElementById('btnLearning').classList.toggle('active', !!progress.learning[card.id]);
-  document.getElementById('btnKnown').classList.toggle('active', !!progress.known[card.id]);
 }
 
 function flipFlash(){
+  if(suppressNextFlip){ suppressNextFlip = false; return; }
   document.getElementById('flashcard').classList.toggle('flipped');
 }
 function flashNext(){
@@ -64,16 +64,41 @@ function applyFlashFilter(){
   flashState.index = 0;
   renderFlash();
 }
-function markFlash(kind){
+function toggleFlashLearning(){
   const deck = currentFlashDeck();
   const card = deck[flashState.index];
-  if(kind==='known'){
-    progress.known[card.id] = true;
-    delete progress.learning[card.id];
-  } else {
-    progress.learning[card.id] = true;
-    delete progress.known[card.id];
-  }
+  if(progress.learning[card.id]) delete progress.learning[card.id];
+  else progress.learning[card.id] = true;
   saveProgress();
   renderFlash();
 }
+
+/* ---------------------------------------------------------
+   Swipe gesture: swipe left/right on the card to move to the
+   next/previous card. A short tap still flips it. We detect a
+   swipe by horizontal distance dominating vertical distance,
+   and suppress the click-to-flip that mobile browsers fire
+   right after a touch gesture ends.
+   --------------------------------------------------------- */
+let touchStartX = 0, touchStartY = 0, suppressNextFlip = false;
+
+function initFlashSwipe(){
+  const el = document.getElementById('flashcard');
+  if(!el) return;
+  el.addEventListener('touchstart', (e)=>{
+    const t = e.changedTouches[0];
+    touchStartX = t.clientX;
+    touchStartY = t.clientY;
+  }, {passive:true});
+  el.addEventListener('touchend', (e)=>{
+    const t = e.changedTouches[0];
+    const dx = t.clientX - touchStartX;
+    const dy = t.clientY - touchStartY;
+    const SWIPE_THRESHOLD = 40;
+    if(Math.abs(dx) > SWIPE_THRESHOLD && Math.abs(dx) > Math.abs(dy) * 1.5){
+      suppressNextFlip = true;
+      if(dx < 0) flashNext(); else flashPrev();
+    }
+  }, {passive:true});
+}
+initFlashSwipe();

@@ -1,33 +1,5 @@
 [
  {
-  "section": "A sejtek felépítése és működése - Az emberi szervezet sejtes alapjai",
-  "q": "Mi a kurzus témája?",
-  "a": "Az emberi szervezet sejtes alapjai, a sejtek felépítése és működése.",
-  "difficulty": "Easy",
-  "id": 0
- },
- {
-  "section": "A kurzus helye az anatómia-élettan tanulmányokban",
-  "q": "Mit tanul a hallgató a Bevezetés az anatómiába és élettanba tárgyban?",
-  "a": "A sejtek felépítését és anyagcseréjét, a főbb szövettípusokat és jellemzőiket, valamint a mozgásrendszert (csontrendszer és izmok).",
-  "difficulty": "Easy",
-  "id": 1
- },
- {
-  "section": "A kurzus helye az anatómia-élettan tanulmányokban",
-  "q": "Mit tanul a hallgató Anatómia és élettan 1. tárgyban?",
-  "a": "A szabályozást, az idegrendszer működését, a hormonális szabályozást, a vér és keringési rendszer működését, a nyirokrendszert, immunitást és a légzést.",
-  "difficulty": "Easy",
-  "id": 2
- },
- {
-  "section": "A kurzus helye az anatómia-élettan tanulmányokban",
-  "q": "Mit tanul a hallgató Anatómia és élettan 2. tárgyban?",
-  "a": "Az érzékszerveket, a táplálkozást, a kiválasztást, a szaporodást, valamint a stresszt és a megküzdést.",
-  "difficulty": "Easy",
-  "id": 3
- },
- {
   "section": "Mit fogunk tanulni a sejtekről?",
   "q": "Milyen témákat foglal magába a sejttananyag?",
   "a": "Az élő rendszer és szerveződési szintek, a sejtet felépítő anyagok, a sejtalkotók, a genetikai információ és fehérjeszintézis, a sejthártya és anyagforgalom, az energiaforgalom, az aerob és anaerob energiafelszabadítás, valamint a specializálódás és szövetek témaköre.",
@@ -149,7 +121,7 @@
  {
   "section": "Az élő szervezetet felépítő molekulák",
   "q": "Mi a szénhidrátok fő szerepe?",
-  "a": "Energiaforrásként és energiaraktárként szolgálnak.",
+  "a": "Energiaforrásként és energiaraktárként szolgálnak; a szervezet egyik legfontosabb energiaforrásai.",
   "difficulty": "Easy",
   "id": 21
  },
@@ -163,23 +135,16 @@
  {
   "section": "Az élő szervezetet felépítő molekulák",
   "q": "Mi a fehérjék fő szerepe?",
-  "a": "Szerkezet, mozgás, szállítás és enzimműködés.",
+  "a": "Szerkezet, mozgás, szállítás és enzimműködés — a sejt alapvető molekulái.",
   "difficulty": "Easy",
   "id": 23
  },
  {
   "section": "Az élő szervezetet felépítő molekulák",
   "q": "Mi a nukleotid típusú vegyületek jelentősége?",
-  "a": "Az ATP, DNS és RNS felépítésében vesznek részt.",
+  "a": "Az ATP, DNS és RNS felépítésében vesznek részt; az energiaátadás és az információtárolás alapjai.",
   "difficulty": "Medium",
   "id": 24
- },
- {
-  "section": "Szénhidrátok",
-  "q": "Mi a szénhidrátok általános szerepe?",
-  "a": "Fontos energiaforrások.",
-  "difficulty": "Easy",
-  "id": 25
  },
  {
   "section": "Szénhidrátok",
@@ -366,7 +331,7 @@
  {
   "section": "Nukleotid típusú vegyületek",
   "q": "Mi az ATP?",
-  "a": "A sejt közvetlen energiaforrása.",
+  "a": "Az ATP (adenozin-trifoszfát) a sejtek közvetlenül felhasználható energiaforrása. A sejt a legtöbb energiaigényes folyamatát ATP segítségével végzi.",
   "difficulty": "Easy",
   "id": 52
  },
@@ -392,13 +357,6 @@
   "id": 55
  },
  {
-  "section": "Nukleotid típusú vegyületek",
-  "q": "Mi a nukleotid típusú vegyületek alapvető jelentősége?",
-  "a": "Az energiaátadás és az információtárolás alapjai.",
-  "difficulty": "Medium",
-  "id": 56
- },
- {
   "section": "A sejtet felépítő anyagok - összefoglalás",
   "q": "Mi a víz fő szerepe a sejtben?",
   "a": "Oldószerként működik, részt vesz az anyagszállításban és számos kémiai reakcióban reakciópartnerként szerepel.",
@@ -414,38 +372,10 @@
  },
  {
   "section": "A sejtet felépítő anyagok - összefoglalás",
-  "q": "Mi a szénhidrátok szerepe?",
-  "a": "Energiaforrásként és energiaraktárként szolgálnak.",
-  "difficulty": "Easy",
-  "id": 59
- },
- {
-  "section": "A sejtet felépítő anyagok - összefoglalás",
-  "q": "Mi a lipidek szerepe?",
-  "a": "Membránalkotók és energiaraktárak.",
-  "difficulty": "Easy",
-  "id": 60
- },
- {
-  "section": "A sejtet felépítő anyagok - összefoglalás",
-  "q": "Mi a fehérjék szerepe?",
-  "a": "A szerkezet, mozgás, szállítás és enzimműködés alapvető molekulái.",
-  "difficulty": "Easy",
-  "id": 61
- },
- {
-  "section": "A sejtet felépítő anyagok - összefoglalás",
   "q": "Mi az ATP szerepe?",
   "a": "A sejt közvetlen energiaforrása.",
   "difficulty": "Easy",
   "id": 62
- },
- {
-  "section": "A sejtet felépítő anyagok - összefoglalás",
-  "q": "Mi az RNS szerepe?",
-  "a": "Részt vesz a fehérjeszintézis folyamatában.",
-  "difficulty": "Easy",
-  "id": 63
  },
  {
   "section": "A sejtet felépítő anyagok - összefoglalás",
@@ -530,13 +460,6 @@
   "a": "Glükóz és keményítő.",
   "difficulty": "Easy",
   "id": 75
- },
- {
-  "section": "Példák makro- és mikrotápanyagokra",
-  "q": "Mi a szénhidrátok fő szerepe?",
-  "a": "A szervezet legfontosabb energiaforrásai.",
-  "difficulty": "Easy",
-  "id": 76
  },
  {
   "section": "Példák makro- és mikrotápanyagokra",
@@ -758,14 +681,6 @@
   "a": "Mert elválasztja a környezetet a sejttől és ellenőrzi az anyagok forgalmát.",
   "difficulty": "Medium",
   "id": 107
- },
- {
-  "section": "A sejthártya felépítése 2. - Ábrafelismerés",
-  "q": "Mit jelölnek a szénhidrátláncok a membránábrán?",
-  "a": "A sejtfelszíni felismerésben szerepet játszó szénhidrátstruktúrákat.",
-  "difficulty": "Medium",
-  "id": 108,
-  "img": "images/cell-diagram-05.jpg"
  },
  {
   "section": "A sejthártya felépítése 2. - Ábrafelismerés",
@@ -995,9 +910,10 @@
  {
   "section": "Lizoszómák",
   "q": "Mik a lizoszómák?",
-  "a": "Lebontó enzimeket tartalmazó membránhólyagok.",
+  "a": "A lizoszómák lebontó enzimeket tartalmazó membránhólyagok, amelyek a sejten belüli lebontási és újrahasznosítási folyamatokban vesznek részt.",
   "difficulty": "Easy",
-  "id": 141
+  "id": 141,
+  "img": "images/cell-diagram-18.jpg"
  },
  {
   "section": "Lizoszómák",
@@ -1023,7 +939,7 @@
  {
   "section": "Lizoszómák",
   "q": "Mi történik a nem hasznosítható anyagokkal?",
-  "a": "A sejt exocitózissal leadhatja őket.",
+  "a": "A sejt exocitózissal eltávolíthatja (leadhatja) őket a sejtből.",
   "difficulty": "Medium",
   "id": 145
  },
@@ -1069,13 +985,6 @@
   "a": "A nagy energiaigényű sejtekben, például szívizom- és vázizomsejtekben.",
   "difficulty": "Medium",
   "id": 151
- },
- {
-  "section": "Mitokondrium és ATP",
-  "q": "Mi az ATP?",
-  "a": "A sejt közvetlenül felhasználható energiaforrása.",
-  "difficulty": "Easy",
-  "id": 152
  },
  {
   "section": "A sejtmag és a genetikai információ",
@@ -1585,13 +1494,6 @@
   "a": "A táplálék szerves anyagaiból építi fel saját anyagait és azok lebontásából nyer energiát.",
   "difficulty": "Medium",
   "id": 224
- },
- {
-  "section": "Az ATP a sejt közvetlen energiaforrása",
-  "q": "Mi az ATP?",
-  "a": "Az ATP (adenozin-trifoszfát) a sejtek közvetlenül felhasználható energiaforrása. A sejt a legtöbb energiaigényes folyamatát ATP segítségével végzi.",
-  "difficulty": "Easy",
-  "id": 225
  },
  {
   "section": "Az ATP a sejt közvetlen energiaforrása",
@@ -2349,20 +2251,6 @@
  },
  {
   "section": "Összefoglalás",
-  "q": "Igényel-e energiát az aktív transzport?",
-  "a": "Igen.",
-  "difficulty": "Easy",
-  "id": 333
- },
- {
-  "section": "Összefoglalás",
-  "q": "Igényel-e energiát az endocitózis és exocitózis?",
-  "a": "Igen.",
-  "difficulty": "Easy",
-  "id": 334
- },
- {
-  "section": "Összefoglalás",
   "q": "Mi biztosít energiát a sejt működéséhez?",
   "a": "A lebontó folyamatok.",
   "difficulty": "Easy",
@@ -2502,21 +2390,6 @@
   "id": 354
  },
  {
-  "section": "Fogalmi kapcsolatok",
-  "q": "Mi a teljes kurzus egyik legfontosabb összefoglaló tétele?",
-  "a": "A sejtek felépítése, működése, energiaforgalma és specializációja együtt teszi lehetővé az emberi szervezet működését.",
-  "difficulty": "Medium",
-  "id": 355
- },
- {
-  "section": "Lizoszómák - lebontás és újrahasznosítás",
-  "q": "Mik a lizoszómák?",
-  "a": "A lizoszómák lebontó enzimeket tartalmazó membránhólyagok, amelyek a sejten belüli lebontási és újrahasznosítási folyamatokban vesznek részt.",
-  "difficulty": "Easy",
-  "id": 356,
-  "img": "images/cell-diagram-18.jpg"
- },
- {
   "section": "Lizoszómák - lebontás és újrahasznosítás",
   "q": "Milyen anyagokat bontanak le a lizoszómák?",
   "a": "A sejt által felvett egyes anyagokat, valamint különböző makromolekulákat.",
@@ -2543,13 +2416,6 @@
   "a": "A felhasználható alkotórészek visszakerülhetnek a sejt anyagcseréjébe és újra felhasználhatók.",
   "difficulty": "Medium",
   "id": 360
- },
- {
-  "section": "Lizoszómák - lebontás és újrahasznosítás",
-  "q": "Mi történik a nem hasznosítható anyagokkal?",
-  "a": "A sejt exocitózis segítségével eltávolíthatja őket.",
-  "difficulty": "Medium",
-  "id": 361
  },
  {
   "section": "Lizoszómák - lebontás és újrahasznosítás",
@@ -2754,5 +2620,645 @@
   "a": "Az emésztés előkészíti, a sejt pedig felhasználja a tápanyagokat.",
   "difficulty": "Easy",
   "id": 390
+ },
+ {
+  "section": "Ábra: A sejtmembrán felépítése",
+  "q": "Az ábrán mit jelöl a(z) 1-es szám?",
+  "a": "Hidrofil feji rész",
+  "difficulty": "Medium",
+  "id": 391,
+  "img": "images/diagram-membrane-labels.jpg"
+ },
+ {
+  "section": "Ábra: A sejtmembrán felépítése",
+  "q": "Az ábrán mit jelöl a(z) 2-es szám?",
+  "a": "Hidrofób zsírsavláncok",
+  "difficulty": "Medium",
+  "id": 392,
+  "img": "images/diagram-membrane-labels.jpg"
+ },
+ {
+  "section": "Ábra: A sejtmembrán felépítése",
+  "q": "Az ábrán mit jelöl a(z) 3-es szám?",
+  "a": "Koleszterin",
+  "difficulty": "Medium",
+  "id": 393,
+  "img": "images/diagram-membrane-labels.jpg"
+ },
+ {
+  "section": "Ábra: A sejtmembrán felépítése",
+  "q": "Az ábrán mit jelöl a(z) 4-es szám?",
+  "a": "Integráns membránfehérje",
+  "difficulty": "Medium",
+  "id": 394,
+  "img": "images/diagram-membrane-labels.jpg"
+ },
+ {
+  "section": "Ábra: A sejtmembrán felépítése",
+  "q": "Az ábrán mit jelöl a(z) 5-es szám?",
+  "a": "Fehérjecsatorna",
+  "difficulty": "Medium",
+  "id": 395,
+  "img": "images/diagram-membrane-labels.jpg"
+ },
+ {
+  "section": "Ábra: A sejthártya részletes felépítése",
+  "q": "Az ábrán mit jelöl a(z) A betű?",
+  "a": "Szénhidrátláncok",
+  "difficulty": "Medium",
+  "id": 396,
+  "img": "images/diagram-membrane-letters.jpg"
+ },
+ {
+  "section": "Ábra: A sejthártya részletes felépítése",
+  "q": "Az ábrán mit jelöl a(z) B betű?",
+  "a": "Foszfatidok zsírsavláncai",
+  "difficulty": "Medium",
+  "id": 397,
+  "img": "images/diagram-membrane-letters.jpg"
+ },
+ {
+  "section": "Ábra: A sejthártya részletes felépítése",
+  "q": "Az ábrán mit jelöl a(z) C betű?",
+  "a": "Poláris rész (szerves bázis és foszforsav)",
+  "difficulty": "Medium",
+  "id": 398,
+  "img": "images/diagram-membrane-letters.jpg"
+ },
+ {
+  "section": "Ábra: A sejthártya részletes felépítése",
+  "q": "Az ábrán mit jelöl a(z) D betű?",
+  "a": "Apoláris réteg",
+  "difficulty": "Medium",
+  "id": 399,
+  "img": "images/diagram-membrane-letters.jpg"
+ },
+ {
+  "section": "Ábra: A sejthártya részletes felépítése",
+  "q": "Az ábrán mit jelöl a(z) E betű?",
+  "a": "Integráns/átérő fehérje",
+  "difficulty": "Medium",
+  "id": 400,
+  "img": "images/diagram-membrane-letters.jpg"
+ },
+ {
+  "section": "Ábra: A sejthártya részletes felépítése",
+  "q": "Az ábrán mit jelöl a(z) F betű?",
+  "a": "Periférás/felületi fehérje",
+  "difficulty": "Medium",
+  "id": 401,
+  "img": "images/diagram-membrane-letters.jpg"
+ },
+ {
+  "section": "Ábra: A sejthártya részletes felépítése",
+  "q": "Az ábrán mit jelöl a(z) G betű?",
+  "a": "Koleszterin/szteránvázas lipid",
+  "difficulty": "Medium",
+  "id": 402,
+  "img": "images/diagram-membrane-letters.jpg"
+ },
+ {
+  "section": "Ábra: A sejthártya részletes felépítése",
+  "q": "Az ábrán mit jelöl a(z) H betű?",
+  "a": "Kettős foszfatid(lipid)réteg",
+  "difficulty": "Medium",
+  "id": 403,
+  "img": "images/diagram-membrane-letters.jpg"
+ },
+ {
+  "section": "Ábra: Az állati sejt részletes felépítése",
+  "q": "Az ábrán mit jelöl a(z) 1-es szám?",
+  "a": "Sejtmag (nukleusz)",
+  "difficulty": "Medium",
+  "id": 404,
+  "img": "images/diagram-full-cell-14.jpg"
+ },
+ {
+  "section": "Ábra: Az állati sejt részletes felépítése",
+  "q": "Az ábrán mit jelöl a(z) 2-es szám?",
+  "a": "Magvacska",
+  "difficulty": "Medium",
+  "id": 405,
+  "img": "images/diagram-full-cell-14.jpg"
+ },
+ {
+  "section": "Ábra: Az állati sejt részletes felépítése",
+  "q": "Az ábrán mit jelöl a(z) 3-es szám?",
+  "a": "Nukleusz burka",
+  "difficulty": "Medium",
+  "id": 406,
+  "img": "images/diagram-full-cell-14.jpg"
+ },
+ {
+  "section": "Ábra: Az állati sejt részletes felépítése",
+  "q": "Az ábrán mit jelöl a(z) 4-es szám?",
+  "a": "Sejthártya",
+  "difficulty": "Medium",
+  "id": 407,
+  "img": "images/diagram-full-cell-14.jpg"
+ },
+ {
+  "section": "Ábra: Az állati sejt részletes felépítése",
+  "q": "Az ábrán mit jelöl a(z) 5-es szám?",
+  "a": "Durva felszínű endoplazmatikus retikulum",
+  "difficulty": "Medium",
+  "id": 408,
+  "img": "images/diagram-full-cell-14.jpg"
+ },
+ {
+  "section": "Ábra: Az állati sejt részletes felépítése",
+  "q": "Az ábrán mit jelöl a(z) 6-es szám?",
+  "a": "Citoplazma",
+  "difficulty": "Medium",
+  "id": 409,
+  "img": "images/diagram-full-cell-14.jpg"
+ },
+ {
+  "section": "Ábra: Az állati sejt részletes felépítése",
+  "q": "Az ábrán mit jelöl a(z) 7-es szám?",
+  "a": "Riboszómák",
+  "difficulty": "Medium",
+  "id": 410,
+  "img": "images/diagram-full-cell-14.jpg"
+ },
+ {
+  "section": "Ábra: Az állati sejt részletes felépítése",
+  "q": "Az ábrán mit jelöl a(z) 8-es szám?",
+  "a": "Sima felszínű endoplazmatikus retikulum",
+  "difficulty": "Medium",
+  "id": 411,
+  "img": "images/diagram-full-cell-14.jpg"
+ },
+ {
+  "section": "Ábra: Az állati sejt részletes felépítése",
+  "q": "Az ábrán mit jelöl a(z) 9-es szám?",
+  "a": "Mitokondrium",
+  "difficulty": "Medium",
+  "id": 412,
+  "img": "images/diagram-full-cell-14.jpg"
+ },
+ {
+  "section": "Ábra: Az állati sejt részletes felépítése",
+  "q": "Az ábrán mit jelöl a(z) 10-es szám?",
+  "a": "Sejtközpont",
+  "difficulty": "Medium",
+  "id": 413,
+  "img": "images/diagram-full-cell-14.jpg"
+ },
+ {
+  "section": "Ábra: Az állati sejt részletes felépítése",
+  "q": "Az ábrán mit jelöl a(z) 11-es szám?",
+  "a": "Golgi-készülék",
+  "difficulty": "Medium",
+  "id": 414,
+  "img": "images/diagram-full-cell-14.jpg"
+ },
+ {
+  "section": "Ábra: Az állati sejt részletes felépítése",
+  "q": "Az ábrán mit jelöl a(z) 12-es szám?",
+  "a": "Lizoszóma",
+  "difficulty": "Medium",
+  "id": 415,
+  "img": "images/diagram-full-cell-14.jpg"
+ },
+ {
+  "section": "Ábra: Az állati sejt részletes felépítése",
+  "q": "Az ábrán mit jelöl a(z) 13-es szám?",
+  "a": "Sejtváz",
+  "difficulty": "Medium",
+  "id": 416,
+  "img": "images/diagram-full-cell-14.jpg"
+ },
+ {
+  "section": "Ábra: Az állati sejt részletes felépítése",
+  "q": "Az ábrán mit jelöl a(z) 14-es szám?",
+  "a": "Membránhólyag",
+  "difficulty": "Medium",
+  "id": 417,
+  "img": "images/diagram-full-cell-14.jpg"
+ },
+ {
+  "section": "Ábra: Sejttípusok összehasonlítása",
+  "q": "Az ábra táblázatának 1. sora melyik sejttípust mutatja be?",
+  "a": "Hámsejt",
+  "difficulty": "Medium",
+  "id": 418,
+  "img": "images/diagram-celltype-table.jpg"
+ },
+ {
+  "section": "Ábra: Sejttípusok összehasonlítása",
+  "q": "Az ábra táblázatának 2. sora melyik sejttípust mutatja be?",
+  "a": "Mirigysejt",
+  "difficulty": "Medium",
+  "id": 419,
+  "img": "images/diagram-celltype-table.jpg"
+ },
+ {
+  "section": "Ábra: Sejttípusok összehasonlítása",
+  "q": "Az ábra táblázatának 3. sora melyik sejttípust mutatja be?",
+  "a": "Izomsejt",
+  "difficulty": "Medium",
+  "id": 420,
+  "img": "images/diagram-celltype-table.jpg"
+ },
+ {
+  "section": "Ábra: Sejttípusok összehasonlítása",
+  "q": "Az ábra táblázatának 4. sora melyik sejttípust mutatja be?",
+  "a": "Kötőszöveti sejt",
+  "difficulty": "Medium",
+  "id": 421,
+  "img": "images/diagram-celltype-table.jpg"
+ },
+ {
+  "section": "Ábra: Sejttípusok összehasonlítása",
+  "q": "Az ábra táblázatának 5. sora melyik sejttípust mutatja be?",
+  "a": "Vörösvértest",
+  "difficulty": "Medium",
+  "id": 422,
+  "img": "images/diagram-celltype-table.jpg"
+ },
+ {
+  "section": "Ábra: Sejttípusok összehasonlítása",
+  "q": "Az ábra táblázatának 6. sora melyik sejttípust mutatja be?",
+  "a": "Idegsejt",
+  "difficulty": "Medium",
+  "id": 423,
+  "img": "images/diagram-celltype-table.jpg"
+ },
+ {
+  "section": "Ábra: A négy fő szövettípus",
+  "q": "Az ábra 1. kártyája melyik szövettípust ábrázolja?",
+  "a": "Hámszövet",
+  "difficulty": "Medium",
+  "id": 424,
+  "img": "images/diagram-tissue-cards.jpg"
+ },
+ {
+  "section": "Ábra: A négy fő szövettípus",
+  "q": "Az ábra 2. kártyája melyik szövettípust ábrázolja?",
+  "a": "Kötő- és támasztószövet",
+  "difficulty": "Medium",
+  "id": 425,
+  "img": "images/diagram-tissue-cards.jpg"
+ },
+ {
+  "section": "Ábra: A négy fő szövettípus",
+  "q": "Az ábra 3. kártyája melyik szövettípust ábrázolja?",
+  "a": "Izomszövet",
+  "difficulty": "Medium",
+  "id": 426,
+  "img": "images/diagram-tissue-cards.jpg"
+ },
+ {
+  "section": "Ábra: A négy fő szövettípus",
+  "q": "Az ábra 4. kártyája melyik szövettípust ábrázolja?",
+  "a": "Idegszövet",
+  "difficulty": "Medium",
+  "id": 427,
+  "img": "images/diagram-tissue-cards.jpg"
+ },
+ {
+  "section": "Ábra: A mitokondrium felépítése",
+  "q": "Az ábrán mit jelöl a(z) 1-es szám?",
+  "a": "Belső membrán",
+  "difficulty": "Medium",
+  "id": 428,
+  "img": "images/diagram-mitochondrion-4.jpg"
+ },
+ {
+  "section": "Ábra: A mitokondrium felépítése",
+  "q": "Az ábrán mit jelöl a(z) 2-es szám?",
+  "a": "Külső membrán",
+  "difficulty": "Medium",
+  "id": 429,
+  "img": "images/diagram-mitochondrion-4.jpg"
+ },
+ {
+  "section": "Ábra: A mitokondrium felépítése",
+  "q": "Az ábrán mit jelöl a(z) 3-es szám?",
+  "a": "Membránok közötti tér",
+  "difficulty": "Medium",
+  "id": 430,
+  "img": "images/diagram-mitochondrion-4.jpg"
+ },
+ {
+  "section": "Ábra: A mitokondrium felépítése",
+  "q": "Az ábrán mit jelöl a(z) 4-es szám?",
+  "a": "Mitokondriális mátrix",
+  "difficulty": "Medium",
+  "id": 431,
+  "img": "images/diagram-mitochondrion-4.jpg"
+ },
+ {
+  "section": "Ábra: A fehérjeszintézis és -szállítás útja",
+  "q": "Az ábrán mit jelöl a(z) 1-es szám?",
+  "a": "Sejtmag",
+  "difficulty": "Medium",
+  "id": 432,
+  "img": "images/diagram-protein-pathway.jpg"
+ },
+ {
+  "section": "Ábra: A fehérjeszintézis és -szállítás útja",
+  "q": "Az ábrán mit jelöl a(z) 2-es szám?",
+  "a": "Riboszóma",
+  "difficulty": "Medium",
+  "id": 433,
+  "img": "images/diagram-protein-pathway.jpg"
+ },
+ {
+  "section": "Ábra: A fehérjeszintézis és -szállítás útja",
+  "q": "Az ábrán mit jelöl a(z) 3-es szám?",
+  "a": "Durva felszínű endoplazmatikus retikulum",
+  "difficulty": "Medium",
+  "id": 434,
+  "img": "images/diagram-protein-pathway.jpg"
+ },
+ {
+  "section": "Ábra: A fehérjeszintézis és -szállítás útja",
+  "q": "Az ábrán mit jelöl a(z) 4-es szám?",
+  "a": "Golgi-készülék",
+  "difficulty": "Medium",
+  "id": 435,
+  "img": "images/diagram-protein-pathway.jpg"
+ },
+ {
+  "section": "Ábra: A fehérjeszintézis és -szállítás útja",
+  "q": "Az ábrán mit jelöl a(z) 5-es szám?",
+  "a": "Membránhólyag",
+  "difficulty": "Medium",
+  "id": 436,
+  "img": "images/diagram-protein-pathway.jpg"
+ },
+ {
+  "section": "Ábra: A fehérjeszintézis és -szállítás útja",
+  "q": "Az ábrán mit jelöl a(z) 6-es szám?",
+  "a": "Felhasználás / exocitózis",
+  "difficulty": "Medium",
+  "id": 437,
+  "img": "images/diagram-protein-pathway.jpg"
+ },
+ {
+  "section": "Ábra: A sejtet felépítő anyagok",
+  "q": "Az ábra 1. sora melyik anyagcsoportot mutatja be?",
+  "a": "Víz",
+  "difficulty": "Medium",
+  "id": 438,
+  "img": "images/diagram-nutrient-icons.jpg"
+ },
+ {
+  "section": "Ábra: A sejtet felépítő anyagok",
+  "q": "Az ábra 2. sora melyik anyagcsoportot mutatja be?",
+  "a": "Szervetlen ionok",
+  "difficulty": "Medium",
+  "id": 439,
+  "img": "images/diagram-nutrient-icons.jpg"
+ },
+ {
+  "section": "Ábra: A sejtet felépítő anyagok",
+  "q": "Az ábra 3. sora melyik anyagcsoportot mutatja be?",
+  "a": "Szénhidrátok",
+  "difficulty": "Medium",
+  "id": 440,
+  "img": "images/diagram-nutrient-icons.jpg"
+ },
+ {
+  "section": "Ábra: A sejtet felépítő anyagok",
+  "q": "Az ábra 4. sora melyik anyagcsoportot mutatja be?",
+  "a": "Lipidek",
+  "difficulty": "Medium",
+  "id": 441,
+  "img": "images/diagram-nutrient-icons.jpg"
+ },
+ {
+  "section": "Ábra: A sejtet felépítő anyagok",
+  "q": "Az ábra 5. sora melyik anyagcsoportot mutatja be?",
+  "a": "Fehérjék",
+  "difficulty": "Medium",
+  "id": 442,
+  "img": "images/diagram-nutrient-icons.jpg"
+ },
+ {
+  "section": "Ábra: A sejtet felépítő anyagok",
+  "q": "Az ábra 6. sora melyik anyagcsoportot mutatja be?",
+  "a": "Nukleotid típusú vegyületek",
+  "difficulty": "Medium",
+  "id": 443,
+  "img": "images/diagram-nutrient-icons.jpg"
+ },
+ {
+  "section": "Ábra: A sejt működésének összefoglalása",
+  "q": "Az ábrán mit jelöl a(z) 1-es kör?",
+  "a": "Sejthártya",
+  "difficulty": "Medium",
+  "id": 444,
+  "img": "images/diagram-cell-hub.jpg"
+ },
+ {
+  "section": "Ábra: A sejt működésének összefoglalása",
+  "q": "Az ábrán mit jelöl a(z) 2-es kör?",
+  "a": "Citoplazma",
+  "difficulty": "Medium",
+  "id": 445,
+  "img": "images/diagram-cell-hub.jpg"
+ },
+ {
+  "section": "Ábra: A sejt működésének összefoglalása",
+  "q": "Az ábrán mit jelöl a(z) 3-es kör?",
+  "a": "Sejtmag",
+  "difficulty": "Medium",
+  "id": 446,
+  "img": "images/diagram-cell-hub.jpg"
+ },
+ {
+  "section": "Ábra: A sejt működésének összefoglalása",
+  "q": "Az ábrán mit jelöl a(z) 4-es kör?",
+  "a": "Sejtalkotók",
+  "difficulty": "Medium",
+  "id": 447,
+  "img": "images/diagram-cell-hub.jpg"
+ },
+ {
+  "section": "Ábra: A sejt működésének összefoglalása",
+  "q": "Az ábrán mit jelöl a(z) 6-es kör?",
+  "a": "Anyagleadás",
+  "difficulty": "Medium",
+  "id": 448,
+  "img": "images/diagram-cell-hub.jpg"
+ },
+ {
+  "section": "Ábra: A sejt működésének összefoglalása",
+  "q": "Az ábrán mit jelöl a(z) 7-es kör?",
+  "a": "Anyagfelvétel",
+  "difficulty": "Medium",
+  "id": 449,
+  "img": "images/diagram-cell-hub.jpg"
+ },
+ {
+  "section": "Ábra: A sejt működésének összefoglalása",
+  "q": "Az ábrán mit jelöl a(z) 8-es kör?",
+  "a": "Specializálódás",
+  "difficulty": "Medium",
+  "id": 450,
+  "img": "images/diagram-cell-hub.jpg"
+ },
+ {
+  "section": "Ábra: A sejt működésének összefoglalása",
+  "q": "Az ábrán mit jelöl a(z) 10-es kör?",
+  "a": "ATP-termelés",
+  "difficulty": "Medium",
+  "id": 451,
+  "img": "images/diagram-cell-hub.jpg"
+ },
+ {
+  "section": "Ábra: Fogalmak és jelentésük",
+  "q": "Az ábra 1. sorában melyik fogalom kapcsolata/jelentése szerepel a jobb oldalon?",
+  "a": "Szelektív áteresztés (sejthártya)",
+  "difficulty": "Medium",
+  "id": 452,
+  "img": "images/diagram-fogalom-table.jpg"
+ },
+ {
+  "section": "Ábra: Fogalmak és jelentésük",
+  "q": "Az ábra 2. sorában melyik fogalom kapcsolata/jelentése szerepel a jobb oldalon?",
+  "a": "Genetikai információ (sejtmag)",
+  "difficulty": "Medium",
+  "id": 453,
+  "img": "images/diagram-fogalom-table.jpg"
+ },
+ {
+  "section": "Ábra: Fogalmak és jelentésük",
+  "q": "Az ábra 3. sorában melyik fogalom kapcsolata/jelentése szerepel a jobb oldalon?",
+  "a": "Fehérjeszintézis (riboszóma)",
+  "difficulty": "Medium",
+  "id": 454,
+  "img": "images/diagram-fogalom-table.jpg"
+ },
+ {
+  "section": "Ábra: Fogalmak és jelentésük",
+  "q": "Az ábra 4. sorában melyik fogalom kapcsolata/jelentése szerepel a jobb oldalon?",
+  "a": "Módosítás és csomagolás (Golgi-készülék)",
+  "difficulty": "Medium",
+  "id": 455,
+  "img": "images/diagram-fogalom-table.jpg"
+ },
+ {
+  "section": "Ábra: Fogalmak és jelentésük",
+  "q": "Az ábra 5. sorában melyik fogalom kapcsolata/jelentése szerepel a jobb oldalon?",
+  "a": "Lebontás (lizoszóma)",
+  "difficulty": "Medium",
+  "id": 456,
+  "img": "images/diagram-fogalom-table.jpg"
+ },
+ {
+  "section": "Ábra: Fogalmak és jelentésük",
+  "q": "Az ábra 6. sorában melyik fogalom kapcsolata/jelentése szerepel a jobb oldalon?",
+  "a": "ATP-termelés (mitokondrium)",
+  "difficulty": "Medium",
+  "id": 457,
+  "img": "images/diagram-fogalom-table.jpg"
+ },
+ {
+  "section": "Ábra: Fogalmak és jelentésük",
+  "q": "Az ábra 7. sorában melyik fogalom kapcsolata/jelentése szerepel a jobb oldalon?",
+  "a": "Passzív transzport (diffúzió)",
+  "difficulty": "Medium",
+  "id": 458,
+  "img": "images/diagram-fogalom-table.jpg"
+ },
+ {
+  "section": "Ábra: Fogalmak és jelentésük",
+  "q": "Az ábra 8. sorában melyik fogalom kapcsolata/jelentése szerepel a jobb oldalon?",
+  "a": "Aktív transzport (Na+-K+-pumpa)",
+  "difficulty": "Medium",
+  "id": 459,
+  "img": "images/diagram-fogalom-table.jpg"
+ },
+ {
+  "section": "Ábra: Fogalmak és jelentésük",
+  "q": "Az ábra 9. sorában melyik fogalom kapcsolata/jelentése szerepel a jobb oldalon?",
+  "a": "Anyagleadás (exocitózis)",
+  "difficulty": "Medium",
+  "id": 460,
+  "img": "images/diagram-fogalom-table.jpg"
+ },
+ {
+  "section": "Ábra: Fogalmak és jelentésük",
+  "q": "Az ábra 10. sorában melyik fogalom kapcsolata/jelentése szerepel a jobb oldalon?",
+  "a": "Anyagfelvétel (endocitózis)",
+  "difficulty": "Medium",
+  "id": 461,
+  "img": "images/diagram-fogalom-table.jpg"
+ },
+ {
+  "section": "Ábra: Fogalmak és jelentésük",
+  "q": "Az ábra 11. sorában melyik fogalom kapcsolata/jelentése szerepel a jobb oldalon?",
+  "a": "Fehérjék továbbítása (durva felszínű ER)",
+  "difficulty": "Medium",
+  "id": 462,
+  "img": "images/diagram-fogalom-table.jpg"
+ },
+ {
+  "section": "Ábra: Fogalmak és jelentésük",
+  "q": "Az ábra 12. sorában melyik fogalom kapcsolata/jelentése szerepel a jobb oldalon?",
+  "a": "Biokémiai reakciók gyorsítása (enzim)",
+  "difficulty": "Medium",
+  "id": 463,
+  "img": "images/diagram-fogalom-table.jpg"
+ },
+ {
+  "section": "Ábra: A fehérje kiválasztásának lépései",
+  "q": "Az ábrán mit jelent a(z) 1-es lépés?",
+  "a": "A genetikai információ a sejtmagban található.",
+  "difficulty": "Medium",
+  "id": 464,
+  "img": "images/diagram-secretion-pathway.jpg"
+ },
+ {
+  "section": "Ábra: A fehérje kiválasztásának lépései",
+  "q": "Az ábrán mit jelent a(z) 2-es lépés?",
+  "a": "A riboszómák fehérjét állítanak elő.",
+  "difficulty": "Medium",
+  "id": 465,
+  "img": "images/diagram-secretion-pathway.jpg"
+ },
+ {
+  "section": "Ábra: A fehérje kiválasztásának lépései",
+  "q": "Az ábrán mit jelent a(z) 3-es lépés?",
+  "a": "A durva felszínű endoplazmatikus retikulumban a fehérje továbbalakul.",
+  "difficulty": "Medium",
+  "id": 466,
+  "img": "images/diagram-secretion-pathway.jpg"
+ },
+ {
+  "section": "Ábra: A fehérje kiválasztásának lépései",
+  "q": "Az ábrán mit jelent a(z) 4-es lépés?",
+  "a": "A Golgi-készülék módosítja és csomagolja a fehérjét.",
+  "difficulty": "Medium",
+  "id": 467,
+  "img": "images/diagram-secretion-pathway.jpg"
+ },
+ {
+  "section": "Ábra: A fehérje kiválasztásának lépései",
+  "q": "Az ábrán mit jelent a(z) 5-es lépés?",
+  "a": "A membránhólyag a megfelelő helyre szállítja.",
+  "difficulty": "Medium",
+  "id": 468,
+  "img": "images/diagram-secretion-pathway.jpg"
+ },
+ {
+  "section": "Ábra: A fehérje kiválasztásának lépései",
+  "q": "Az ábrán mit jelent a(z) 6-es lépés?",
+  "a": "Exocitózissal a váladék a sejtből kiürül.",
+  "difficulty": "Medium",
+  "id": 469,
+  "img": "images/diagram-secretion-pathway.jpg"
+ },
+ {
+  "section": "Ábra: A fehérje kiválasztásának lépései",
+  "q": "Az ábrán mit jelent a(z) 7-es lépés?",
+  "a": "A folyamathoz ATP szükséges.",
+  "difficulty": "Medium",
+  "id": 470,
+  "img": "images/diagram-secretion-pathway.jpg"
  }
 ]
