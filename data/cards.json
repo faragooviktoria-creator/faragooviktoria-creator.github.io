@@ -1,0 +1,2758 @@
+[
+ {
+  "section": "A sejtek felépítése és működése - Az emberi szervezet sejtes alapjai",
+  "q": "Mi a kurzus témája?",
+  "a": "Az emberi szervezet sejtes alapjai, a sejtek felépítése és működése.",
+  "difficulty": "Easy",
+  "id": 0
+ },
+ {
+  "section": "A kurzus helye az anatómia-élettan tanulmányokban",
+  "q": "Mit tanul a hallgató a Bevezetés az anatómiába és élettanba tárgyban?",
+  "a": "A sejtek felépítését és anyagcseréjét, a főbb szövettípusokat és jellemzőiket, valamint a mozgásrendszert (csontrendszer és izmok).",
+  "difficulty": "Easy",
+  "id": 1
+ },
+ {
+  "section": "A kurzus helye az anatómia-élettan tanulmányokban",
+  "q": "Mit tanul a hallgató Anatómia és élettan 1. tárgyban?",
+  "a": "A szabályozást, az idegrendszer működését, a hormonális szabályozást, a vér és keringési rendszer működését, a nyirokrendszert, immunitást és a légzést.",
+  "difficulty": "Easy",
+  "id": 2
+ },
+ {
+  "section": "A kurzus helye az anatómia-élettan tanulmányokban",
+  "q": "Mit tanul a hallgató Anatómia és élettan 2. tárgyban?",
+  "a": "Az érzékszerveket, a táplálkozást, a kiválasztást, a szaporodást, valamint a stresszt és a megküzdést.",
+  "difficulty": "Easy",
+  "id": 3
+ },
+ {
+  "section": "Mit fogunk tanulni a sejtekről?",
+  "q": "Milyen témákat foglal magába a sejttananyag?",
+  "a": "Az élő rendszer és szerveződési szintek, a sejtet felépítő anyagok, a sejtalkotók, a genetikai információ és fehérjeszintézis, a sejthártya és anyagforgalom, az energiaforgalom, az aerob és anaerob energiafelszabadítás, valamint a specializálódás és szövetek témaköre.",
+  "difficulty": "Easy",
+  "id": 4
+ },
+ {
+  "section": "Mit fogunk tanulni a sejtekről?",
+  "q": "Mi a kapcsolat a sejtek tanulmányozásában?",
+  "a": "Felépítés → Működés → Energia → Specializálódás.",
+  "difficulty": "Medium",
+  "id": 5
+ },
+ {
+  "section": "A biológiai szerveződés szintjei",
+  "q": "Melyek a biológiai szerveződés fő szintjei?",
+  "a": "Atomok és elemek → molekulák és vegyületek → sejtek → szövetek → szervek → szervrendszerek → szervezet/egyed.",
+  "difficulty": "Easy",
+  "id": 6
+ },
+ {
+  "section": "A biológiai szerveződés szintjei",
+  "q": "Mi a sejt?",
+  "a": "Az élővilág legkisebb, önálló életre képes egysége.",
+  "difficulty": "Easy",
+  "id": 7
+ },
+ {
+  "section": "Az élő rendszer",
+  "q": "Mit jelent, hogy az élőlény nyílt rendszer?",
+  "a": "Az élőlény folyamatos anyag- és energiakicserélődést folytat környezetével.",
+  "difficulty": "Easy",
+  "id": 8
+ },
+ {
+  "section": "Az élő rendszer",
+  "q": "Miért fontos az élőlény elhatárolódása a környezettől?",
+  "a": "A belső rend és a szabályozott belső környezet fenntartása miatt.",
+  "difficulty": "Easy",
+  "id": 9
+ },
+ {
+  "section": "Az élő rendszer",
+  "q": "Mi történik, ha megszűnik az anyag- és energiacsere?",
+  "a": "Az élőlény elpusztul.",
+  "difficulty": "Easy",
+  "id": 10
+ },
+ {
+  "section": "Az élő rendszer",
+  "q": "Hogyan működik a sejt a környezetével kapcsolatban?",
+  "a": "Folyamatos kapcsolatban áll környezetével és állandó anyagcserét folytat.",
+  "difficulty": "Easy",
+  "id": 11
+ },
+ {
+  "section": "Mit kell megértenünk a sejtről?",
+  "q": "Milyen alapvető kérdések építik fel a sejttananyagot?",
+  "a": "Miből épül fel a sejt, hogyan határolódik el környezetétől, hogyan történik az anyagok ki- és bejutása, hogyan használ energiát, hogyan állít elő anyagokat, miért különböznek a sejtek egymástól, és hogyan alkotnak szöveteket.",
+  "difficulty": "Easy",
+  "id": 12
+ },
+ {
+  "section": "A sejtet felépítő anyagok",
+  "q": "Mely fő anyagcsoportok építik fel a sejtet?",
+  "a": "Víz, szervetlen ionok és szerves vegyületek.",
+  "difficulty": "Easy",
+  "id": 13
+ },
+ {
+  "section": "A víz biológiai szempontból fontos tulajdonságai",
+  "q": "Mennyi az élő rendszerek víztartalma?",
+  "a": "Általában 60-80%.",
+  "difficulty": "Easy",
+  "id": 14
+ },
+ {
+  "section": "A víz biológiai szempontból fontos tulajdonságai",
+  "q": "Milyen közeg a víz a sejtekben?",
+  "a": "Összefüggő és rugalmas közeget biztosít.",
+  "difficulty": "Easy",
+  "id": 15
+ },
+ {
+  "section": "A víz biológiai szempontból fontos tulajdonságai",
+  "q": "Milyen anyagok fontos oldószere a víz?",
+  "a": "A poláris anyagoké.",
+  "difficulty": "Easy",
+  "id": 16
+ },
+ {
+  "section": "A víz biológiai szempontból fontos tulajdonságai",
+  "q": "Milyen szerepet tölt be a víz a szállításban?",
+  "a": "Részt vesz az anyagok szállításában.",
+  "difficulty": "Easy",
+  "id": 17
+ },
+ {
+  "section": "A víz biológiai szempontból fontos tulajdonságai",
+  "q": "Milyen kémiai reakciókban vesz részt a víz?",
+  "a": "Hidrolízisben és kondenzációs reakciókban.",
+  "difficulty": "Medium",
+  "id": 18
+ },
+ {
+  "section": "A víz biológiai szempontból fontos tulajdonságai",
+  "q": "Mely fontos szervetlen ionok találhatók a szervezetben?",
+  "a": "Na+, K+, Ca2+, Mg2+, Cl− és foszfátionok.",
+  "difficulty": "Medium",
+  "id": 19
+ },
+ {
+  "section": "A víz biológiai szempontból fontos tulajdonságai",
+  "q": "Mi a víz szerepe a sejtekben?",
+  "a": "A sejtek alapvető belső közege.",
+  "difficulty": "Easy",
+  "id": 20
+ },
+ {
+  "section": "Az élő szervezetet felépítő molekulák",
+  "q": "Mi a szénhidrátok fő szerepe?",
+  "a": "Energiaforrásként és energiaraktárként szolgálnak.",
+  "difficulty": "Easy",
+  "id": 21
+ },
+ {
+  "section": "Az élő szervezetet felépítő molekulák",
+  "q": "Mi a lipidek fő szerepe?",
+  "a": "Membránalkotók és energiaraktárak.",
+  "difficulty": "Easy",
+  "id": 22
+ },
+ {
+  "section": "Az élő szervezetet felépítő molekulák",
+  "q": "Mi a fehérjék fő szerepe?",
+  "a": "Szerkezet, mozgás, szállítás és enzimműködés.",
+  "difficulty": "Easy",
+  "id": 23
+ },
+ {
+  "section": "Az élő szervezetet felépítő molekulák",
+  "q": "Mi a nukleotid típusú vegyületek jelentősége?",
+  "a": "Az ATP, DNS és RNS felépítésében vesznek részt.",
+  "difficulty": "Medium",
+  "id": 24
+ },
+ {
+  "section": "Szénhidrátok",
+  "q": "Mi a szénhidrátok általános szerepe?",
+  "a": "Fontos energiaforrások.",
+  "difficulty": "Easy",
+  "id": 25
+ },
+ {
+  "section": "Szénhidrátok",
+  "q": "Mik azok a monoszacharidok?",
+  "a": "Egyetlen cukoregységből álló egyszerű szénhidrátok, amelyek 3-7 szénatomot tartalmaznak.",
+  "difficulty": "Medium",
+  "id": 26
+ },
+ {
+  "section": "Szénhidrátok",
+  "q": "Mi a legfontosabb monoszacharid?",
+  "a": "A hatszénatomos glükóz (szőlőcukor).",
+  "difficulty": "Easy",
+  "id": 27
+ },
+ {
+  "section": "Szénhidrátok",
+  "q": "Mik azok a diszacharidok?",
+  "a": "Két monoszacharidból felépülő cukrok.",
+  "difficulty": "Easy",
+  "id": 28
+ },
+ {
+  "section": "Szénhidrátok",
+  "q": "Mondj példát diszacharidokra.",
+  "a": "Szacharóz (répacukor) és laktóz (tejcukor).",
+  "difficulty": "Easy",
+  "id": 29
+ },
+ {
+  "section": "Szénhidrátok",
+  "q": "Mik azok a poliszacharidok?",
+  "a": "Több száz vagy több ezer monoszacharidból álló makromolekulák.",
+  "difficulty": "Medium",
+  "id": 30
+ },
+ {
+  "section": "Szénhidrátok",
+  "q": "Mi az állati szervezet fontos szénhidrátraktára?",
+  "a": "A glikogén, amely a májban és a vázizmokban tárolódik.",
+  "difficulty": "Medium",
+  "id": 31
+ },
+ {
+  "section": "Szénhidrátok",
+  "q": "Mi a glükóz jelentősége?",
+  "a": "A sejtek egyik legfontosabb energiaforrása.",
+  "difficulty": "Easy",
+  "id": 32
+ },
+ {
+  "section": "Szénhidrátok",
+  "q": "Mi a poliszacharidok monomerje?",
+  "a": "A glükóz.",
+  "difficulty": "Medium",
+  "id": 33
+ },
+ {
+  "section": "Szénhidrátok",
+  "q": "Mondj példát poliszacharidokra.",
+  "a": "Cellulóz és keményítő.",
+  "difficulty": "Easy",
+  "id": 34
+ },
+ {
+  "section": "Lipidek",
+  "q": "Mi a neutrális zsírok szerepe?",
+  "a": "Energiaraktárként működnek, valamint hőszigetelő és mechanikai védő szerepet töltenek be.",
+  "difficulty": "Easy",
+  "id": 35
+ },
+ {
+  "section": "Lipidek",
+  "q": "Mi a szteroidok jelentősége?",
+  "a": "Több hormon kiindulási anyagai.",
+  "difficulty": "Medium",
+  "id": 36
+ },
+ {
+  "section": "Lipidek",
+  "q": "Mely hormonok származhatnak szteroidokból?",
+  "a": "Kortizon, ösztrogének, progeszteron és tesztoszteron.",
+  "difficulty": "Medium",
+  "id": 37
+ },
+ {
+  "section": "Lipidek",
+  "q": "Mi a foszfolipidek szerepe?",
+  "a": "A biológiai membránok fontos alkotói.",
+  "difficulty": "Easy",
+  "id": 38
+ },
+ {
+  "section": "Lipidek",
+  "q": "Mi alkotja a sejtmembrán alapját?",
+  "a": "A foszfolipid kettős réteg.",
+  "difficulty": "Easy",
+  "id": 39
+ },
+ {
+  "section": "Lipidek",
+  "q": "Milyen oldhatóságú anyagok a lipidek?",
+  "a": "Vízben rosszul oldódó szerves vegyületek.",
+  "difficulty": "Easy",
+  "id": 40
+ },
+ {
+  "section": "Fehérjék",
+  "q": "Miből épülnek fel a fehérjék?",
+  "a": "Aminosavakból.",
+  "difficulty": "Easy",
+  "id": 41
+ },
+ {
+  "section": "Fehérjék",
+  "q": "Mit határoz meg a fehérjék szerkezete?",
+  "a": "A működésüket.",
+  "difficulty": "Medium",
+  "id": 42
+ },
+ {
+  "section": "Fehérjék",
+  "q": "Milyen szerepeket töltenek be a fehérjék?",
+  "a": "Szerkezet, mozgás, szállítás, enzimműködés, receptorfunkció.",
+  "difficulty": "Easy",
+  "id": 43
+ },
+ {
+  "section": "Fehérjék",
+  "q": "Milyen típusú fehérjék léteznek?",
+  "a": "Szerkezeti fehérjék, enzimek, szállítófehérjék és receptorok.",
+  "difficulty": "Easy",
+  "id": 44
+ },
+ {
+  "section": "Fehérjék",
+  "q": "Mondj példát fehérjékre.",
+  "a": "Kollagén, hemoglobin, aktin és miozin.",
+  "difficulty": "Easy",
+  "id": 45
+ },
+ {
+  "section": "Fehérjék",
+  "q": "Miért alapvetőek a fehérjék?",
+  "a": "A sejtek szerkezetében és működésében egyaránt nélkülözhetetlenek.",
+  "difficulty": "Easy",
+  "id": 46
+ },
+ {
+  "section": "A fehérjék szerkezete",
+  "q": "Mik az egyszerű fehérjék?",
+  "a": "Csak aminosavakból felépülő fehérjék.",
+  "difficulty": "Medium",
+  "id": 47
+ },
+ {
+  "section": "A fehérjék szerkezete",
+  "q": "Mondj példát egyszerű fehérjére.",
+  "a": "Kollagén vagy aktin.",
+  "difficulty": "Easy",
+  "id": 48
+ },
+ {
+  "section": "A fehérjék szerkezete",
+  "q": "Mik az összetett fehérjék?",
+  "a": "Aminosavakon kívül nem-fehérje részt is tartalmaznak.",
+  "difficulty": "Medium",
+  "id": 49
+ },
+ {
+  "section": "A fehérjék szerkezete",
+  "q": "Mondj példát összetett fehérjére.",
+  "a": "Hemoglobin, amely hemcsoportot is tartalmaz.",
+  "difficulty": "Medium",
+  "id": 50
+ },
+ {
+  "section": "Nukleotid típusú vegyületek",
+  "q": "Miből épül fel egy nukleotid?",
+  "a": "Nitrogéntartalmú bázisból, ötszénatomos cukorból és foszfátcsoportból.",
+  "difficulty": "Medium",
+  "id": 51
+ },
+ {
+  "section": "Nukleotid típusú vegyületek",
+  "q": "Mi az ATP?",
+  "a": "A sejt közvetlen energiaforrása.",
+  "difficulty": "Easy",
+  "id": 52
+ },
+ {
+  "section": "Nukleotid típusú vegyületek",
+  "q": "Melyek a fő nukleinsavak?",
+  "a": "DNS és RNS.",
+  "difficulty": "Easy",
+  "id": 53
+ },
+ {
+  "section": "Nukleotid típusú vegyületek",
+  "q": "Mi a DNS szerepe?",
+  "a": "A genetikai információ tárolása.",
+  "difficulty": "Easy",
+  "id": 54
+ },
+ {
+  "section": "Nukleotid típusú vegyületek",
+  "q": "Mi az RNS szerepe?",
+  "a": "A fehérjeszintézisben vesz részt.",
+  "difficulty": "Easy",
+  "id": 55
+ },
+ {
+  "section": "Nukleotid típusú vegyületek",
+  "q": "Mi a nukleotid típusú vegyületek alapvető jelentősége?",
+  "a": "Az energiaátadás és az információtárolás alapjai.",
+  "difficulty": "Medium",
+  "id": 56
+ },
+ {
+  "section": "A sejtet felépítő anyagok - összefoglalás",
+  "q": "Mi a víz fő szerepe a sejtben?",
+  "a": "Oldószerként működik, részt vesz az anyagszállításban és számos kémiai reakcióban reakciópartnerként szerepel.",
+  "difficulty": "Easy",
+  "id": 57
+ },
+ {
+  "section": "A sejtet felépítő anyagok - összefoglalás",
+  "q": "Mi a szervetlen ionok fő szerepe?",
+  "a": "Fontosak az elektromos működésben, az enzimek működésében és az ozmózis fenntartásában.",
+  "difficulty": "Medium",
+  "id": 58
+ },
+ {
+  "section": "A sejtet felépítő anyagok - összefoglalás",
+  "q": "Mi a szénhidrátok szerepe?",
+  "a": "Energiaforrásként és energiaraktárként szolgálnak.",
+  "difficulty": "Easy",
+  "id": 59
+ },
+ {
+  "section": "A sejtet felépítő anyagok - összefoglalás",
+  "q": "Mi a lipidek szerepe?",
+  "a": "Membránalkotók és energiaraktárak.",
+  "difficulty": "Easy",
+  "id": 60
+ },
+ {
+  "section": "A sejtet felépítő anyagok - összefoglalás",
+  "q": "Mi a fehérjék szerepe?",
+  "a": "A szerkezet, mozgás, szállítás és enzimműködés alapvető molekulái.",
+  "difficulty": "Easy",
+  "id": 61
+ },
+ {
+  "section": "A sejtet felépítő anyagok - összefoglalás",
+  "q": "Mi az ATP szerepe?",
+  "a": "A sejt közvetlen energiaforrása.",
+  "difficulty": "Easy",
+  "id": 62
+ },
+ {
+  "section": "A sejtet felépítő anyagok - összefoglalás",
+  "q": "Mi az RNS szerepe?",
+  "a": "Részt vesz a fehérjeszintézis folyamatában.",
+  "difficulty": "Easy",
+  "id": 63
+ },
+ {
+  "section": "A sejtet felépítő anyagok - összefoglalás",
+  "q": "Mire van szükség a sejt felépítéséhez és működéséhez?",
+  "a": "Mind szervetlen, mind szerves anyagokra.",
+  "difficulty": "Easy",
+  "id": 64
+ },
+ {
+  "section": "Makro- és mikrotápanyagok",
+  "q": "Mi alapján különböztetjük meg a makro- és mikrotápanyagokat?",
+  "a": "Az alapján, hogy milyen mennyiségben van rájuk szüksége a szervezetnek.",
+  "difficulty": "Easy",
+  "id": 65
+ },
+ {
+  "section": "Makro- és mikrotápanyagok",
+  "q": "Mik a makrotápanyagok?",
+  "a": "Olyan tápanyagok, amelyeket a szervezet nagyobb mennyiségben igényel.",
+  "difficulty": "Easy",
+  "id": 66
+ },
+ {
+  "section": "Makro- és mikrotápanyagok",
+  "q": "Melyek a fő makrotápanyagok?",
+  "a": "Szénhidrátok, zsírok és fehérjék.",
+  "difficulty": "Easy",
+  "id": 67
+ },
+ {
+  "section": "Makro- és mikrotápanyagok",
+  "q": "Mi a makrotápanyagok szerepe?",
+  "a": "Energiát szolgáltatnak és/vagy építőanyagként hasznosulnak.",
+  "difficulty": "Easy",
+  "id": 68
+ },
+ {
+  "section": "Makro- és mikrotápanyagok",
+  "q": "Milyen mennyiségben van szükség makrotápanyagokra?",
+  "a": "Általában grammos nagyságrendben.",
+  "difficulty": "Easy",
+  "id": 69
+ },
+ {
+  "section": "Makro- és mikrotápanyagok",
+  "q": "Mik a mikrotápanyagok?",
+  "a": "Kis mennyiségben szükséges, de nélkülözhetetlen tápanyagok.",
+  "difficulty": "Easy",
+  "id": 70
+ },
+ {
+  "section": "Makro- és mikrotápanyagok",
+  "q": "Miért fontosak a mikrotápanyagok?",
+  "a": "Szükségesek a normális anyagcseréhez, növekedéshez és szabályozó folyamatokhoz.",
+  "difficulty": "Medium",
+  "id": 71
+ },
+ {
+  "section": "Makro- és mikrotápanyagok",
+  "q": "Melyek a mikrotápanyagok fő csoportjai?",
+  "a": "Vitaminok, ásványi anyagok és nyomelemek.",
+  "difficulty": "Easy",
+  "id": 72
+ },
+ {
+  "section": "Makro- és mikrotápanyagok",
+  "q": "Milyen mennyiségben szükségesek a mikrotápanyagok?",
+  "a": "Általában milligrammos vagy mikrogrammos mennyiségben.",
+  "difficulty": "Easy",
+  "id": 73
+ },
+ {
+  "section": "Makro- és mikrotápanyagok",
+  "q": "Mit nem jelent a \"mikro\" és \"makro\" elnevezés?",
+  "a": "Nem a molekulák méretére utal.",
+  "difficulty": "Easy",
+  "id": 74
+ },
+ {
+  "section": "Példák makro- és mikrotápanyagokra",
+  "q": "Mondj példát szénhidrátokra.",
+  "a": "Glükóz és keményítő.",
+  "difficulty": "Easy",
+  "id": 75
+ },
+ {
+  "section": "Példák makro- és mikrotápanyagokra",
+  "q": "Mi a szénhidrátok fő szerepe?",
+  "a": "A szervezet legfontosabb energiaforrásai.",
+  "difficulty": "Easy",
+  "id": 76
+ },
+ {
+  "section": "Példák makro- és mikrotápanyagokra",
+  "q": "Mondj példát zsírokra.",
+  "a": "Trigliceridek és zsírsavak.",
+  "difficulty": "Easy",
+  "id": 77
+ },
+ {
+  "section": "Példák makro- és mikrotápanyagokra",
+  "q": "Mi a zsírok szerepe?",
+  "a": "Energiaforrások és membránalkotók.",
+  "difficulty": "Easy",
+  "id": 78
+ },
+ {
+  "section": "Példák makro- és mikrotápanyagokra",
+  "q": "Mi a fehérjék szerepe a szervezetben?",
+  "a": "Építés, enzimfunkció és szállítás.",
+  "difficulty": "Easy",
+  "id": 79
+ },
+ {
+  "section": "Példák makro- és mikrotápanyagokra",
+  "q": "Mondj példát vitaminokra.",
+  "a": "A-, C-, D-, E-, K-vitaminok és a B-vitaminok.",
+  "difficulty": "Easy",
+  "id": 80
+ },
+ {
+  "section": "Példák makro- és mikrotápanyagokra",
+  "q": "Mondj példát ásványi anyagokra.",
+  "a": "Kalcium, magnézium, nátrium és kálium.",
+  "difficulty": "Easy",
+  "id": 81
+ },
+ {
+  "section": "Példák makro- és mikrotápanyagokra",
+  "q": "Mondj példát nyomelemekre.",
+  "a": "Vas, cink, jód és szelén.",
+  "difficulty": "Easy",
+  "id": 82
+ },
+ {
+  "section": "Példák makro- és mikrotápanyagokra",
+  "q": "Mi a makro- és mikrotápanyagok közötti legfontosabb különbség?",
+  "a": "Makrotápanyagból sok kell, mikrotápanyagból kevés, de mindkettő nélkülözhetetlen.",
+  "difficulty": "Easy",
+  "id": 83
+ },
+ {
+  "section": "Az állati sejt felépítése",
+  "q": "Mi biztosítja az állati sejt működését?",
+  "a": "Az elkülönült sejtalkotók összehangolt működése.",
+  "difficulty": "Easy",
+  "id": 84
+ },
+ {
+  "section": "Az eukarióta sejt",
+  "q": "Milyen típusú sejtek az emberi sejtek?",
+  "a": "Eukarióta sejtek.",
+  "difficulty": "Easy",
+  "id": 85,
+  "img": "images/cell-diagram-01.jpg"
+ },
+ {
+  "section": "Az eukarióta sejt",
+  "q": "Mi határolja az eukarióta sejtet?",
+  "a": "Sejthártya.",
+  "difficulty": "Easy",
+  "id": 86
+ },
+ {
+  "section": "Az eukarióta sejt",
+  "q": "Mit tartalmaz az eukarióta sejt?",
+  "a": "Citoplazmát és elkülönült sejtmagot.",
+  "difficulty": "Easy",
+  "id": 87
+ },
+ {
+  "section": "Az eukarióta sejt",
+  "q": "Milyen sejtalkotói vannak az eukarióta sejteknek?",
+  "a": "Membránnal határolt sejtalkotók.",
+  "difficulty": "Easy",
+  "id": 88
+ },
+ {
+  "section": "Az eukarióta sejt",
+  "q": "Milyen sejtek a baktériumok?",
+  "a": "Prokarióta sejtek.",
+  "difficulty": "Easy",
+  "id": 89
+ },
+ {
+  "section": "Az eukarióta sejt",
+  "q": "Mi a prokarióta sejtek egyik fő jellemzője?",
+  "a": "Nincs elkülönült sejtmagjuk.",
+  "difficulty": "Easy",
+  "id": 90
+ },
+ {
+  "section": "Az eukarióta sejt",
+  "q": "Mi az eukarióta sejtek egyik legfontosabb jellemzője?",
+  "a": "Elkülönült sejtmaggal és membránnal körülvett sejtalkotókkal rendelkeznek.",
+  "difficulty": "Medium",
+  "id": 91
+ },
+ {
+  "section": "Az állati sejt fő részei",
+  "q": "Mi jellemző az állati sejt különböző sejtalkotóira?",
+  "a": "Eltérő feladatokat látnak el.",
+  "difficulty": "Easy",
+  "id": 92,
+  "img": "images/cell-diagram-02.jpg"
+ },
+ {
+  "section": "A citoplazma és a sejtváz",
+  "q": "Mi a citoplazma?",
+  "a": "A sejt vízben gazdag belső közege.",
+  "difficulty": "Easy",
+  "id": 93
+ },
+ {
+  "section": "A citoplazma és a sejtváz",
+  "q": "Hol találhatók a sejtalkotók?",
+  "a": "A citoplazmában.",
+  "difficulty": "Easy",
+  "id": 94
+ },
+ {
+  "section": "A citoplazma és a sejtváz",
+  "q": "Mi zajlik a citoplazmában?",
+  "a": "Számos anyagcsere-folyamat.",
+  "difficulty": "Easy",
+  "id": 95
+ },
+ {
+  "section": "A citoplazma és a sejtváz",
+  "q": "Mi a sejtváz?",
+  "a": "Fehérjefonalak és fehérjecsövek hálózata.",
+  "difficulty": "Medium",
+  "id": 96
+ },
+ {
+  "section": "A citoplazma és a sejtváz",
+  "q": "Mi határozza meg a sejtváz?",
+  "a": "A sejt alakját.",
+  "difficulty": "Easy",
+  "id": 97
+ },
+ {
+  "section": "A citoplazma és a sejtváz",
+  "q": "Milyen folyamatokat segít a sejtváz?",
+  "a": "A sejten belüli szállítást és mozgást.",
+  "difficulty": "Medium",
+  "id": 98
+ },
+ {
+  "section": "A citoplazma és a sejtváz",
+  "q": "Milyen szerepet játszik a sejtváz a sejtosztódásban?",
+  "a": "Aktívan részt vesz annak lebonyolításában.",
+  "difficulty": "Medium",
+  "id": 99
+ },
+ {
+  "section": "A sejthártya felépítése 1.",
+  "q": "Miből épül fel a sejthártya?",
+  "a": "Foszfatidokból (foszfolipidekből) álló kettős rétegből.",
+  "difficulty": "Easy",
+  "id": 100,
+  "img": "images/cell-diagram-03.jpg"
+ },
+ {
+  "section": "A sejthártya felépítése 1.",
+  "q": "Milyen fehérjék találhatók a sejthártyában?",
+  "a": "Integráns és perifériás fehérjék.",
+  "difficulty": "Medium",
+  "id": 101
+ },
+ {
+  "section": "A sejthártya felépítése 1.",
+  "q": "Mi a membránfehérjék szerepe?",
+  "a": "Anyagok átjuttatása, megkötése és a membrán működésének biztosítása.",
+  "difficulty": "Medium",
+  "id": 102
+ },
+ {
+  "section": "A sejthártya felépítése 1.",
+  "q": "Mi a sejtfelszíni szénhidrátláncok szerepe?",
+  "a": "Segítik a sejtek felismerhetőségét.",
+  "difficulty": "Medium",
+  "id": 103,
+  "img": "images/cell-diagram-04.jpg"
+ },
+ {
+  "section": "A sejthártya felépítése 1.",
+  "q": "Mi a vércsoportok egyik sejtfelszíni alapja?",
+  "a": "A sejtfelszíni szénhidrátláncok.",
+  "difficulty": "Medium",
+  "id": 104
+ },
+ {
+  "section": "A sejthártya felépítése 1.",
+  "q": "Mi a koleszterin szerepe a membránban?",
+  "a": "A membrán stabilitásának és folyékonyságának szabályozása.",
+  "difficulty": "Medium",
+  "id": 105
+ },
+ {
+  "section": "A sejthártya felépítése 1.",
+  "q": "Mi a sejthártya két alapvető funkciója?",
+  "a": "Elhatárolja a sejtet és szabályozza az anyagforgalmat.",
+  "difficulty": "Easy",
+  "id": 106
+ },
+ {
+  "section": "A sejthártya felépítése 1.",
+  "q": "Miért tekinthető a sejthártya egyszerre határfelületnek és szabályozó rendszernek?",
+  "a": "Mert elválasztja a környezetet a sejttől és ellenőrzi az anyagok forgalmát.",
+  "difficulty": "Medium",
+  "id": 107
+ },
+ {
+  "section": "A sejthártya felépítése 2. - Ábrafelismerés",
+  "q": "Mit jelölnek a szénhidrátláncok a membránábrán?",
+  "a": "A sejtfelszíni felismerésben szerepet játszó szénhidrátstruktúrákat.",
+  "difficulty": "Medium",
+  "id": 108,
+  "img": "images/cell-diagram-05.jpg"
+ },
+ {
+  "section": "A sejthártya felépítése 2. - Ábrafelismerés",
+  "q": "Mit jelölnek a foszfatidok zsírsavláncai?",
+  "a": "A membrán apoláris belső részét alkotó hidrofób részeket.",
+  "difficulty": "Medium",
+  "id": 109
+ },
+ {
+  "section": "A sejthártya felépítése 2. - Ábrafelismerés",
+  "q": "Mi a foszfolipid poláris része?",
+  "a": "A foszforsavat és szerves bázist tartalmazó hidrofil fej.",
+  "difficulty": "Medium",
+  "id": 110
+ },
+ {
+  "section": "A sejthártya felépítése 2. - Ábrafelismerés",
+  "q": "Mi az apoláris réteg?",
+  "a": "A foszfolipidek hidrofób zsírsavláncaiból kialakuló membránrész.",
+  "difficulty": "Medium",
+  "id": 111
+ },
+ {
+  "section": "A sejthártya felépítése 2. - Ábrafelismerés",
+  "q": "Mi az integráns fehérje?",
+  "a": "A membránon áthaladó fehérje.",
+  "difficulty": "Medium",
+  "id": 112
+ },
+ {
+  "section": "A sejthártya felépítése 2. - Ábrafelismerés",
+  "q": "Mi a perifériás fehérje?",
+  "a": "A membrán felszínéhez kapcsolódó fehérje.",
+  "difficulty": "Medium",
+  "id": 113
+ },
+ {
+  "section": "A sejthártya felépítése 2. - Ábrafelismerés",
+  "q": "Mi a membránban található koleszterin?",
+  "a": "Szteránvázas lipid, amely a membrán stabilitását szabályozza.",
+  "difficulty": "Medium",
+  "id": 114
+ },
+ {
+  "section": "A sejthártya felépítése 2. - Ábrafelismerés",
+  "q": "Mi alkotja a membrán kettős rétegét?",
+  "a": "A foszfatidok (foszfolipidek).",
+  "difficulty": "Easy",
+  "id": 115
+ },
+ {
+  "section": "A biológiai membránok szerepe",
+  "q": "Mi a biológiai membránok egyik alapvető feladata?",
+  "a": "Elkülönítik egymástól a különböző sejtbeli és sejten kívüli tereket.",
+  "difficulty": "Easy",
+  "id": 116,
+  "img": "images/cell-diagram-06.jpg"
+ },
+ {
+  "section": "A biológiai membránok szerepe",
+  "q": "Hogyan vesznek részt a membránok az anyagforgalomban?",
+  "a": "Szabályozzák az anyagok be- és kijutását a különböző terek között.",
+  "difficulty": "Medium",
+  "id": 117
+ },
+ {
+  "section": "A biológiai membránok szerepe",
+  "q": "Milyen szerepet töltenek be a membránok a biokémiai folyamatokban?",
+  "a": "Felületet biztosítanak különböző biokémiai reakciók számára.",
+  "difficulty": "Medium",
+  "id": 118
+ },
+ {
+  "section": "A biológiai membránok szerepe",
+  "q": "Hogyan vesznek részt a membránok a sejtek közötti kapcsolatokban?",
+  "a": "Lehetővé teszik és szabályozzák a sejtek közötti kapcsolatok kialakulását.",
+  "difficulty": "Medium",
+  "id": 119
+ },
+ {
+  "section": "A biológiai membránok szerepe",
+  "q": "Az összes biológiai membrán azonos feladatot lát el?",
+  "a": "Nem. Alapfelépítésük hasonló, de funkciójuk eltérő lehet.",
+  "difficulty": "Medium",
+  "id": 120
+ },
+ {
+  "section": "A biológiai membránok szerepe",
+  "q": "Miért nélkülözhetetlenek a sejthártyák és a belső membránok?",
+  "a": "A sejt működésének alapvető feltételeit biztosítják.",
+  "difficulty": "Easy",
+  "id": 121
+ },
+ {
+  "section": "A durva és sima felszínű endoplazmatikus retikulum",
+  "q": "Mi a durva felszínű endoplazmatikus retikulum (DER)?",
+  "a": "Olyan membránrendszer, amelynek felszínén riboszómák találhatók.",
+  "difficulty": "Medium",
+  "id": 122
+ },
+ {
+  "section": "A durva és sima felszínű endoplazmatikus retikulum",
+  "q": "Mi a durva felszínű ER egyik fő feladata?",
+  "a": "A fehérjeszintézis.",
+  "difficulty": "Easy",
+  "id": 123
+ },
+ {
+  "section": "A durva és sima felszínű endoplazmatikus retikulum",
+  "q": "Miben vesz részt még a durva felszínű ER?",
+  "a": "Az elkészült fehérjék szállításában.",
+  "difficulty": "Medium",
+  "id": 124
+ },
+ {
+  "section": "A durva és sima felszínű endoplazmatikus retikulum",
+  "q": "Mivel áll kapcsolatban a durva felszínű ER?",
+  "a": "A sejtmaghártyával összefüggő membránrendszer része.",
+  "difficulty": "Medium",
+  "id": 125
+ },
+ {
+  "section": "A durva és sima felszínű endoplazmatikus retikulum",
+  "q": "Mi a sima felszínű endoplazmatikus retikulum?",
+  "a": "Olyan ER-szakasz, amelynek felszínén nincsenek riboszómák.",
+  "difficulty": "Easy",
+  "id": 126
+ },
+ {
+  "section": "A durva és sima felszínű endoplazmatikus retikulum",
+  "q": "Mi a sima ER egyik szerepe?",
+  "a": "Anyagok tárolása.",
+  "difficulty": "Easy",
+  "id": 127
+ },
+ {
+  "section": "A durva és sima felszínű endoplazmatikus retikulum",
+  "q": "Milyen molekulák képzésében vesz részt a sima ER?",
+  "a": "Lipidek képzésében.",
+  "difficulty": "Medium",
+  "id": 128
+ },
+ {
+  "section": "A durva és sima felszínű endoplazmatikus retikulum",
+  "q": "Mi a sima ER fontos élettani szerepe?",
+  "a": "A méregtelenítés.",
+  "difficulty": "Medium",
+  "id": 129
+ },
+ {
+  "section": "A durva és sima felszínű endoplazmatikus retikulum",
+  "q": "Mi a fő különbség a durva és sima ER között?",
+  "a": "A durva ER riboszómákat hordoz és fehérjéket termel, a sima ER nem hordoz riboszómát és főleg lipidképzésben, tárolásban és méregtelenítésben vesz részt.",
+  "difficulty": "Medium",
+  "id": 130
+ },
+ {
+  "section": "A Golgi-készülék és a riboszóma",
+  "q": "Mi a Golgi-készülék?",
+  "a": "Lemezes zsákocskákból álló sejtszervecske.",
+  "difficulty": "Easy",
+  "id": 131
+ },
+ {
+  "section": "A Golgi-készülék és a riboszóma",
+  "q": "Milyen sejtekben fejlettebb a Golgi-készülék?",
+  "a": "Azokban, amelyek intenzív váladéktermelést végeznek.",
+  "difficulty": "Medium",
+  "id": 132
+ },
+ {
+  "section": "A Golgi-készülék és a riboszóma",
+  "q": "Mi a Golgi-készülék egyik feladata?",
+  "a": "A fehérjék módosítása.",
+  "difficulty": "Medium",
+  "id": 133
+ },
+ {
+  "section": "A Golgi-készülék és a riboszóma",
+  "q": "Mi történik a fehérjékkel a Golgi-készülékben?",
+  "a": "Átalakulnak, rendeződnek és csomagolódnak.",
+  "difficulty": "Medium",
+  "id": 134
+ },
+ {
+  "section": "A Golgi-készülék és a riboszóma",
+  "q": "Mit jelent a Golgi-készülék „becsomagoló” funkciója?",
+  "a": "A fehérjéket és más anyagokat a megfelelő rendeltetési helyre irányítja.",
+  "difficulty": "Medium",
+  "id": 135
+ },
+ {
+  "section": "A Golgi-készülék és a riboszóma",
+  "q": "Mire készíti elő a Golgi-készülék a fehérjéket?",
+  "a": "A sejtből történő kiválasztásra.",
+  "difficulty": "Medium",
+  "id": 136
+ },
+ {
+  "section": "A Golgi-készülék és a riboszóma",
+  "q": "Mi a riboszóma?",
+  "a": "A fehérjeszintézis helye.",
+  "difficulty": "Easy",
+  "id": 137
+ },
+ {
+  "section": "A Golgi-készülék és a riboszóma",
+  "q": "Hol helyezkedhetnek el a riboszómák?",
+  "a": "Szabadon a citoplazmában vagy a durva felszínű ER felszínén.",
+  "difficulty": "Easy",
+  "id": 138
+ },
+ {
+  "section": "A Golgi-készülék és a riboszóma",
+  "q": "Hogyan készít fehérjét a riboszóma?",
+  "a": "Az mRNS információja alapján kapcsolja össze az aminosavakat.",
+  "difficulty": "Medium",
+  "id": 139
+ },
+ {
+  "section": "A Golgi-készülék és a riboszóma",
+  "q": "Miért nélkülözhetetlen a riboszóma?",
+  "a": "Fehérjeszintézis nélkül a sejt nem tudna működni.",
+  "difficulty": "Easy",
+  "id": 140
+ },
+ {
+  "section": "Lizoszómák",
+  "q": "Mik a lizoszómák?",
+  "a": "Lebontó enzimeket tartalmazó membránhólyagok.",
+  "difficulty": "Easy",
+  "id": 141
+ },
+ {
+  "section": "Lizoszómák",
+  "q": "Mit bontanak le a lizoszómák?",
+  "a": "A sejt által felvett egyes anyagokat.",
+  "difficulty": "Easy",
+  "id": 142
+ },
+ {
+  "section": "Lizoszómák",
+  "q": "Milyen sejtalkotókat távolítanak el a lizoszómák?",
+  "a": "Károsodott vagy elöregedett sejtalkotókat.",
+  "difficulty": "Medium",
+  "id": 143
+ },
+ {
+  "section": "Lizoszómák",
+  "q": "Mi történik a lebontott anyagok hasznos részeivel?",
+  "a": "Visszakerülhetnek a sejt anyagcseréjébe.",
+  "difficulty": "Medium",
+  "id": 144
+ },
+ {
+  "section": "Lizoszómák",
+  "q": "Mi történik a nem hasznosítható anyagokkal?",
+  "a": "A sejt exocitózissal leadhatja őket.",
+  "difficulty": "Medium",
+  "id": 145
+ },
+ {
+  "section": "Lizoszómák",
+  "q": "Miért tekinthetők a lizoszómák újrahasznosító rendszernek?",
+  "a": "Mert lebontják és újra felhasználhatóvá teszik a sejt egyes alkotóit.",
+  "difficulty": "Medium",
+  "id": 146
+ },
+ {
+  "section": "Mitokondrium és ATP",
+  "q": "Hol zajlik az energiatermelő folyamatok jelentős része?",
+  "a": "A mitokondriumban.",
+  "difficulty": "Easy",
+  "id": 147,
+  "img": "images/cell-diagram-07.jpg"
+ },
+ {
+  "section": "Mitokondrium és ATP",
+  "q": "Mi képződik a tápanyagok energiájából?",
+  "a": "ATP.",
+  "difficulty": "Easy",
+  "id": 148
+ },
+ {
+  "section": "Mitokondrium és ATP",
+  "q": "Mit használnak fel az aerob folyamatok?",
+  "a": "Oxigént.",
+  "difficulty": "Easy",
+  "id": 149
+ },
+ {
+  "section": "Mitokondrium és ATP",
+  "q": "Milyen végtermékek keletkeznek aerob lebontás során?",
+  "a": "Szén-dioxid és víz.",
+  "difficulty": "Easy",
+  "id": 150
+ },
+ {
+  "section": "Mitokondrium és ATP",
+  "q": "Mely sejtekben található sok mitokondrium?",
+  "a": "A nagy energiaigényű sejtekben, például szívizom- és vázizomsejtekben.",
+  "difficulty": "Medium",
+  "id": 151
+ },
+ {
+  "section": "Mitokondrium és ATP",
+  "q": "Mi az ATP?",
+  "a": "A sejt közvetlenül felhasználható energiaforrása.",
+  "difficulty": "Easy",
+  "id": 152
+ },
+ {
+  "section": "A sejtmag és a genetikai információ",
+  "q": "Mi határolja a sejtmagot?",
+  "a": "Kettős maghártya.",
+  "difficulty": "Easy",
+  "id": 153
+ },
+ {
+  "section": "A sejtmag és a genetikai információ",
+  "q": "Hol található a DNS legnagyobb része?",
+  "a": "A sejtmagban.",
+  "difficulty": "Easy",
+  "id": 154
+ },
+ {
+  "section": "A sejtmag és a genetikai információ",
+  "q": "Mit hordoz a DNS?",
+  "a": "Az örökítőanyagot.",
+  "difficulty": "Easy",
+  "id": 155
+ },
+ {
+  "section": "A sejtmag és a genetikai információ",
+  "q": "Hogyan irányítja a sejtmag a sejt működését?",
+  "a": "A genetikai információ segítségével.",
+  "difficulty": "Medium",
+  "id": 156
+ },
+ {
+  "section": "A sejtmag és a genetikai információ",
+  "q": "Mi található általában a sejtmagban?",
+  "a": "Egy vagy több sejtmagvacska.",
+  "difficulty": "Easy",
+  "id": 157
+ },
+ {
+  "section": "A sejtmag és a genetikai információ",
+  "q": "Mi a sejtmagvacska feladata?",
+  "a": "A riboszómák alkotórészeinek képzése és összeszerelése.",
+  "difficulty": "Medium",
+  "id": 158
+ },
+ {
+  "section": "Fehérjék előállítása és továbbítása",
+  "q": "Mi alapján történik a fehérjeszintézis?",
+  "a": "Genetikai információ alapján.",
+  "difficulty": "Easy",
+  "id": 159,
+  "img": "images/cell-diagram-08.jpg"
+ },
+ {
+  "section": "Fehérjék előállítása és továbbítása",
+  "q": "Milyen kapcsolat van a sejtmag és a riboszóma között?",
+  "a": "A sejtmag információja alapján a riboszóma fehérjét készít.",
+  "difficulty": "Medium",
+  "id": 160
+ },
+ {
+  "section": "Fehérjék előállítása és továbbítása",
+  "q": "Hova kerülnek a durva ER-ben képződött fehérjék?",
+  "a": "Membránhólyagokba.",
+  "difficulty": "Medium",
+  "id": 161
+ },
+ {
+  "section": "Fehérjék előállítása és továbbítása",
+  "q": "Mit csinál a Golgi-készülék a fehérjékkel?",
+  "a": "Módosítja, rendezi és becsomagolja őket.",
+  "difficulty": "Medium",
+  "id": 162
+ },
+ {
+  "section": "Fehérjék előállítása és továbbítása",
+  "q": "Hogyan jutnak a fehérjék végső helyükre?",
+  "a": "Membránhólyagok segítségével.",
+  "difficulty": "Medium",
+  "id": 163
+ },
+ {
+  "section": "A fehérjeszintézis jelentősége",
+  "q": "Mi történik a fehérjeszintézis során?",
+  "a": "A sejt aminosavakból fehérjét állít elő a genetikai információ alapján.",
+  "difficulty": "Medium",
+  "id": 164
+ },
+ {
+  "section": "A fehérjeszintézis jelentősége",
+  "q": "Hol zajlik a fehérjeszintézis?",
+  "a": "A riboszómákon.",
+  "difficulty": "Easy",
+  "id": 165
+ },
+ {
+  "section": "A fehérjeszintézis jelentősége",
+  "q": "Mi az enzimek szerepe?",
+  "a": "Gyorsítják a sejtek biokémiai reakcióit.",
+  "difficulty": "Medium",
+  "id": 166
+ },
+ {
+  "section": "A fehérjeszintézis jelentősége",
+  "q": "Mi a szerkezeti fehérjék szerepe?",
+  "a": "Szövetek és szervek felépítése.",
+  "difficulty": "Easy",
+  "id": 167
+ },
+ {
+  "section": "A fehérjeszintézis jelentősége",
+  "q": "Mely fehérjék teszik lehetővé az izomösszehúzódást?",
+  "a": "Az aktin és a miozin.",
+  "difficulty": "Easy",
+  "id": 168
+ },
+ {
+  "section": "A fehérjeszintézis jelentősége",
+  "q": "Mi a hemoglobin feladata?",
+  "a": "Gázok szállítása a vérben.",
+  "difficulty": "Easy",
+  "id": 169
+ },
+ {
+  "section": "A fehérjeszintézis jelentősége",
+  "q": "Milyen további szerepük lehet a fehérjéknek?",
+  "a": "Védekezés és szabályozás.",
+  "difficulty": "Medium",
+  "id": 170
+ },
+ {
+  "section": "A sejt belső membránjainak kapcsolata",
+  "q": "Hogyan kapcsolódnak egymáshoz a sejt belső membránrendszerei?",
+  "a": "A sejtmaghártya, az endoplazmatikus retikulum, a Golgi-készülék, a membránhólyagok és a sejthártya funkcionális kapcsolatban állnak egymással.",
+  "difficulty": "Medium",
+  "id": 171
+ },
+ {
+  "section": "A sejt belső membránjainak kapcsolata",
+  "q": "Mi a fehérjék útja a sejten belül?",
+  "a": "Sejtmag → riboszóma → durva felszínű ER → Golgi-készülék → membránhólyag → sejtfelszín vagy exocitózis.",
+  "difficulty": "Hard",
+  "id": 172,
+  "img": "images/cell-diagram-09.jpg"
+ },
+ {
+  "section": "A sejt belső membránjainak kapcsolata",
+  "q": "Miért fontos a membránrendszerek együttműködése?",
+  "a": "Lehetővé teszi az anyagok szintézisét, módosítását, szállítását és kiválasztását.",
+  "difficulty": "Medium",
+  "id": 173
+ },
+ {
+  "section": "A sejtalkotók együttműködése - összefoglalás",
+  "q": "Hol található a genetikai információ?",
+  "a": "A sejtmagban.",
+  "difficulty": "Easy",
+  "id": 174
+ },
+ {
+  "section": "A sejtalkotók együttműködése - összefoglalás",
+  "q": "Mi a riboszómák feladata?",
+  "a": "Fehérjék előállítása.",
+  "difficulty": "Easy",
+  "id": 175
+ },
+ {
+  "section": "A sejtalkotók együttműködése - összefoglalás",
+  "q": "Mi történik a durva felszínű ER-ben?",
+  "a": "Az újonnan képződött fehérjék további feldolgozása és szállítása.",
+  "difficulty": "Medium",
+  "id": 176
+ },
+ {
+  "section": "A sejtalkotók együttműködése - összefoglalás",
+  "q": "Mi a Golgi-készülék szerepe?",
+  "a": "A fehérjék módosítása és csomagolása.",
+  "difficulty": "Medium",
+  "id": 177
+ },
+ {
+  "section": "A sejtalkotók együttműködése - összefoglalás",
+  "q": "Mi a membránhólyagok feladata?",
+  "a": "A fehérjék rendeltetési helyre történő szállítása.",
+  "difficulty": "Medium",
+  "id": 178
+ },
+ {
+  "section": "A sejtalkotók együttműködése - összefoglalás",
+  "q": "Mi az exocitózis szerepe ebben a folyamatban?",
+  "a": "A váladék vagy fehérje sejtből való kijuttatása.",
+  "difficulty": "Medium",
+  "id": 179
+ },
+ {
+  "section": "A sejtalkotók együttműködése - összefoglalás",
+  "q": "Mire van szükség a teljes folyamat során?",
+  "a": "ATP-re.",
+  "difficulty": "Easy",
+  "id": 180
+ },
+ {
+  "section": "A sejtalkotók együttműködése - összefoglalás",
+  "q": "Mi jellemzi a sejtműködést?",
+  "a": "A különböző sejtalkotók összehangolt együttműködése.",
+  "difficulty": "Medium",
+  "id": 181
+ },
+ {
+  "section": "A sejtek anyagfelvétele és anyagleadása",
+  "q": "Mi szabályozza a sejtek anyagforgalmát?",
+  "a": "A sejthártya.",
+  "difficulty": "Easy",
+  "id": 182
+ },
+ {
+  "section": "A sejtek anyagfelvétele és anyagleadása",
+  "q": "Miért fontos a sejthártya szelektív áteresztőképessége?",
+  "a": "Mert meghatározza, mely anyagok és milyen módon jutnak át rajta.",
+  "difficulty": "Medium",
+  "id": 183
+ },
+ {
+  "section": "Transzportfolyamatok a sejthártyán át",
+  "q": "Mik a transzportfolyamatok?",
+  "a": "A sejthártyán keresztül zajló anyagmozgások.",
+  "difficulty": "Easy",
+  "id": 184
+ },
+ {
+  "section": "Transzportfolyamatok a sejthártyán át",
+  "q": "Igényel-e energiát a passzív transzport?",
+  "a": "Nem igényel közvetlen ATP-felhasználást.",
+  "difficulty": "Easy",
+  "id": 185
+ },
+ {
+  "section": "Transzportfolyamatok a sejthártyán át",
+  "q": "Igényel-e energiát az aktív transzport?",
+  "a": "Igen, ATP-t használ.",
+  "difficulty": "Easy",
+  "id": 186
+ },
+ {
+  "section": "Transzportfolyamatok a sejthártyán át",
+  "q": "Mire szolgál a membránáthelyezéssel járó transzport?",
+  "a": "Nagyobb molekulák és részecskék mozgatására.",
+  "difficulty": "Medium",
+  "id": 187
+ },
+ {
+  "section": "Transzportfolyamatok a sejthártyán át",
+  "q": "Mi a transzportfolyamatok jelentősége?",
+  "a": "Fenntartják a sejt belső környezetét és biztosítják az anyagforgalmat.",
+  "difficulty": "Medium",
+  "id": 188
+ },
+ {
+  "section": "Passzív transzport",
+  "q": "Mi a passzív transzport?",
+  "a": "ATP felhasználása nélkül végbemenő anyagmozgás.",
+  "difficulty": "Easy",
+  "id": 189
+ },
+ {
+  "section": "Passzív transzport",
+  "q": "Milyen irányban mozognak az anyagok passzív transzport során?",
+  "a": "Nagyobb koncentrációjú helyről kisebb koncentrációjú hely felé.",
+  "difficulty": "Easy",
+  "id": 190
+ },
+ {
+  "section": "Passzív transzport",
+  "q": "Melyek a passzív transzport fő típusai?",
+  "a": "Egyszerű diffúzió, facilitált diffúzió és ozmózis.",
+  "difficulty": "Medium",
+  "id": 191,
+  "img": "images/cell-diagram-10.jpg"
+ },
+ {
+  "section": "Passzív transzport",
+  "q": "Mi az egyszerű diffúzió?",
+  "a": "Molekulák spontán mozgása koncentrációgradiens mentén.",
+  "difficulty": "Medium",
+  "id": 192
+ },
+ {
+  "section": "Passzív transzport",
+  "q": "Mi az egyszerű diffúzió példája?",
+  "a": "Az oxigén és a szén-dioxid membránon keresztüli mozgása.",
+  "difficulty": "Easy",
+  "id": 193
+ },
+ {
+  "section": "Passzív transzport",
+  "q": "Mi a facilitált diffúzió?",
+  "a": "Fehérjék segítségével végbemenő passzív anyagtranszport.",
+  "difficulty": "Medium",
+  "id": 194
+ },
+ {
+  "section": "Passzív transzport",
+  "q": "Mi a facilitált diffúzió példája?",
+  "a": "Ionok mozgása csatornafehérjéken keresztül.",
+  "difficulty": "Medium",
+  "id": 195
+ },
+ {
+  "section": "Passzív transzport",
+  "q": "Mi hajtja a passzív transzportot?",
+  "a": "A koncentrációkülönbségből származó hajtóerő.",
+  "difficulty": "Medium",
+  "id": 196
+ },
+ {
+  "section": "Ozmózis és a sejtek vízháztartása",
+  "q": "Mi az ozmózis?",
+  "a": "A víz passzív mozgása féligáteresztő membránon keresztül.",
+  "difficulty": "Easy",
+  "id": 197
+ },
+ {
+  "section": "Ozmózis és a sejtek vízháztartása",
+  "q": "Mi határozza meg a vízmozgás irányát?",
+  "a": "Az oldott anyagok koncentrációkülönbsége.",
+  "difficulty": "Medium",
+  "id": 198
+ },
+ {
+  "section": "Ozmózis és a sejtek vízháztartása",
+  "q": "Mi történik hígabb környezetben?",
+  "a": "A sejt vizet vesz fel.",
+  "difficulty": "Easy",
+  "id": 199
+ },
+ {
+  "section": "Ozmózis és a sejtek vízháztartása",
+  "q": "Mi történik töményebb környezetben?",
+  "a": "A sejt vizet veszít.",
+  "difficulty": "Easy",
+  "id": 200
+ },
+ {
+  "section": "Ozmózis és a sejtek vízháztartása",
+  "q": "Hogyan változhat a sejt térfogata ozmózis során?",
+  "a": "Nőhet vagy csökkenhet a vízmozgás irányától függően.",
+  "difficulty": "Medium",
+  "id": 201
+ },
+ {
+  "section": "Ozmózis és a sejtek vízháztartása",
+  "q": "Mi a hemolízis?",
+  "a": "A vörösvértest szétesése túlzott vízfelvétel következtében.",
+  "difficulty": "Medium",
+  "id": 202
+ },
+ {
+  "section": "Aktív transzport",
+  "q": "Mi az aktív transzport?",
+  "a": "ATP felhasználásával végbemenő anyagtranszport.",
+  "difficulty": "Easy",
+  "id": 203
+ },
+ {
+  "section": "Aktív transzport",
+  "q": "Kik végzik az aktív transzportot?",
+  "a": "Membránfehérjék.",
+  "difficulty": "Medium",
+  "id": 204
+ },
+ {
+  "section": "Aktív transzport",
+  "q": "Mi teszi lehetővé az aktív transzportot?",
+  "a": "Az ATP-ből származó energia.",
+  "difficulty": "Medium",
+  "id": 205
+ },
+ {
+  "section": "Aktív transzport",
+  "q": "Milyen irányban mozoghatnak az anyagok aktív transzport során?",
+  "a": "A koncentrációkülönbséggel ellentétes irányban is.",
+  "difficulty": "Medium",
+  "id": 206
+ },
+ {
+  "section": "Aktív transzport",
+  "q": "Mi az aktív transzport legismertebb példája?",
+  "a": "A Na+-K+-pumpa.",
+  "difficulty": "Easy",
+  "id": 207,
+  "img": "images/cell-diagram-11.jpg"
+ },
+ {
+  "section": "Aktív transzport",
+  "q": "Mi az aktív transzport jelentősége?",
+  "a": "A belső egyensúly és az ioneloszlás fenntartása.",
+  "difficulty": "Medium",
+  "id": 208
+ },
+ {
+  "section": "Aktív transzport",
+  "q": "Mely sejttípusok működéséhez különösen fontos az aktív transzport?",
+  "a": "Az ideg- és izomsejtekéhez.",
+  "difficulty": "Medium",
+  "id": 209
+ },
+ {
+  "section": "Membránáthelyezéssel járó transzport",
+  "q": "Milyen anyagok mozgatására alkalmas a membránáthelyezéssel járó transzport?",
+  "a": "Nagy molekulák, részecskék és folyadékcseppek mozgatására.",
+  "difficulty": "Medium",
+  "id": 210
+ },
+ {
+  "section": "Membránáthelyezéssel járó transzport",
+  "q": "Mi az endocitózis?",
+  "a": "Anyagfelvétel a sejtbe membránhólyagok segítségével.",
+  "difficulty": "Easy",
+  "id": 211,
+  "img": "images/cell-diagram-12.jpg"
+ },
+ {
+  "section": "Membránáthelyezéssel járó transzport",
+  "q": "Mi az exocitózis?",
+  "a": "Anyagleadás a sejtből membránhólyagok segítségével.",
+  "difficulty": "Easy",
+  "id": 212
+ },
+ {
+  "section": "Membránáthelyezéssel járó transzport",
+  "q": "Milyen anyagok kerülhetnek be endocitózissal?",
+  "a": "Nagyobb fehérjék, részecskék és folyadékcseppek.",
+  "difficulty": "Medium",
+  "id": 213
+ },
+ {
+  "section": "Membránáthelyezéssel járó transzport",
+  "q": "Milyen anyagok adhatók le exocitózissal?",
+  "a": "Hormonok, enzimek és ingerületátvivő anyagok.",
+  "difficulty": "Medium",
+  "id": 214
+ },
+ {
+  "section": "Membránáthelyezéssel járó transzport",
+  "q": "Igényel-e energiát az endocitózis és exocitózis?",
+  "a": "Igen, ATP-t igényelnek.",
+  "difficulty": "Easy",
+  "id": 215
+ },
+ {
+  "section": "A sejtek anyag- és energiaforgalma",
+  "q": "Mi a sejt működésének két alapvető anyagcsere-folyamata?",
+  "a": "A felépítő és a lebontó folyamatok.",
+  "difficulty": "Easy",
+  "id": 216
+ },
+ {
+  "section": "Felépítő és lebontó folyamatok",
+  "q": "Mi történik a felépítő folyamatok során?",
+  "a": "Kisebb molekulákból nagyobb és összetettebb molekulák képződnek.",
+  "difficulty": "Easy",
+  "id": 217
+ },
+ {
+  "section": "Felépítő és lebontó folyamatok",
+  "q": "Energiaigényesek-e a felépítő folyamatok?",
+  "a": "Igen.",
+  "difficulty": "Easy",
+  "id": 218
+ },
+ {
+  "section": "Felépítő és lebontó folyamatok",
+  "q": "Mi a fehérjeszintézis anyagcsere szempontból?",
+  "a": "Felépítő folyamat.",
+  "difficulty": "Medium",
+  "id": 219
+ },
+ {
+  "section": "Felépítő és lebontó folyamatok",
+  "q": "Mi a glikogénképzés?",
+  "a": "Glükózból történő poliszacharid-felépítés.",
+  "difficulty": "Medium",
+  "id": 220
+ },
+ {
+  "section": "Felépítő és lebontó folyamatok",
+  "q": "Mi történik a lebontó folyamatok során?",
+  "a": "Nagy molekulák kisebb molekulákra bomlanak.",
+  "difficulty": "Easy",
+  "id": 221
+ },
+ {
+  "section": "Felépítő és lebontó folyamatok",
+  "q": "Mi szabadul fel lebontás során?",
+  "a": "Energia.",
+  "difficulty": "Easy",
+  "id": 222
+ },
+ {
+  "section": "Felépítő és lebontó folyamatok",
+  "q": "Mire használja a sejt a felszabaduló energia egy részét?",
+  "a": "ATP képzésére.",
+  "difficulty": "Easy",
+  "id": 223
+ },
+ {
+  "section": "Felépítő és lebontó folyamatok",
+  "q": "Mit jelent, hogy az ember heterotróf élőlény?",
+  "a": "A táplálék szerves anyagaiból építi fel saját anyagait és azok lebontásából nyer energiát.",
+  "difficulty": "Medium",
+  "id": 224
+ },
+ {
+  "section": "Az ATP a sejt közvetlen energiaforrása",
+  "q": "Mi az ATP?",
+  "a": "Az ATP (adenozin-trifoszfát) a sejtek közvetlenül felhasználható energiaforrása. A sejt a legtöbb energiaigényes folyamatát ATP segítségével végzi.",
+  "difficulty": "Easy",
+  "id": 225
+ },
+ {
+  "section": "Az ATP a sejt közvetlen energiaforrása",
+  "q": "Miért nevezik az ATP-t a sejt energiapénzének?",
+  "a": "Mert a sejtek a kémiai energiát ATP formájában tárolják és használják fel különböző életfolyamataik működtetésére.",
+  "difficulty": "Easy",
+  "id": 226
+ },
+ {
+  "section": "Az ATP a sejt közvetlen energiaforrása",
+  "q": "Miből épül fel az ATP?",
+  "a": "Adenin nevű nitrogénbázisból, ribóz cukorból és három foszfátcsoportból.",
+  "difficulty": "Medium",
+  "id": 227
+ },
+ {
+  "section": "Az ATP a sejt közvetlen energiaforrása",
+  "q": "Hol található az ATP energiája?",
+  "a": "Elsősorban a foszfátcsoportok közötti nagy energiájú kémiai kötésekben.",
+  "difficulty": "Medium",
+  "id": 228
+ },
+ {
+  "section": "Az ATP a sejt közvetlen energiaforrása",
+  "q": "Hogyan szabadul fel energia az ATP-ből?",
+  "a": "Amikor a harmadik foszfátcsoport leválik az ATP-ről, ATP-ből ADP (adenozin-difoszfát) keletkezik és energia szabadul fel.",
+  "difficulty": "Medium",
+  "id": 229
+ },
+ {
+  "section": "Az ATP a sejt közvetlen energiaforrása",
+  "q": "Mi az ADP?",
+  "a": "Az ATP lebomlásakor keletkező adenozin-difoszfát, amely két foszfátcsoportot tartalmaz.",
+  "difficulty": "Medium",
+  "id": 230
+ },
+ {
+  "section": "Az ATP a sejt közvetlen energiaforrása",
+  "q": "Hogyan képződik újra ATP?",
+  "a": "Az ADP egy foszfátcsoport felvételével ATP-vé alakul vissza, ami energiát igényel.",
+  "difficulty": "Hard",
+  "id": 231
+ },
+ {
+  "section": "Az ATP a sejt közvetlen energiaforrása",
+  "q": "Miért van szükség ATP-re a sejtekben?",
+  "a": "Az ATP biztosítja a sejtek energiaigényes folyamataihoz szükséges energiát.",
+  "difficulty": "Easy",
+  "id": 232
+ },
+ {
+  "section": "Az ATP a sejt közvetlen energiaforrása",
+  "q": "Mire használják fel a sejtek az ATP energiáját?",
+  "a": "Anyagok szállítására, izomösszehúzódásra, fehérjeszintézisre, sejtosztódásra és egyéb energiaigényes folyamatokra.",
+  "difficulty": "Medium",
+  "id": 233,
+  "img": "images/cell-diagram-13.jpg"
+ },
+ {
+  "section": "Az ATP a sejt közvetlen energiaforrása",
+  "q": "Mi a kapcsolat az ATP és az aktív transzport között?",
+  "a": "Az aktív transzport ATP energiáját használja fel az anyagok koncentrációgradienssel szembeni mozgatására.",
+  "difficulty": "Medium",
+  "id": 234
+ },
+ {
+  "section": "Az ATP a sejt közvetlen energiaforrása",
+  "q": "Mi a kapcsolat az ATP és a fehérjeszintézis között?",
+  "a": "A fehérjék előállítása energiaigényes folyamat, amelyhez ATP szükséges.",
+  "difficulty": "Medium",
+  "id": 235
+ },
+ {
+  "section": "Az ATP a sejt közvetlen energiaforrása",
+  "q": "Mi a kapcsolat az ATP és az izomösszehúzódás között?",
+  "a": "Az izomrostok összehúzódásához és elernyedéséhez közvetlenül ATP szükséges.",
+  "difficulty": "Medium",
+  "id": 236
+ },
+ {
+  "section": "Az ATP a sejt közvetlen energiaforrása",
+  "q": "Miért kell az ATP-nek folyamatosan újraképződnie?",
+  "a": "Mert a sejtek állandóan felhasználják, és készlete nagyon kicsi.",
+  "difficulty": "Medium",
+  "id": 237
+ },
+ {
+  "section": "Az ATP a sejt közvetlen energiaforrása",
+  "q": "A sejtek nagy mennyiségben tárolják-e az ATP-t?",
+  "a": "Nem, az ATP folyamatosan képződik és folyamatosan felhasználódik.",
+  "difficulty": "Medium",
+  "id": 238
+ },
+ {
+  "section": "Az ATP a sejt közvetlen energiaforrása",
+  "q": "Honnan származik az ATP képzéséhez szükséges energia?",
+  "a": "A tápanyagok lebontásából felszabaduló energiából.",
+  "difficulty": "Medium",
+  "id": 239
+ },
+ {
+  "section": "Az ATP a sejt közvetlen energiaforrása",
+  "q": "Mely tápanyagok szolgáltathatnak energiát ATP-képzéshez?",
+  "a": "Szénhidrátok, zsírok és bizonyos esetekben fehérjék.",
+  "difficulty": "Medium",
+  "id": 240
+ },
+ {
+  "section": "Az ATP a sejt közvetlen energiaforrása",
+  "q": "Mi a sejtek legfontosabb energiaforrása ATP-termelés szempontjából?",
+  "a": "A glükóz.",
+  "difficulty": "Easy",
+  "id": 241
+ },
+ {
+  "section": "Az ATP a sejt közvetlen energiaforrása",
+  "q": "Hol történik az ATP-termelés jelentős része?",
+  "a": "A mitokondriumokban.",
+  "difficulty": "Easy",
+  "id": 242
+ },
+ {
+  "section": "Az ATP a sejt közvetlen energiaforrása",
+  "q": "Miért található sok mitokondrium az izomsejtekben?",
+  "a": "Mert az izomműködés sok ATP-t igényel.",
+  "difficulty": "Medium",
+  "id": 243
+ },
+ {
+  "section": "Az ATP a sejt közvetlen energiaforrása",
+  "q": "Miért található sok mitokondrium a szívizomsejtekben?",
+  "a": "Mert a szív folyamatos működése állandó és nagy energiaellátást igényel.",
+  "difficulty": "Medium",
+  "id": 244
+ },
+ {
+  "section": "Az ATP a sejt közvetlen energiaforrása",
+  "q": "Mi a kapcsolat a lebontó folyamatok és az ATP között?",
+  "a": "A lebontó folyamatok energiát szabadítanak fel, amely ATP képzésére fordítható.",
+  "difficulty": "Medium",
+  "id": 245
+ },
+ {
+  "section": "Az ATP a sejt közvetlen energiaforrása",
+  "q": "Mi a kapcsolat a felépítő folyamatok és az ATP között?",
+  "a": "A felépítő folyamatok ATP-t használnak fel energiaforrásként.",
+  "difficulty": "Medium",
+  "id": 246
+ },
+ {
+  "section": "Az ATP a sejt közvetlen energiaforrása",
+  "q": "Miért tekinthető az ATP közvetlen energiaforrásnak?",
+  "a": "Mert a sejtek az energiaigényes folyamatokat közvetlenül az ATP lebontásából származó energiával hajtják végre.",
+  "difficulty": "Medium",
+  "id": 247
+ },
+ {
+  "section": "Az ATP a sejt közvetlen energiaforrása",
+  "q": "Mi történik ATP hiányában?",
+  "a": "A sejt energiaigényes folyamatai leállnak, ami a sejtműködés súlyos zavarához vezet.",
+  "difficulty": "Hard",
+  "id": 248
+ },
+ {
+  "section": "Az ATP a sejt közvetlen energiaforrása",
+  "q": "Mi a legfontosabb összefoglaló állítás az ATP-ről?",
+  "a": "Az ATP a sejt közvetlen energiaforrása, amely folyamatosan képződik a tápanyagok lebontásából és folyamatosan felhasználódik a sejtműködés során.",
+  "difficulty": "Easy",
+  "id": 249
+ },
+ {
+  "section": "Aerob és anaerob energiafelszabadítás",
+  "q": "Mi az energiafelszabadítás két alapvető módja?",
+  "a": "Az aerob és az anaerob energiafelszabadítás.",
+  "difficulty": "Easy",
+  "id": 250
+ },
+ {
+  "section": "Aerob és anaerob energiafelszabadítás",
+  "q": "Mi az aerob energiafelszabadítás?",
+  "a": "Oxigén jelenlétében zajló energiatermelő folyamat.",
+  "difficulty": "Easy",
+  "id": 251
+ },
+ {
+  "section": "Aerob és anaerob energiafelszabadítás",
+  "q": "Mi az anaerob energiafelszabadítás?",
+  "a": "Olyan energiatermelő folyamat, amely nem használ fel közvetlenül oxigént.",
+  "difficulty": "Easy",
+  "id": 252
+ },
+ {
+  "section": "Aerob és anaerob energiafelszabadítás",
+  "q": "Melyik energiafelszabadítás hatékonyabb?",
+  "a": "Az aerob energiafelszabadítás.",
+  "difficulty": "Easy",
+  "id": 253
+ },
+ {
+  "section": "Aerob és anaerob energiafelszabadítás",
+  "q": "Miért hatékonyabb az aerob energiafelszabadítás?",
+  "a": "Mert a tápanyagok teljesebb lebontását valósítja meg, így több ATP termelődik.",
+  "difficulty": "Medium",
+  "id": 254
+ },
+ {
+  "section": "Aerob és anaerob energiafelszabadítás",
+  "q": "Az aerob lebontás során milyen végtermékek keletkeznek?",
+  "a": "Szén-dioxid és víz.",
+  "difficulty": "Easy",
+  "id": 255
+ },
+ {
+  "section": "Aerob és anaerob energiafelszabadítás",
+  "q": "Az anaerob lebontás során mennyi ATP képződik?",
+  "a": "Kevesebb ATP, mint aerob lebontás esetén.",
+  "difficulty": "Medium",
+  "id": 256
+ },
+ {
+  "section": "Aerob és anaerob energiafelszabadítás",
+  "q": "Mikor fokozódhat az anaerob energiafelszabadítás?",
+  "a": "Nagy intenzitású izomműködés során.",
+  "difficulty": "Medium",
+  "id": 257
+ },
+ {
+  "section": "Aerob és anaerob energiafelszabadítás",
+  "q": "Miért kapcsol be az anaerob energiafelszabadítás intenzív terheléskor?",
+  "a": "Mert az oxigénellátás nem mindig képes követni az energiaigényt.",
+  "difficulty": "Hard",
+  "id": 258
+ },
+ {
+  "section": "A glükóz aerob lebontásának fő szakaszai",
+  "q": "Mi a glükóz aerob lebontásának célja?",
+  "a": "A glükózban tárolt kémiai energia felszabadítása és ATP-vé alakítása.",
+  "difficulty": "Medium",
+  "id": 259
+ },
+ {
+  "section": "A glükóz aerob lebontásának fő szakaszai",
+  "q": "Hol zajlik a glükóz aerob lebontásának jelentős része?",
+  "a": "A mitokondriumban.",
+  "difficulty": "Easy",
+  "id": 260
+ },
+ {
+  "section": "A glükóz aerob lebontásának fő szakaszai",
+  "q": "Mire van szükség az aerob lebontáshoz?",
+  "a": "Oxigénre.",
+  "difficulty": "Easy",
+  "id": 261
+ },
+ {
+  "section": "A glükóz aerob lebontásának fő szakaszai",
+  "q": "Mi a glükóz aerob lebontásának eredménye?",
+  "a": "Jelentős mennyiségű ATP, valamint szén-dioxid és víz keletkezik.",
+  "difficulty": "Medium",
+  "id": 262
+ },
+ {
+  "section": "A glükóz aerob lebontásának fő szakaszai",
+  "q": "Miért tekinthető az aerob lebontás hatékonynak?",
+  "a": "Mert a glükóz energiájának nagy részét ATP formájában képes hasznosítani.",
+  "difficulty": "Medium",
+  "id": 263
+ },
+ {
+  "section": "A glükóz aerob lebontásának fő szakaszai",
+  "q": "Csak a szénhidrátok kapcsolódhatnak be az energiatermelésbe?",
+  "a": "Nem. A zsírok és a fehérjék lebontási termékei is bekapcsolódhatnak a közös energiatermelő folyamatokba.",
+  "difficulty": "Medium",
+  "id": 264
+ },
+ {
+  "section": "A glükóz aerob lebontásának fő szakaszai",
+  "q": "Mi a kapcsolat a glükóz és az ATP között?",
+  "a": "A glükóz lebontása során felszabaduló energia ATP képzésére fordítható.",
+  "difficulty": "Medium",
+  "id": 265
+ },
+ {
+  "section": "Az energiaellátás és az izomműködés kapcsolata",
+  "q": "Mire van szükség az izomösszehúzódáshoz?",
+  "a": "ATP-re.",
+  "difficulty": "Easy",
+  "id": 266
+ },
+ {
+  "section": "Az energiaellátás és az izomműködés kapcsolata",
+  "q": "Mi az izomműködés közvetlen energiaforrása?",
+  "a": "Az ATP.",
+  "difficulty": "Easy",
+  "id": 267
+ },
+ {
+  "section": "Az energiaellátás és az izomműködés kapcsolata",
+  "q": "Milyen energiaellátás dominál nyugalomban?",
+  "a": "Az aerob energiaellátás.",
+  "difficulty": "Easy",
+  "id": 268
+ },
+ {
+  "section": "Az energiaellátás és az izomműködés kapcsolata",
+  "q": "Milyen energiaellátás dominál mérsékelt terhelés esetén?",
+  "a": "Többségében az aerob energiaellátás.",
+  "difficulty": "Easy",
+  "id": 269
+ },
+ {
+  "section": "Az energiaellátás és az izomműködés kapcsolata",
+  "q": "Mit szállít a vér az izomsejtekhez?",
+  "a": "Oxigént és tápanyagokat.",
+  "difficulty": "Easy",
+  "id": 270,
+  "img": "images/cell-diagram-14.jpg"
+ },
+ {
+  "section": "Az energiaellátás és az izomműködés kapcsolata",
+  "q": "Mi történik nagy intenzitású terhelés során?",
+  "a": "Fokozódhat az anaerob energiafelszabadítás.",
+  "difficulty": "Medium",
+  "id": 271
+ },
+ {
+  "section": "Az energiaellátás és az izomműködés kapcsolata",
+  "q": "Miért fontos az oxigén az izomműködés során?",
+  "a": "Az aerob ATP-termeléshez szükséges.",
+  "difficulty": "Medium",
+  "id": 272
+ },
+ {
+  "section": "Az energiaellátás és az izomműködés kapcsolata",
+  "q": "Mi a különbség az aerob és az anaerob energiaellátás között?",
+  "a": "Az aerob energiaellátás hatékonyabb és több ATP-t termel, de oxigént igényel, míg az anaerob gyorsabb, de kevesebb ATP-t biztosít.",
+  "difficulty": "Medium",
+  "id": 273
+ },
+ {
+  "section": "A lebontó és felépítő folyamatok összekapcsolódása",
+  "q": "Mi a lebontó folyamatok egyik legfontosabb szerepe?",
+  "a": "Energia biztosítása.",
+  "difficulty": "Easy",
+  "id": 274
+ },
+ {
+  "section": "A lebontó és felépítő folyamatok összekapcsolódása",
+  "q": "Milyen formában hasznosul a lebontásból származó energia?",
+  "a": "ATP formájában.",
+  "difficulty": "Easy",
+  "id": 275
+ },
+ {
+  "section": "A lebontó és felépítő folyamatok összekapcsolódása",
+  "q": "Mire használja a sejt az ATP-t?",
+  "a": "A felépítő és más energiaigényes folyamatok működtetésére.",
+  "difficulty": "Medium",
+  "id": 276
+ },
+ {
+  "section": "A lebontó és felépítő folyamatok összekapcsolódása",
+  "q": "Mi a kapcsolat a lebontó és felépítő folyamatok között?",
+  "a": "A lebontó folyamatok energiát termelnek, a felépítő folyamatok ezt az energiát használják fel.",
+  "difficulty": "Medium",
+  "id": 277
+ },
+ {
+  "section": "A lebontó és felépítő folyamatok összekapcsolódása",
+  "q": "Min alapul a sejt működése?",
+  "a": "A felépítő és lebontó folyamatok egységén és összehangoltságán.",
+  "difficulty": "Medium",
+  "id": 278
+ },
+ {
+  "section": "A lebontó és felépítő folyamatok összekapcsolódása",
+  "q": "Miért nélkülözhetetlen a két folyamatcsoport együttműködése?",
+  "a": "Mert energia nélkül nincs felépítés, és energiaigény nélkül a lebontás sem szolgálná a sejtműködést.",
+  "difficulty": "Hard",
+  "id": 279
+ },
+ {
+  "section": "A sejtek specializálódása",
+  "q": "Mit jelent a sejtek specializálódása?",
+  "a": "Az azonos alapfelépítésű sejtek eltérő feladatokra alkalmazkodnak.",
+  "difficulty": "Easy",
+  "id": 280
+ },
+ {
+  "section": "A sejtek specializálódása",
+  "q": "Mi jellemzi a specializált sejteket?",
+  "a": "Ugyanazon alapvető sejtszerkezet mellett eltérő feladatot látnak el.",
+  "difficulty": "Easy",
+  "id": 281
+ },
+ {
+  "section": "A sejtek specializálódása",
+  "q": "Miért fontos a specializáció?",
+  "a": "Lehetővé teszi a szervezet bonyolult működését és a munkamegosztást.",
+  "difficulty": "Medium",
+  "id": 282
+ },
+ {
+  "section": "Miért különböznek egymástól az emberi sejtek?",
+  "q": "Miből származik minden emberi sejt?",
+  "a": "Ugyanabból a megtermékenyített petesejtből.",
+  "difficulty": "Easy",
+  "id": 283,
+  "img": "images/cell-diagram-15.jpg"
+ },
+ {
+  "section": "Miért különböznek egymástól az emberi sejtek?",
+  "q": "Az emberi sejtek azonos genetikai állományt tartalmaznak?",
+  "a": "Nagyrészt igen.",
+  "difficulty": "Medium",
+  "id": 284
+ },
+ {
+  "section": "Miért különböznek egymástól az emberi sejtek?",
+  "q": "Miért különböznek mégis a sejtek egymástól?",
+  "a": "Mert különböző gének működnek bennük.",
+  "difficulty": "Medium",
+  "id": 285
+ },
+ {
+  "section": "Miért különböznek egymástól az emberi sejtek?",
+  "q": "Mi a génműködés következménye?",
+  "a": "Eltérő fehérjék termelődnek.",
+  "difficulty": "Medium",
+  "id": 286
+ },
+ {
+  "section": "Miért különböznek egymástól az emberi sejtek?",
+  "q": "Mi határozza meg a sejtek eltérő működését?",
+  "a": "Az eltérő génműködés és fehérjetermelés.",
+  "difficulty": "Medium",
+  "id": 287
+ },
+ {
+  "section": "Miért különböznek egymástól az emberi sejtek?",
+  "q": "Mihez alkalmazkodik a sejtek alakja és belső felépítése?",
+  "a": "Az általuk ellátott feladathoz.",
+  "difficulty": "Easy",
+  "id": 288
+ },
+ {
+  "section": "Specializált sejtek összehasonlítása",
+  "q": "Mi a hámsejt fő feladata?",
+  "a": "Borítás, elhatárolás és felszívás.",
+  "difficulty": "Easy",
+  "id": 289
+ },
+ {
+  "section": "Specializált sejtek összehasonlítása",
+  "q": "Mi jellemzi a hámsejteket?",
+  "a": "Szorosan kapcsolódnak egymáshoz.",
+  "difficulty": "Easy",
+  "id": 290
+ },
+ {
+  "section": "Specializált sejtek összehasonlítása",
+  "q": "Mi a mirigysejtek fő feladata?",
+  "a": "Váladéktermelés.",
+  "difficulty": "Easy",
+  "id": 291
+ },
+ {
+  "section": "Specializált sejtek összehasonlítása",
+  "q": "Milyen sejtalkotók fejlettek a mirigysejtekben?",
+  "a": "A durva felszínű ER, a Golgi-készülék és a membránhólyagok.",
+  "difficulty": "Medium",
+  "id": 292
+ },
+ {
+  "section": "Specializált sejtek összehasonlítása",
+  "q": "Mi az izomsejtek fő feladata?",
+  "a": "Az összehúzódás.",
+  "difficulty": "Easy",
+  "id": 293
+ },
+ {
+  "section": "Specializált sejtek összehasonlítása",
+  "q": "Mi jellemzi az izomsejteket?",
+  "a": "Aktin- és miozinszálakat, valamint sok mitokondriumot tartalmaznak.",
+  "difficulty": "Medium",
+  "id": 294
+ },
+ {
+  "section": "Specializált sejtek összehasonlítása",
+  "q": "Mi a kötőszöveti sejtek feladata?",
+  "a": "A sejtközötti állomány képzése és fenntartása.",
+  "difficulty": "Medium",
+  "id": 295
+ },
+ {
+  "section": "Specializált sejtek összehasonlítása",
+  "q": "Mitől függ a kötőszöveti sejtek alakja?",
+  "a": "Az adott szövettípustól.",
+  "difficulty": "Medium",
+  "id": 296
+ },
+ {
+  "section": "Specializált sejtek összehasonlítása",
+  "q": "Mi a vörösvértest fő feladata?",
+  "a": "A gázszállítás.",
+  "difficulty": "Easy",
+  "id": 297
+ },
+ {
+  "section": "Specializált sejtek összehasonlítása",
+  "q": "Mi található a vörösvértestben?",
+  "a": "Hemoglobin.",
+  "difficulty": "Easy",
+  "id": 298
+ },
+ {
+  "section": "Specializált sejtek összehasonlítása",
+  "q": "Mi hiányzik az érett vörösvértestből?",
+  "a": "A sejtmag.",
+  "difficulty": "Medium",
+  "id": 299
+ },
+ {
+  "section": "Specializált sejtek összehasonlítása",
+  "q": "Mi az idegsejt fő feladata?",
+  "a": "Információ felvétele és továbbítása.",
+  "difficulty": "Easy",
+  "id": 300
+ },
+ {
+  "section": "Specializált sejtek összehasonlítása",
+  "q": "Mi jellemzi az idegsejteket?",
+  "a": "Hosszú nyúlványokkal és ingerelhető sejthártyával rendelkeznek.",
+  "difficulty": "Medium",
+  "id": 301
+ },
+ {
+  "section": "Specializált sejtek összehasonlítása",
+  "q": "Mi határozza meg a sejtek alakját és felépítését?",
+  "a": "A működésük.",
+  "difficulty": "Easy",
+  "id": 302
+ },
+ {
+  "section": "A sejtektől a szövetekig",
+  "q": "Mi a szövet?",
+  "a": "A szövet hasonló eredetű, hasonló felépítésű és összehangolt működésű sejtek együttese.",
+  "difficulty": "Easy",
+  "id": 303,
+  "img": "images/cell-diagram-16.jpg"
+ },
+ {
+  "section": "A sejtektől a szövetekig",
+  "q": "Miből épül fel a szövet?",
+  "a": "A szövetet a sejtek és a sejtközötti állomány együttesen alkotják.",
+  "difficulty": "Easy",
+  "id": 304
+ },
+ {
+  "section": "A sejtektől a szövetekig",
+  "q": "Mi a sejtközötti állomány?",
+  "a": "A sejtek között található anyag, amely szerkezeti és működési szerepet tölt be a szövetekben.",
+  "difficulty": "Medium",
+  "id": 305
+ },
+ {
+  "section": "A sejtektől a szövetekig",
+  "q": "Azonos mennyiségű sejtközötti állomány található minden szövetben?",
+  "a": "Nem. A mennyisége és összetétele szövettípusonként eltérő.",
+  "difficulty": "Medium",
+  "id": 306
+ },
+ {
+  "section": "A sejtektől a szövetekig",
+  "q": "Mi teszi lehetővé a szövetek kialakulását?",
+  "a": "A sejtek specializálódása.",
+  "difficulty": "Medium",
+  "id": 307
+ },
+ {
+  "section": "A sejtektől a szövetekig",
+  "q": "Hogyan kapcsolódik a specializáció a szövetképzéshez?",
+  "a": "Az eltérő feladatokra specializálódott sejtek együttműködve szöveteket alkotnak.",
+  "difficulty": "Medium",
+  "id": 308
+ },
+ {
+  "section": "A sejtektől a szövetekig",
+  "q": "Miért fontos a szövetek kialakulása?",
+  "a": "Lehetővé teszi összetettebb szerkezetek, szervek és szervrendszerek létrejöttét.",
+  "difficulty": "Medium",
+  "id": 309
+ },
+ {
+  "section": "A négy fő szövettípus",
+  "q": "Hány alapvető szövettípus különíthető el az állati szervezetben?",
+  "a": "Négy alapvető szövettípus.",
+  "difficulty": "Easy",
+  "id": 310
+ },
+ {
+  "section": "A négy fő szövettípus",
+  "q": "Mi alapján különböztethetők meg a szövettípusok?",
+  "a": "A sejtek felépítése, a sejtközötti állomány és a fő működés alapján.",
+  "difficulty": "Medium",
+  "id": 311
+ },
+ {
+  "section": "A négy fő szövettípus",
+  "q": "Melyik a négy fő szövettípus?",
+  "a": "Hámszövet, kötő- és támasztószövet, izomszövet és idegszövet.",
+  "difficulty": "Easy",
+  "id": 312
+ },
+ {
+  "section": "A négy fő szövettípus",
+  "q": "Milyen feladatokat lát el a hámszövet?",
+  "a": "Borítás, elhatárolás és felszívás.",
+  "difficulty": "Easy",
+  "id": 313
+ },
+ {
+  "section": "A négy fő szövettípus",
+  "q": "Mi a hámszövet legfontosabb szerepe?",
+  "a": "A testfelszínek és üregek borítása, valamint az anyagforgalom szabályozása.",
+  "difficulty": "Medium",
+  "id": 314
+ },
+ {
+  "section": "A négy fő szövettípus",
+  "q": "Milyen feladatokat lát el a kötő- és támasztószövet?",
+  "a": "Összekapcsolás, kitöltés és támasztás.",
+  "difficulty": "Easy",
+  "id": 315
+ },
+ {
+  "section": "A négy fő szövettípus",
+  "q": "Mi a kötő- és támasztószövet jelentősége?",
+  "a": "Mechanikai támaszt nyújt a szervezet számára és kapcsolatot biztosít a szövetek között.",
+  "difficulty": "Medium",
+  "id": 316
+ },
+ {
+  "section": "A négy fő szövettípus",
+  "q": "Mi az izomszövet fő feladata?",
+  "a": "Az összehúzódás és a mozgás.",
+  "difficulty": "Easy",
+  "id": 317
+ },
+ {
+  "section": "A négy fő szövettípus",
+  "q": "Mi teszi lehetővé az izomszövet működését?",
+  "a": "Az aktin- és miozinszálak működése.",
+  "difficulty": "Medium",
+  "id": 318
+ },
+ {
+  "section": "A négy fő szövettípus",
+  "q": "Mi az idegszövet fő feladata?",
+  "a": "Az ingerfelvétel, ingerületvezetés és információfeldolgozás.",
+  "difficulty": "Easy",
+  "id": 319
+ },
+ {
+  "section": "A négy fő szövettípus",
+  "q": "Miért nélkülözhetetlen az idegszövet?",
+  "a": "Lehetővé teszi a szervezet szabályozását és a különböző szervek működésének összehangolását.",
+  "difficulty": "Medium",
+  "id": 320
+ },
+ {
+  "section": "A négy fő szövettípus",
+  "q": "Mit alkotnak a különböző szövettípusok?",
+  "a": "Szerveket és szervrendszereket.",
+  "difficulty": "Easy",
+  "id": 321
+ },
+ {
+  "section": "Mit kell tudni a sejtről?",
+  "q": "Mi a sejt szerepe az élő szervezetben?",
+  "a": "A szervezet alapegysége.",
+  "difficulty": "Easy",
+  "id": 322
+ },
+ {
+  "section": "Mit kell tudni a sejtről?",
+  "q": "Mi jellemzi a sejt kapcsolatát a környezetével?",
+  "a": "Folyamatos anyag- és energiacsere zajlik a környezettel.",
+  "difficulty": "Easy",
+  "id": 323
+ },
+ {
+  "section": "Mit kell tudni a sejtről?",
+  "q": "Mi biztosítja a sejt működését?",
+  "a": "A genetikai információ és a sejtalkotók összehangolt munkája.",
+  "difficulty": "Medium",
+  "id": 324
+ },
+ {
+  "section": "Mit kell tudni a sejtről?",
+  "q": "Mit alkotnak a specializált sejtek?",
+  "a": "Szöveteket.",
+  "difficulty": "Easy",
+  "id": 325
+ },
+ {
+  "section": "Mit kell tudni a sejtről?",
+  "q": "Mi a legfontosabb kapcsolat a sejttanban?",
+  "a": "A sejt felépítése és működése szorosan összefügg.",
+  "difficulty": "Medium",
+  "id": 326
+ },
+ {
+  "section": "Összefoglalás",
+  "q": "Mi az emberi szervezet alapvető működési egysége?",
+  "a": "A sejt.",
+  "difficulty": "Easy",
+  "id": 327,
+  "img": "images/cell-diagram-17.jpg"
+ },
+ {
+  "section": "Összefoglalás",
+  "q": "Mi a sejthártya két fő feladata?",
+  "a": "Elhatárolás és az anyagforgalom szabályozása.",
+  "difficulty": "Easy",
+  "id": 328
+ },
+ {
+  "section": "Összefoglalás",
+  "q": "Mit tartalmaz a sejtmag?",
+  "a": "DNS-t.",
+  "difficulty": "Easy",
+  "id": 329
+ },
+ {
+  "section": "Összefoglalás",
+  "q": "Mire használja fel a sejt a DNS-ben található információt?",
+  "a": "A fehérjék előállítására.",
+  "difficulty": "Medium",
+  "id": 330
+ },
+ {
+  "section": "Összefoglalás",
+  "q": "Hol zajlik az aerob ATP-termelés döntő része?",
+  "a": "A mitokondriumban.",
+  "difficulty": "Easy",
+  "id": 331
+ },
+ {
+  "section": "Összefoglalás",
+  "q": "Igényel-e ATP-t a passzív transzport?",
+  "a": "Nem.",
+  "difficulty": "Easy",
+  "id": 332
+ },
+ {
+  "section": "Összefoglalás",
+  "q": "Igényel-e energiát az aktív transzport?",
+  "a": "Igen.",
+  "difficulty": "Easy",
+  "id": 333
+ },
+ {
+  "section": "Összefoglalás",
+  "q": "Igényel-e energiát az endocitózis és exocitózis?",
+  "a": "Igen.",
+  "difficulty": "Easy",
+  "id": 334
+ },
+ {
+  "section": "Összefoglalás",
+  "q": "Mi biztosít energiát a sejt működéséhez?",
+  "a": "A lebontó folyamatok.",
+  "difficulty": "Easy",
+  "id": 335
+ },
+ {
+  "section": "Összefoglalás",
+  "q": "Miért alapozzák meg a sejttani ismeretek a későbbi anatómiai és élettani tanulmányokat?",
+  "a": "Mert a szövetek, szervek és szervrendszerek működésének alapja a sejtek működése.",
+  "difficulty": "Medium",
+  "id": 336
+ },
+ {
+  "section": "Fogalmi kapcsolatok",
+  "q": "Sejthártya → milyen funkció?",
+  "a": "Szelektív áteresztés.",
+  "difficulty": "Easy",
+  "id": 337
+ },
+ {
+  "section": "Fogalmi kapcsolatok",
+  "q": "Mit jelent a sejthártya szelektív áteresztése?",
+  "a": "Meghatározza, mely anyagok juthatnak át a membránon.",
+  "difficulty": "Medium",
+  "id": 338
+ },
+ {
+  "section": "Fogalmi kapcsolatok",
+  "q": "Sejtmag → milyen funkció?",
+  "a": "Genetikai információ tárolása.",
+  "difficulty": "Easy",
+  "id": 339
+ },
+ {
+  "section": "Fogalmi kapcsolatok",
+  "q": "Riboszóma → milyen funkció?",
+  "a": "Fehérjeszintézis.",
+  "difficulty": "Easy",
+  "id": 340
+ },
+ {
+  "section": "Fogalmi kapcsolatok",
+  "q": "Golgi-készülék → milyen funkció?",
+  "a": "A fehérjék módosítása és csomagolása.",
+  "difficulty": "Medium",
+  "id": 341
+ },
+ {
+  "section": "Fogalmi kapcsolatok",
+  "q": "Lizoszóma → milyen funkció?",
+  "a": "Lebontás.",
+  "difficulty": "Easy",
+  "id": 342
+ },
+ {
+  "section": "Fogalmi kapcsolatok",
+  "q": "Mitokondrium → milyen funkció?",
+  "a": "ATP-termelés.",
+  "difficulty": "Easy",
+  "id": 343
+ },
+ {
+  "section": "Fogalmi kapcsolatok",
+  "q": "Diffúzió → melyik transzporttípus?",
+  "a": "Passzív transzport.",
+  "difficulty": "Easy",
+  "id": 344
+ },
+ {
+  "section": "Fogalmi kapcsolatok",
+  "q": "Na+-K+-pumpa → melyik transzporttípus?",
+  "a": "Aktív transzport.",
+  "difficulty": "Easy",
+  "id": 345
+ },
+ {
+  "section": "Fogalmi kapcsolatok",
+  "q": "Exocitózis → milyen folyamat?",
+  "a": "Anyagleadás.",
+  "difficulty": "Easy",
+  "id": 346
+ },
+ {
+  "section": "Fogalmi kapcsolatok",
+  "q": "Endocitózis → milyen folyamat?",
+  "a": "Anyagfelvétel.",
+  "difficulty": "Easy",
+  "id": 347
+ },
+ {
+  "section": "Fogalmi kapcsolatok",
+  "q": "Durva felszínű ER → milyen funkció?",
+  "a": "Fehérjék továbbítása és feldolgozása.",
+  "difficulty": "Medium",
+  "id": 348
+ },
+ {
+  "section": "Fogalmi kapcsolatok",
+  "q": "Enzim → milyen feladat?",
+  "a": "Biokémiai reakciók gyorsítása.",
+  "difficulty": "Medium",
+  "id": 349
+ },
+ {
+  "section": "Fogalmi kapcsolatok",
+  "q": "Mi a kapcsolat a sejtmag és a riboszómák között?",
+  "a": "A sejtmag genetikai információja alapján a riboszómák fehérjét szintetizálnak.",
+  "difficulty": "Medium",
+  "id": 350
+ },
+ {
+  "section": "Fogalmi kapcsolatok",
+  "q": "Mi a kapcsolat a riboszóma, a durva ER és a Golgi-készülék között?",
+  "a": "Együtt vesznek részt a fehérjék előállításában, módosításában és célba juttatásában.",
+  "difficulty": "Hard",
+  "id": 351
+ },
+ {
+  "section": "Fogalmi kapcsolatok",
+  "q": "Mi a kapcsolat az ATP és a mitokondrium között?",
+  "a": "A mitokondrium a sejtek ATP-termelésének fő helyszíne.",
+  "difficulty": "Easy",
+  "id": 352
+ },
+ {
+  "section": "Fogalmi kapcsolatok",
+  "q": "Mi a kapcsolat a diffúzió és az ozmózis között?",
+  "a": "Mindkettő passzív transzportfolyamat, amely koncentrációkülönbség hatására zajlik.",
+  "difficulty": "Medium",
+  "id": 353
+ },
+ {
+  "section": "Fogalmi kapcsolatok",
+  "q": "Mi a kapcsolat az endocitózis és exocitózis között?",
+  "a": "Mindkettő membránáthelyezéssel járó transzport, az egyik anyagfelvételt, a másik anyagleadást biztosít.",
+  "difficulty": "Medium",
+  "id": 354
+ },
+ {
+  "section": "Fogalmi kapcsolatok",
+  "q": "Mi a teljes kurzus egyik legfontosabb összefoglaló tétele?",
+  "a": "A sejtek felépítése, működése, energiaforgalma és specializációja együtt teszi lehetővé az emberi szervezet működését.",
+  "difficulty": "Medium",
+  "id": 355
+ },
+ {
+  "section": "Lizoszómák - lebontás és újrahasznosítás",
+  "q": "Mik a lizoszómák?",
+  "a": "A lizoszómák lebontó enzimeket tartalmazó membránhólyagok, amelyek a sejten belüli lebontási és újrahasznosítási folyamatokban vesznek részt.",
+  "difficulty": "Easy",
+  "id": 356,
+  "img": "images/cell-diagram-18.jpg"
+ },
+ {
+  "section": "Lizoszómák - lebontás és újrahasznosítás",
+  "q": "Milyen anyagokat bontanak le a lizoszómák?",
+  "a": "A sejt által felvett egyes anyagokat, valamint különböző makromolekulákat.",
+  "difficulty": "Easy",
+  "id": 357
+ },
+ {
+  "section": "Lizoszómák - lebontás és újrahasznosítás",
+  "q": "Mi történik a károsodott sejtalkotókkal?",
+  "a": "A lizoszómák lebontják a károsodott vagy elöregedett sejtalkotókat.",
+  "difficulty": "Easy",
+  "id": 358
+ },
+ {
+  "section": "Lizoszómák - lebontás és újrahasznosítás",
+  "q": "Mi az intracelluláris emésztés?",
+  "a": "A sejt belsejében történő lebontó folyamat, amelyben a lizoszómák enzimei különböző anyagokat bontanak le.",
+  "difficulty": "Medium",
+  "id": 359
+ },
+ {
+  "section": "Lizoszómák - lebontás és újrahasznosítás",
+  "q": "Mi történik a lebontás során keletkező hasznos alkotórészekkel?",
+  "a": "A felhasználható alkotórészek visszakerülhetnek a sejt anyagcseréjébe és újra felhasználhatók.",
+  "difficulty": "Medium",
+  "id": 360
+ },
+ {
+  "section": "Lizoszómák - lebontás és újrahasznosítás",
+  "q": "Mi történik a nem hasznosítható anyagokkal?",
+  "a": "A sejt exocitózis segítségével eltávolíthatja őket.",
+  "difficulty": "Medium",
+  "id": 361
+ },
+ {
+  "section": "Lizoszómák - lebontás és újrahasznosítás",
+  "q": "Miért nevezhetők a lizoszómák a sejt újrahasznosító rendszerének?",
+  "a": "Mert lebontják az elhasználódott sejtalkotókat és a hasznos alkotóelemeket visszaforgatják a sejt működésébe.",
+  "difficulty": "Medium",
+  "id": 362
+ },
+ {
+  "section": "Lizoszómák - lebontás és újrahasznosítás",
+  "q": "Miért fontos a lizoszómák működése a sejt számára?",
+  "a": "Segít fenntartani a sejt belső rendjét és eltávolítani a működésképtelen alkotókat.",
+  "difficulty": "Medium",
+  "id": 363
+ },
+ {
+  "section": "Lizoszómák - lebontás és újrahasznosítás",
+  "q": "Hogyan járulnak hozzá a lizoszómák a sejtek egészségéhez?",
+  "a": "A felesleges, sérült vagy elöregedett struktúrák eltávolításával.",
+  "difficulty": "Medium",
+  "id": 364
+ },
+ {
+  "section": "Lizoszómák - lebontás és újrahasznosítás",
+  "q": "Mi a kapcsolat a lizoszómák és az exocitózis között?",
+  "a": "A lizoszómák által lebontott, de nem hasznosítható anyagok exocitózissal eltávolíthatók a sejtből.",
+  "difficulty": "Medium",
+  "id": 365
+ },
+ {
+  "section": "Lizoszómák - lebontás és újrahasznosítás",
+  "q": "Mi a lizoszómák és az anyagcsere kapcsolata?",
+  "a": "A lebontott anyagok egy része újra bekerül az anyagcserébe, így a lizoszómák közvetlenül támogatják a sejt anyagforgalmát.",
+  "difficulty": "Hard",
+  "id": 366
+ },
+ {
+  "section": "Lizoszómák - lebontás és újrahasznosítás",
+  "q": "Miért tekinthető a lizoszóma membránhólyagnak?",
+  "a": "Mert enzimeit membránnal körülhatárolt belső térben tárolja.",
+  "difficulty": "Medium",
+  "id": 367
+ },
+ {
+  "section": "Lizoszómák - lebontás és újrahasznosítás",
+  "q": "Miért fontos, hogy a lebontó enzimek membránnal legyenek elhatárolva?",
+  "a": "Így az enzimek nem károsítják a sejt többi alkotórészét.",
+  "difficulty": "Hard",
+  "id": 368
+ },
+ {
+  "section": "Lizoszómák - lebontás és újrahasznosítás",
+  "q": "Melyik sejtszervecske felelős elsősorban a sejten belüli lebontásért?",
+  "a": "A lizoszóma.",
+  "difficulty": "Easy",
+  "id": 369
+ },
+ {
+  "section": "Lizoszómák - lebontás és újrahasznosítás",
+  "q": "Mi a lizoszómák összefoglaló funkciója?",
+  "a": "Lebontás, tisztítás és újrahasznosítás.",
+  "difficulty": "Easy",
+  "id": 370
+ },
+ {
+  "section": "A tápanyagok lebontásának két szintje",
+  "q": "Miért szükséges a tápanyagok lebontása?",
+  "a": "Azért, mert a táplálékban található nagy molekulák közvetlenül nem használhatók fel a sejtek számára. Ezeket először kisebb egységekre kell bontani, majd a sejtek tovább dolgozzák fel őket energia előállítására és saját anyagaik felépítésére.",
+  "difficulty": "Medium",
+  "id": 371,
+  "img": "images/cell-diagram-19.jpg"
+ },
+ {
+  "section": "A tápanyagok lebontásának két szintje",
+  "q": "Hol történik a tápanyagok lebontásának első szintje?",
+  "a": "Az emésztőrendszerben.",
+  "difficulty": "Easy",
+  "id": 372
+ },
+ {
+  "section": "A tápanyagok lebontásának két szintje",
+  "q": "Mi történik az emésztés során?",
+  "a": "A nagy méretű tápanyag-molekulák kisebb egységekre bomlanak, amelyek felszívódhatnak a bélrendszerből.",
+  "difficulty": "Easy",
+  "id": 373
+ },
+ {
+  "section": "A tápanyagok lebontásának két szintje",
+  "q": "Hogyan bomlanak le a szénhidrátok az emésztés során?",
+  "a": "Egyszerű cukrokká, elsősorban glükózzá.",
+  "difficulty": "Medium",
+  "id": 374
+ },
+ {
+  "section": "A tápanyagok lebontásának két szintje",
+  "q": "Hogyan bomlanak le a fehérjék az emésztés során?",
+  "a": "Aminosavakra.",
+  "difficulty": "Easy",
+  "id": 375
+ },
+ {
+  "section": "A tápanyagok lebontásának két szintje",
+  "q": "Hogyan bomlanak le a zsírok az emésztés során?",
+  "a": "Zsírsavakra és glicerinre.",
+  "difficulty": "Medium",
+  "id": 376
+ },
+ {
+  "section": "A tápanyagok lebontásának két szintje",
+  "q": "Mi történik az emésztés után keletkező kisebb molekulákkal?",
+  "a": "Felszívódnak és a vérkeringés segítségével eljutnak a sejtekhez.",
+  "difficulty": "Medium",
+  "id": 377
+ },
+ {
+  "section": "A tápanyagok lebontásának két szintje",
+  "q": "Hol történik a tápanyagok lebontásának második szintje?",
+  "a": "A sejtekben.",
+  "difficulty": "Easy",
+  "id": 378
+ },
+ {
+  "section": "A tápanyagok lebontásának két szintje",
+  "q": "Mi a sejtszintű lebontás célja?",
+  "a": "Energia felszabadítása és ATP termelése.",
+  "difficulty": "Easy",
+  "id": 379
+ },
+ {
+  "section": "A tápanyagok lebontásának két szintje",
+  "q": "Mi történik a glükózzal a sejtekben?",
+  "a": "Többlépcsős lebontási folyamat során energiát szolgáltat ATP termeléséhez.",
+  "difficulty": "Medium",
+  "id": 380
+ },
+ {
+  "section": "A tápanyagok lebontásának két szintje",
+  "q": "Miért nem elegendő önmagában az emésztés?",
+  "a": "Mert az emésztés csak előkészíti a tápanyagokat, a tényleges energiatermelés a sejtekben történik.",
+  "difficulty": "Medium",
+  "id": 381
+ },
+ {
+  "section": "A tápanyagok lebontásának két szintje",
+  "q": "Mi a kapcsolat az emésztés és a sejtek anyagcseréje között?",
+  "a": "Az emésztés biztosítja a sejtek számára a felhasználható építőköveket és energiaforrásokat.",
+  "difficulty": "Medium",
+  "id": 382
+ },
+ {
+  "section": "A tápanyagok lebontásának két szintje",
+  "q": "Mi a tápanyagok lebontásának első szintjének eredménye?",
+  "a": "Felszívható, kis molekulájú tápanyagok keletkezése.",
+  "difficulty": "Easy",
+  "id": 383
+ },
+ {
+  "section": "A tápanyagok lebontásának két szintje",
+  "q": "Mi a tápanyagok lebontásának második szintjének eredménye?",
+  "a": "ATP és egyéb, a sejtműködéshez szükséges energia felszabadítása.",
+  "difficulty": "Medium",
+  "id": 384
+ },
+ {
+  "section": "A tápanyagok lebontásának két szintje",
+  "q": "Mely folyamat készíti elő a tápanyagokat a sejtek számára?",
+  "a": "Az emésztés.",
+  "difficulty": "Easy",
+  "id": 385
+ },
+ {
+  "section": "A tápanyagok lebontásának két szintje",
+  "q": "Mely folyamat használja fel ténylegesen a tápanyagokat energiatermelésre?",
+  "a": "A sejtszintű lebontás.",
+  "difficulty": "Easy",
+  "id": 386
+ },
+ {
+  "section": "A tápanyagok lebontásának két szintje",
+  "q": "Mit jelent az, hogy az emésztés előkészíti a tápanyagokat?",
+  "a": "A nagymolekulás tápanyagokat olyan méretű molekulákra bontja, amelyek felszívódhatnak és bejuthatnak a sejtekbe.",
+  "difficulty": "Medium",
+  "id": 387
+ },
+ {
+  "section": "A tápanyagok lebontásának két szintje",
+  "q": "Mi a glükóz jelentősége a sejtek energiaellátásában?",
+  "a": "A sejtek egyik legfontosabb energiaforrása, amelynek lebontásából ATP termelődik.",
+  "difficulty": "Easy",
+  "id": 388
+ },
+ {
+  "section": "A tápanyagok lebontásának két szintje",
+  "q": "Miért tekinthető a tápanyagok lebontása kétlépcsős folyamatnak?",
+  "a": "Mert először az emésztőrendszerben történik előemésztés, majd a sejtekben zajlik a tényleges energiatermelő lebontás.",
+  "difficulty": "Medium",
+  "id": 389
+ },
+ {
+  "section": "A tápanyagok lebontásának két szintje",
+  "q": "Mi a tápanyagok lebontásának összefoglalása?",
+  "a": "Az emésztés előkészíti, a sejt pedig felhasználja a tápanyagokat.",
+  "difficulty": "Easy",
+  "id": 390
+ }
+]
