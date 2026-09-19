@@ -1,13 +1,67 @@
 /* =========================================================
    FLASHCARD MODE
+   Diagram-based cards are consolidated: instead of one card
+   per number/letter, each diagram becomes ONE flashcard —
+   front shows the blank image with a generic prompt, back
+   shows the fully labeled solution image (plus, for a couple
+   of diagrams where the image alone doesn't carry the full
+   answer, a short written list).
    ========================================================= */
 
 let flashState = null;
 
+const GROUP_FLASH_TITLES = {
+  'Ábra: A sejtmembrán felépítése': 'Miket jelölnek a számok?',
+  'Ábra: A sejthártya részletes felépítése': 'Miket jelölnek a betűk?',
+  'Ábra: Az állati sejt részletes felépítése': 'Miket jelölnek a számok?',
+  'Ábra: Sejttípusok összehasonlítása': 'Melyik sejttípust jelöli az egyes sorok száma?',
+  'Ábra: A négy fő szövettípus': 'Melyik szövettípust mutatja az egyes számozott kártya, és mi a feladata?',
+  'Ábra: A mitokondrium felépítése': 'Miket jelölnek a számok?',
+  'Ábra: A fehérjeszintézis és -szállítás útja': 'Miket jelölnek a számok?',
+  'Ábra: A sejtet felépítő anyagok': 'Melyik anyagcsoportot jelöli az egyes sorok száma?',
+  'Ábra: A sejt működésének összefoglalása': 'Miket jelölnek a számozott körök?',
+  'Ábra: Fogalmak és jelentésük': 'Melyik fogalom kapcsolata/jelentése szerepel az egyes sorokban?',
+  'Ábra: A fehérje kiválasztásának lépései': 'Mit jelentenek az egyes számozott lépések?'
+};
+
+// Groups where the image alone doesn't carry the complete answer
+// (e.g. the tissue-card image already shows the name; the function
+// list is the part actually worth testing), so we also print a list.
+const GROUP_FLASH_LIST_OVERRIDE = {
+  'Ábra: A négy fő szövettípus': [
+    '1. Hámszövet — borítás, elhatárolás, felszívás',
+    '2. Kötő- és támasztószövet — összekapcsolás, kitöltés, támasztás',
+    '3. Izomszövet — összehúzódás, mozgás',
+    '4. Idegszövet — ingerfelvétel, ingerületvezetés, információfeldolgozás'
+  ].join('\n')
+};
+
+function buildGroupFlashcard(g){
+  return {
+    id: 'grp:' + g.section,
+    section: g.section,
+    q: GROUP_FLASH_TITLES[g.section] || 'Miket jelölnek a számok?',
+    a: GROUP_FLASH_LIST_OVERRIDE[g.section] || '',
+    img: g.img,
+    imgBack: g.imgBack,
+    isGroup: true
+  };
+}
+
+function buildFlashDeck(pool){
+  const abraSections = new Set(pool.filter(c => c.section.startsWith('Ábra:')).map(c => c.section));
+  const textCards = pool.filter(c => !c.section.startsWith('Ábra:'));
+  const groupCards = MATCH_GROUPS
+    .filter(g => abraSections.has(g.section))
+    .map(g => buildGroupFlashcard(g));
+  return [...textCards, ...groupCards];
+}
+
 function beginFlash(pool){
+  const deck = buildFlashDeck(pool);
   flashState = {
-    fullPool: pool,
-    deck: shuffleArr(pool),
+    fullPool: deck,
+    deck: shuffleArr(deck),
     index: 0,
     onlyLearning: false
   };
@@ -30,16 +84,27 @@ function renderFlash(){
   const card = deck[flashState.index];
   document.getElementById('flashcard').classList.remove('flipped');
   document.getElementById('flashTagFront').textContent = card.section;
+
   const flashImg = document.getElementById('flashImage');
   if(card.img){ flashImg.src = card.img; flashImg.style.display='block'; }
   else { flashImg.style.display='none'; flashImg.removeAttribute('src'); }
+
   const flashImgBack = document.getElementById('flashImageBack');
   if(card.imgBack){ flashImgBack.src = card.imgBack; flashImgBack.style.display='block'; }
   else { flashImgBack.style.display='none'; flashImgBack.removeAttribute('src'); }
-  document.getElementById('flashFront').textContent = card.q;
-  document.getElementById('flashBack').textContent = card.a;
-  document.getElementById('flashCounter').textContent = `${flashState.index+1} / ${deck.length}`;
 
+  document.getElementById('flashFront').textContent = card.q;
+
+  const backTextEl = document.getElementById('flashBack');
+  if(card.a && card.a.trim() !== ''){
+    backTextEl.style.display = 'block';
+    backTextEl.innerHTML = card.a.split('\n').map(line => `<div>${line}</div>`).join('');
+  } else {
+    backTextEl.style.display = 'none';
+    backTextEl.innerHTML = '';
+  }
+
+  document.getElementById('flashCounter').textContent = `${flashState.index+1} / ${deck.length}`;
   document.getElementById('btnLearning').classList.toggle('active', !!progress.learning[card.id]);
 }
 

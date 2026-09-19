@@ -2954,7 +2954,7 @@
  {
   "section": "Ábra: A négy fő szövettípus",
   "q": "Az ábra 1. kártyája melyik szövettípust ábrázolja?",
-  "a": "Hámszövet",
+  "a": "Hámszövet — borítás, elhatárolás, felszívás",
   "difficulty": "Medium",
   "id": 424,
   "img": "images/diagram-tissue-cards.jpg",
@@ -2964,7 +2964,7 @@
  {
   "section": "Ábra: A négy fő szövettípus",
   "q": "Az ábra 2. kártyája melyik szövettípust ábrázolja?",
-  "a": "Kötő- és támasztószövet",
+  "a": "Kötő- és támasztószövet — összekapcsolás, kitöltés, támasztás",
   "difficulty": "Medium",
   "id": 425,
   "img": "images/diagram-tissue-cards.jpg",
@@ -2974,7 +2974,7 @@
  {
   "section": "Ábra: A négy fő szövettípus",
   "q": "Az ábra 3. kártyája melyik szövettípust ábrázolja?",
-  "a": "Izomszövet",
+  "a": "Izomszövet — összehúzódás, mozgás",
   "difficulty": "Medium",
   "id": 426,
   "img": "images/diagram-tissue-cards.jpg",
@@ -2984,7 +2984,7 @@
  {
   "section": "Ábra: A négy fő szövettípus",
   "q": "Az ábra 4. kártyája melyik szövettípust ábrázolja?",
-  "a": "Idegszövet",
+  "a": "Idegszövet — ingerfelvétel, ingerületvezetés, információfeldolgozás",
   "difficulty": "Medium",
   "id": 427,
   "img": "images/diagram-tissue-cards.jpg",

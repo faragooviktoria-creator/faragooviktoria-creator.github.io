@@ -70,12 +70,26 @@ etc.) were split into individual per-label cards — one per number/letter,
 all sharing the same diagram. These live in sections named `Ábra: ...` in
 `data/cards.json`.
 
-**Flashcard mode** shows the blank numbered diagram (`img`) on the front and
-the fully labeled solution diagram (`imgBack`) — plus the plain-text answer —
-on the back, both displayed at 600px wide (scaling down on narrow screens).
-Because these images can be taller than the card's fixed height, that
-specific card scrolls internally rather than clipping the image; plain
-text-only cards are unaffected and stay a fixed, scroll-free height.
+**Flashcard mode** consolidates each diagram into ONE card (not one per
+label): the front shows the blank image with a generic prompt like "Miket
+jelölnek a számok?", and the back shows the fully labeled solution diagram
+at 600px wide — nothing else, for most diagrams. Two exceptions: this
+consolidation happens at runtime in `js/flashcards.js` (grouping via the
+same `MATCH_GROUPS` built by `js/matching.js`), so `data/cards.json` itself
+still holds the original 80 granular per-label cards untouched — those are
+what Quiz mode's matching puzzles and Exam mode's individual questions use.
+
+One diagram (`Ábra: A négy fő szövettípus`) also gets a short written list
+on the back, because its "blank" image already shows the tissue names in
+the card headers — the part actually worth testing is the function list
+next to each one, which isn't otherwise captured as text. Its answers in
+`data/cards.json` were enriched to combine name + function (e.g.
+`"Hámszövet — borítás, elhatárolás, felszívás"`) so the Quiz-mode matching
+puzzle and Exam-mode questions for that diagram test the right thing too,
+instead of just asking the person to repeat a name already visible on
+screen. If another diagram turns out to have this same "answer is already
+visible" issue, look for it in `GROUP_FLASH_LIST_OVERRIDE` in
+`js/flashcards.js` and add a similar entry.
 
 **Quiz mode** turns each diagram into ONE drag-and-drop matching puzzle
 instead of separate multiple-choice questions: the full image is shown

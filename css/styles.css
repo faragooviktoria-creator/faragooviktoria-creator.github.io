@@ -450,6 +450,8 @@
     font-size:clamp(1.35rem, 3.2vw, 1.75rem);
   }
   .flash-face.back .content{ font-family:var(--font-body); font-size:clamp(1.25rem, 3vw, 1.6rem); }
+  .flash-face.back .content div{ margin-bottom:8px; }
+  .flash-face.back .content div:last-child{ margin-bottom:0; }
   .flash-hint{
     position:absolute;
     bottom:12px;
