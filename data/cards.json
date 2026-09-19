@@ -2627,7 +2627,9 @@
   "a": "Hidrofil feji rész",
   "difficulty": "Medium",
   "id": 391,
-  "img": "images/diagram-membrane-labels.jpg"
+  "img": "images/diagram-membrane-labels.jpg",
+  "imgBack": "images/diagram-membrane-labels-solution.jpg",
+  "label": "1"
  },
  {
   "section": "Ábra: A sejtmembrán felépítése",
@@ -2635,7 +2637,9 @@
   "a": "Hidrofób zsírsavláncok",
   "difficulty": "Medium",
   "id": 392,
-  "img": "images/diagram-membrane-labels.jpg"
+  "img": "images/diagram-membrane-labels.jpg",
+  "imgBack": "images/diagram-membrane-labels-solution.jpg",
+  "label": "2"
  },
  {
   "section": "Ábra: A sejtmembrán felépítése",
@@ -2643,7 +2647,9 @@
   "a": "Koleszterin",
   "difficulty": "Medium",
   "id": 393,
-  "img": "images/diagram-membrane-labels.jpg"
+  "img": "images/diagram-membrane-labels.jpg",
+  "imgBack": "images/diagram-membrane-labels-solution.jpg",
+  "label": "3"
  },
  {
   "section": "Ábra: A sejtmembrán felépítése",
@@ -2651,7 +2657,9 @@
   "a": "Integráns membránfehérje",
   "difficulty": "Medium",
   "id": 394,
-  "img": "images/diagram-membrane-labels.jpg"
+  "img": "images/diagram-membrane-labels.jpg",
+  "imgBack": "images/diagram-membrane-labels-solution.jpg",
+  "label": "4"
  },
  {
   "section": "Ábra: A sejtmembrán felépítése",
@@ -2659,7 +2667,9 @@
   "a": "Fehérjecsatorna",
   "difficulty": "Medium",
   "id": 395,
-  "img": "images/diagram-membrane-labels.jpg"
+  "img": "images/diagram-membrane-labels.jpg",
+  "imgBack": "images/diagram-membrane-labels-solution.jpg",
+  "label": "5"
  },
  {
   "section": "Ábra: A sejthártya részletes felépítése",
@@ -2667,7 +2677,9 @@
   "a": "Szénhidrátláncok",
   "difficulty": "Medium",
   "id": 396,
-  "img": "images/diagram-membrane-letters.jpg"
+  "img": "images/diagram-membrane-letters.jpg",
+  "imgBack": "images/diagram-membrane-letters-solution.jpg",
+  "label": "A"
  },
  {
   "section": "Ábra: A sejthártya részletes felépítése",
@@ -2675,7 +2687,9 @@
   "a": "Foszfatidok zsírsavláncai",
   "difficulty": "Medium",
   "id": 397,
-  "img": "images/diagram-membrane-letters.jpg"
+  "img": "images/diagram-membrane-letters.jpg",
+  "imgBack": "images/diagram-membrane-letters-solution.jpg",
+  "label": "B"
  },
  {
   "section": "Ábra: A sejthártya részletes felépítése",
@@ -2683,7 +2697,9 @@
   "a": "Poláris rész (szerves bázis és foszforsav)",
   "difficulty": "Medium",
   "id": 398,
-  "img": "images/diagram-membrane-letters.jpg"
+  "img": "images/diagram-membrane-letters.jpg",
+  "imgBack": "images/diagram-membrane-letters-solution.jpg",
+  "label": "C"
  },
  {
   "section": "Ábra: A sejthártya részletes felépítése",
@@ -2691,7 +2707,9 @@
   "a": "Apoláris réteg",
   "difficulty": "Medium",
   "id": 399,
-  "img": "images/diagram-membrane-letters.jpg"
+  "img": "images/diagram-membrane-letters.jpg",
+  "imgBack": "images/diagram-membrane-letters-solution.jpg",
+  "label": "D"
  },
  {
   "section": "Ábra: A sejthártya részletes felépítése",
@@ -2699,7 +2717,9 @@
   "a": "Integráns/átérő fehérje",
   "difficulty": "Medium",
   "id": 400,
-  "img": "images/diagram-membrane-letters.jpg"
+  "img": "images/diagram-membrane-letters.jpg",
+  "imgBack": "images/diagram-membrane-letters-solution.jpg",
+  "label": "E"
  },
  {
   "section": "Ábra: A sejthártya részletes felépítése",
@@ -2707,7 +2727,9 @@
   "a": "Periférás/felületi fehérje",
   "difficulty": "Medium",
   "id": 401,
-  "img": "images/diagram-membrane-letters.jpg"
+  "img": "images/diagram-membrane-letters.jpg",
+  "imgBack": "images/diagram-membrane-letters-solution.jpg",
+  "label": "F"
  },
  {
   "section": "Ábra: A sejthártya részletes felépítése",
@@ -2715,7 +2737,9 @@
   "a": "Koleszterin/szteránvázas lipid",
   "difficulty": "Medium",
   "id": 402,
-  "img": "images/diagram-membrane-letters.jpg"
+  "img": "images/diagram-membrane-letters.jpg",
+  "imgBack": "images/diagram-membrane-letters-solution.jpg",
+  "label": "G"
  },
  {
   "section": "Ábra: A sejthártya részletes felépítése",
@@ -2723,7 +2747,9 @@
   "a": "Kettős foszfatid(lipid)réteg",
   "difficulty": "Medium",
   "id": 403,
-  "img": "images/diagram-membrane-letters.jpg"
+  "img": "images/diagram-membrane-letters.jpg",
+  "imgBack": "images/diagram-membrane-letters-solution.jpg",
+  "label": "H"
  },
  {
   "section": "Ábra: Az állati sejt részletes felépítése",
@@ -2731,7 +2757,9 @@
   "a": "Sejtmag (nukleusz)",
   "difficulty": "Medium",
   "id": 404,
-  "img": "images/diagram-full-cell-14.jpg"
+  "img": "images/diagram-full-cell-14.jpg",
+  "imgBack": "images/diagram-full-cell-14-solution.jpg",
+  "label": "1"
  },
  {
   "section": "Ábra: Az állati sejt részletes felépítése",
@@ -2739,7 +2767,9 @@
   "a": "Magvacska",
   "difficulty": "Medium",
   "id": 405,
-  "img": "images/diagram-full-cell-14.jpg"
+  "img": "images/diagram-full-cell-14.jpg",
+  "imgBack": "images/diagram-full-cell-14-solution.jpg",
+  "label": "2"
  },
  {
   "section": "Ábra: Az állati sejt részletes felépítése",
@@ -2747,7 +2777,9 @@
   "a": "Nukleusz burka",
   "difficulty": "Medium",
   "id": 406,
-  "img": "images/diagram-full-cell-14.jpg"
+  "img": "images/diagram-full-cell-14.jpg",
+  "imgBack": "images/diagram-full-cell-14-solution.jpg",
+  "label": "3"
  },
  {
   "section": "Ábra: Az állati sejt részletes felépítése",
@@ -2755,7 +2787,9 @@
   "a": "Sejthártya",
   "difficulty": "Medium",
   "id": 407,
-  "img": "images/diagram-full-cell-14.jpg"
+  "img": "images/diagram-full-cell-14.jpg",
+  "imgBack": "images/diagram-full-cell-14-solution.jpg",
+  "label": "4"
  },
  {
   "section": "Ábra: Az állati sejt részletes felépítése",
@@ -2763,7 +2797,9 @@
   "a": "Durva felszínű endoplazmatikus retikulum",
   "difficulty": "Medium",
   "id": 408,
-  "img": "images/diagram-full-cell-14.jpg"
+  "img": "images/diagram-full-cell-14.jpg",
+  "imgBack": "images/diagram-full-cell-14-solution.jpg",
+  "label": "5"
  },
  {
   "section": "Ábra: Az állati sejt részletes felépítése",
@@ -2771,7 +2807,9 @@
   "a": "Citoplazma",
   "difficulty": "Medium",
   "id": 409,
-  "img": "images/diagram-full-cell-14.jpg"
+  "img": "images/diagram-full-cell-14.jpg",
+  "imgBack": "images/diagram-full-cell-14-solution.jpg",
+  "label": "6"
  },
  {
   "section": "Ábra: Az állati sejt részletes felépítése",
@@ -2779,7 +2817,9 @@
   "a": "Riboszómák",
   "difficulty": "Medium",
   "id": 410,
-  "img": "images/diagram-full-cell-14.jpg"
+  "img": "images/diagram-full-cell-14.jpg",
+  "imgBack": "images/diagram-full-cell-14-solution.jpg",
+  "label": "7"
  },
  {
   "section": "Ábra: Az állati sejt részletes felépítése",
@@ -2787,7 +2827,9 @@
   "a": "Sima felszínű endoplazmatikus retikulum",
   "difficulty": "Medium",
   "id": 411,
-  "img": "images/diagram-full-cell-14.jpg"
+  "img": "images/diagram-full-cell-14.jpg",
+  "imgBack": "images/diagram-full-cell-14-solution.jpg",
+  "label": "8"
  },
  {
   "section": "Ábra: Az állati sejt részletes felépítése",
@@ -2795,7 +2837,9 @@
   "a": "Mitokondrium",
   "difficulty": "Medium",
   "id": 412,
-  "img": "images/diagram-full-cell-14.jpg"
+  "img": "images/diagram-full-cell-14.jpg",
+  "imgBack": "images/diagram-full-cell-14-solution.jpg",
+  "label": "9"
  },
  {
   "section": "Ábra: Az állati sejt részletes felépítése",
@@ -2803,7 +2847,9 @@
   "a": "Sejtközpont",
   "difficulty": "Medium",
   "id": 413,
-  "img": "images/diagram-full-cell-14.jpg"
+  "img": "images/diagram-full-cell-14.jpg",
+  "imgBack": "images/diagram-full-cell-14-solution.jpg",
+  "label": "10"
  },
  {
   "section": "Ábra: Az állati sejt részletes felépítése",
@@ -2811,7 +2857,9 @@
   "a": "Golgi-készülék",
   "difficulty": "Medium",
   "id": 414,
-  "img": "images/diagram-full-cell-14.jpg"
+  "img": "images/diagram-full-cell-14.jpg",
+  "imgBack": "images/diagram-full-cell-14-solution.jpg",
+  "label": "11"
  },
  {
   "section": "Ábra: Az állati sejt részletes felépítése",
@@ -2819,7 +2867,9 @@
   "a": "Lizoszóma",
   "difficulty": "Medium",
   "id": 415,
-  "img": "images/diagram-full-cell-14.jpg"
+  "img": "images/diagram-full-cell-14.jpg",
+  "imgBack": "images/diagram-full-cell-14-solution.jpg",
+  "label": "12"
  },
  {
   "section": "Ábra: Az állati sejt részletes felépítése",
@@ -2827,7 +2877,9 @@
   "a": "Sejtváz",
   "difficulty": "Medium",
   "id": 416,
-  "img": "images/diagram-full-cell-14.jpg"
+  "img": "images/diagram-full-cell-14.jpg",
+  "imgBack": "images/diagram-full-cell-14-solution.jpg",
+  "label": "13"
  },
  {
   "section": "Ábra: Az állati sejt részletes felépítése",
@@ -2835,7 +2887,9 @@
   "a": "Membránhólyag",
   "difficulty": "Medium",
   "id": 417,
-  "img": "images/diagram-full-cell-14.jpg"
+  "img": "images/diagram-full-cell-14.jpg",
+  "imgBack": "images/diagram-full-cell-14-solution.jpg",
+  "label": "14"
  },
  {
   "section": "Ábra: Sejttípusok összehasonlítása",
@@ -2843,7 +2897,9 @@
   "a": "Hámsejt",
   "difficulty": "Medium",
   "id": 418,
-  "img": "images/diagram-celltype-table.jpg"
+  "img": "images/diagram-celltype-table.jpg",
+  "imgBack": "images/diagram-celltype-table-solution.jpg",
+  "label": "1"
  },
  {
   "section": "Ábra: Sejttípusok összehasonlítása",
@@ -2851,7 +2907,9 @@
   "a": "Mirigysejt",
   "difficulty": "Medium",
   "id": 419,
-  "img": "images/diagram-celltype-table.jpg"
+  "img": "images/diagram-celltype-table.jpg",
+  "imgBack": "images/diagram-celltype-table-solution.jpg",
+  "label": "2"
  },
  {
   "section": "Ábra: Sejttípusok összehasonlítása",
@@ -2859,7 +2917,9 @@
   "a": "Izomsejt",
   "difficulty": "Medium",
   "id": 420,
-  "img": "images/diagram-celltype-table.jpg"
+  "img": "images/diagram-celltype-table.jpg",
+  "imgBack": "images/diagram-celltype-table-solution.jpg",
+  "label": "3"
  },
  {
   "section": "Ábra: Sejttípusok összehasonlítása",
@@ -2867,7 +2927,9 @@
   "a": "Kötőszöveti sejt",
   "difficulty": "Medium",
   "id": 421,
-  "img": "images/diagram-celltype-table.jpg"
+  "img": "images/diagram-celltype-table.jpg",
+  "imgBack": "images/diagram-celltype-table-solution.jpg",
+  "label": "4"
  },
  {
   "section": "Ábra: Sejttípusok összehasonlítása",
@@ -2875,7 +2937,9 @@
   "a": "Vörösvértest",
   "difficulty": "Medium",
   "id": 422,
-  "img": "images/diagram-celltype-table.jpg"
+  "img": "images/diagram-celltype-table.jpg",
+  "imgBack": "images/diagram-celltype-table-solution.jpg",
+  "label": "5"
  },
  {
   "section": "Ábra: Sejttípusok összehasonlítása",
@@ -2883,7 +2947,9 @@
   "a": "Idegsejt",
   "difficulty": "Medium",
   "id": 423,
-  "img": "images/diagram-celltype-table.jpg"
+  "img": "images/diagram-celltype-table.jpg",
+  "imgBack": "images/diagram-celltype-table-solution.jpg",
+  "label": "6"
  },
  {
   "section": "Ábra: A négy fő szövettípus",
@@ -2891,7 +2957,9 @@
   "a": "Hámszövet",
   "difficulty": "Medium",
   "id": 424,
-  "img": "images/diagram-tissue-cards.jpg"
+  "img": "images/diagram-tissue-cards.jpg",
+  "imgBack": "images/diagram-tissue-cards-solution.jpg",
+  "label": "1"
  },
  {
   "section": "Ábra: A négy fő szövettípus",
@@ -2899,7 +2967,9 @@
   "a": "Kötő- és támasztószövet",
   "difficulty": "Medium",
   "id": 425,
-  "img": "images/diagram-tissue-cards.jpg"
+  "img": "images/diagram-tissue-cards.jpg",
+  "imgBack": "images/diagram-tissue-cards-solution.jpg",
+  "label": "2"
  },
  {
   "section": "Ábra: A négy fő szövettípus",
@@ -2907,7 +2977,9 @@
   "a": "Izomszövet",
   "difficulty": "Medium",
   "id": 426,
-  "img": "images/diagram-tissue-cards.jpg"
+  "img": "images/diagram-tissue-cards.jpg",
+  "imgBack": "images/diagram-tissue-cards-solution.jpg",
+  "label": "3"
  },
  {
   "section": "Ábra: A négy fő szövettípus",
@@ -2915,7 +2987,9 @@
   "a": "Idegszövet",
   "difficulty": "Medium",
   "id": 427,
-  "img": "images/diagram-tissue-cards.jpg"
+  "img": "images/diagram-tissue-cards.jpg",
+  "imgBack": "images/diagram-tissue-cards-solution.jpg",
+  "label": "4"
  },
  {
   "section": "Ábra: A mitokondrium felépítése",
@@ -2923,7 +2997,9 @@
   "a": "Belső membrán",
   "difficulty": "Medium",
   "id": 428,
-  "img": "images/diagram-mitochondrion-4.jpg"
+  "img": "images/diagram-mitochondrion-4.jpg",
+  "imgBack": "images/diagram-mitochondrion-4-solution.jpg",
+  "label": "1"
  },
  {
   "section": "Ábra: A mitokondrium felépítése",
@@ -2931,7 +3007,9 @@
   "a": "Külső membrán",
   "difficulty": "Medium",
   "id": 429,
-  "img": "images/diagram-mitochondrion-4.jpg"
+  "img": "images/diagram-mitochondrion-4.jpg",
+  "imgBack": "images/diagram-mitochondrion-4-solution.jpg",
+  "label": "2"
  },
  {
   "section": "Ábra: A mitokondrium felépítése",
@@ -2939,7 +3017,9 @@
   "a": "Membránok közötti tér",
   "difficulty": "Medium",
   "id": 430,
-  "img": "images/diagram-mitochondrion-4.jpg"
+  "img": "images/diagram-mitochondrion-4.jpg",
+  "imgBack": "images/diagram-mitochondrion-4-solution.jpg",
+  "label": "3"
  },
  {
   "section": "Ábra: A mitokondrium felépítése",
@@ -2947,7 +3027,9 @@
   "a": "Mitokondriális mátrix",
   "difficulty": "Medium",
   "id": 431,
-  "img": "images/diagram-mitochondrion-4.jpg"
+  "img": "images/diagram-mitochondrion-4.jpg",
+  "imgBack": "images/diagram-mitochondrion-4-solution.jpg",
+  "label": "4"
  },
  {
   "section": "Ábra: A fehérjeszintézis és -szállítás útja",
@@ -2955,7 +3037,9 @@
   "a": "Sejtmag",
   "difficulty": "Medium",
   "id": 432,
-  "img": "images/diagram-protein-pathway.jpg"
+  "img": "images/diagram-protein-pathway.jpg",
+  "imgBack": "images/diagram-protein-pathway-solution.jpg",
+  "label": "1"
  },
  {
   "section": "Ábra: A fehérjeszintézis és -szállítás útja",
@@ -2963,7 +3047,9 @@
   "a": "Riboszóma",
   "difficulty": "Medium",
   "id": 433,
-  "img": "images/diagram-protein-pathway.jpg"
+  "img": "images/diagram-protein-pathway.jpg",
+  "imgBack": "images/diagram-protein-pathway-solution.jpg",
+  "label": "2"
  },
  {
   "section": "Ábra: A fehérjeszintézis és -szállítás útja",
@@ -2971,7 +3057,9 @@
   "a": "Durva felszínű endoplazmatikus retikulum",
   "difficulty": "Medium",
   "id": 434,
-  "img": "images/diagram-protein-pathway.jpg"
+  "img": "images/diagram-protein-pathway.jpg",
+  "imgBack": "images/diagram-protein-pathway-solution.jpg",
+  "label": "3"
  },
  {
   "section": "Ábra: A fehérjeszintézis és -szállítás útja",
@@ -2979,7 +3067,9 @@
   "a": "Golgi-készülék",
   "difficulty": "Medium",
   "id": 435,
-  "img": "images/diagram-protein-pathway.jpg"
+  "img": "images/diagram-protein-pathway.jpg",
+  "imgBack": "images/diagram-protein-pathway-solution.jpg",
+  "label": "4"
  },
  {
   "section": "Ábra: A fehérjeszintézis és -szállítás útja",
@@ -2987,7 +3077,9 @@
   "a": "Membránhólyag",
   "difficulty": "Medium",
   "id": 436,
-  "img": "images/diagram-protein-pathway.jpg"
+  "img": "images/diagram-protein-pathway.jpg",
+  "imgBack": "images/diagram-protein-pathway-solution.jpg",
+  "label": "5"
  },
  {
   "section": "Ábra: A fehérjeszintézis és -szállítás útja",
@@ -2995,7 +3087,9 @@
   "a": "Felhasználás / exocitózis",
   "difficulty": "Medium",
   "id": 437,
-  "img": "images/diagram-protein-pathway.jpg"
+  "img": "images/diagram-protein-pathway.jpg",
+  "imgBack": "images/diagram-protein-pathway-solution.jpg",
+  "label": "6"
  },
  {
   "section": "Ábra: A sejtet felépítő anyagok",
@@ -3003,7 +3097,9 @@
   "a": "Víz",
   "difficulty": "Medium",
   "id": 438,
-  "img": "images/diagram-nutrient-icons.jpg"
+  "img": "images/diagram-nutrient-icons.jpg",
+  "imgBack": "images/diagram-nutrient-icons-solution.jpg",
+  "label": "1"
  },
  {
   "section": "Ábra: A sejtet felépítő anyagok",
@@ -3011,7 +3107,9 @@
   "a": "Szervetlen ionok",
   "difficulty": "Medium",
   "id": 439,
-  "img": "images/diagram-nutrient-icons.jpg"
+  "img": "images/diagram-nutrient-icons.jpg",
+  "imgBack": "images/diagram-nutrient-icons-solution.jpg",
+  "label": "2"
  },
  {
   "section": "Ábra: A sejtet felépítő anyagok",
@@ -3019,7 +3117,9 @@
   "a": "Szénhidrátok",
   "difficulty": "Medium",
   "id": 440,
-  "img": "images/diagram-nutrient-icons.jpg"
+  "img": "images/diagram-nutrient-icons.jpg",
+  "imgBack": "images/diagram-nutrient-icons-solution.jpg",
+  "label": "3"
  },
  {
   "section": "Ábra: A sejtet felépítő anyagok",
@@ -3027,7 +3127,9 @@
   "a": "Lipidek",
   "difficulty": "Medium",
   "id": 441,
-  "img": "images/diagram-nutrient-icons.jpg"
+  "img": "images/diagram-nutrient-icons.jpg",
+  "imgBack": "images/diagram-nutrient-icons-solution.jpg",
+  "label": "4"
  },
  {
   "section": "Ábra: A sejtet felépítő anyagok",
@@ -3035,7 +3137,9 @@
   "a": "Fehérjék",
   "difficulty": "Medium",
   "id": 442,
-  "img": "images/diagram-nutrient-icons.jpg"
+  "img": "images/diagram-nutrient-icons.jpg",
+  "imgBack": "images/diagram-nutrient-icons-solution.jpg",
+  "label": "5"
  },
  {
   "section": "Ábra: A sejtet felépítő anyagok",
@@ -3043,7 +3147,9 @@
   "a": "Nukleotid típusú vegyületek",
   "difficulty": "Medium",
   "id": 443,
-  "img": "images/diagram-nutrient-icons.jpg"
+  "img": "images/diagram-nutrient-icons.jpg",
+  "imgBack": "images/diagram-nutrient-icons-solution.jpg",
+  "label": "6"
  },
  {
   "section": "Ábra: A sejt működésének összefoglalása",
@@ -3051,7 +3157,9 @@
   "a": "Sejthártya",
   "difficulty": "Medium",
   "id": 444,
-  "img": "images/diagram-cell-hub.jpg"
+  "img": "images/diagram-cell-hub.jpg",
+  "imgBack": "images/diagram-cell-hub-solution.jpg",
+  "label": "1"
  },
  {
   "section": "Ábra: A sejt működésének összefoglalása",
@@ -3059,7 +3167,9 @@
   "a": "Citoplazma",
   "difficulty": "Medium",
   "id": 445,
-  "img": "images/diagram-cell-hub.jpg"
+  "img": "images/diagram-cell-hub.jpg",
+  "imgBack": "images/diagram-cell-hub-solution.jpg",
+  "label": "2"
  },
  {
   "section": "Ábra: A sejt működésének összefoglalása",
@@ -3067,7 +3177,9 @@
   "a": "Sejtmag",
   "difficulty": "Medium",
   "id": 446,
-  "img": "images/diagram-cell-hub.jpg"
+  "img": "images/diagram-cell-hub.jpg",
+  "imgBack": "images/diagram-cell-hub-solution.jpg",
+  "label": "3"
  },
  {
   "section": "Ábra: A sejt működésének összefoglalása",
@@ -3075,7 +3187,9 @@
   "a": "Sejtalkotók",
   "difficulty": "Medium",
   "id": 447,
-  "img": "images/diagram-cell-hub.jpg"
+  "img": "images/diagram-cell-hub.jpg",
+  "imgBack": "images/diagram-cell-hub-solution.jpg",
+  "label": "4"
  },
  {
   "section": "Ábra: A sejt működésének összefoglalása",
@@ -3083,7 +3197,9 @@
   "a": "Anyagleadás",
   "difficulty": "Medium",
   "id": 448,
-  "img": "images/diagram-cell-hub.jpg"
+  "img": "images/diagram-cell-hub.jpg",
+  "imgBack": "images/diagram-cell-hub-solution.jpg",
+  "label": "6"
  },
  {
   "section": "Ábra: A sejt működésének összefoglalása",
@@ -3091,7 +3207,9 @@
   "a": "Anyagfelvétel",
   "difficulty": "Medium",
   "id": 449,
-  "img": "images/diagram-cell-hub.jpg"
+  "img": "images/diagram-cell-hub.jpg",
+  "imgBack": "images/diagram-cell-hub-solution.jpg",
+  "label": "7"
  },
  {
   "section": "Ábra: A sejt működésének összefoglalása",
@@ -3099,7 +3217,9 @@
   "a": "Specializálódás",
   "difficulty": "Medium",
   "id": 450,
-  "img": "images/diagram-cell-hub.jpg"
+  "img": "images/diagram-cell-hub.jpg",
+  "imgBack": "images/diagram-cell-hub-solution.jpg",
+  "label": "8"
  },
  {
   "section": "Ábra: A sejt működésének összefoglalása",
@@ -3107,7 +3227,9 @@
   "a": "ATP-termelés",
   "difficulty": "Medium",
   "id": 451,
-  "img": "images/diagram-cell-hub.jpg"
+  "img": "images/diagram-cell-hub.jpg",
+  "imgBack": "images/diagram-cell-hub-solution.jpg",
+  "label": "10"
  },
  {
   "section": "Ábra: Fogalmak és jelentésük",
@@ -3115,7 +3237,9 @@
   "a": "Szelektív áteresztés (sejthártya)",
   "difficulty": "Medium",
   "id": 452,
-  "img": "images/diagram-fogalom-table.jpg"
+  "img": "images/diagram-fogalom-table.jpg",
+  "imgBack": "images/diagram-fogalom-table-solution.jpg",
+  "label": "1"
  },
  {
   "section": "Ábra: Fogalmak és jelentésük",
@@ -3123,7 +3247,9 @@
   "a": "Genetikai információ (sejtmag)",
   "difficulty": "Medium",
   "id": 453,
-  "img": "images/diagram-fogalom-table.jpg"
+  "img": "images/diagram-fogalom-table.jpg",
+  "imgBack": "images/diagram-fogalom-table-solution.jpg",
+  "label": "2"
  },
  {
   "section": "Ábra: Fogalmak és jelentésük",
@@ -3131,7 +3257,9 @@
   "a": "Fehérjeszintézis (riboszóma)",
   "difficulty": "Medium",
   "id": 454,
-  "img": "images/diagram-fogalom-table.jpg"
+  "img": "images/diagram-fogalom-table.jpg",
+  "imgBack": "images/diagram-fogalom-table-solution.jpg",
+  "label": "3"
  },
  {
   "section": "Ábra: Fogalmak és jelentésük",
@@ -3139,7 +3267,9 @@
   "a": "Módosítás és csomagolás (Golgi-készülék)",
   "difficulty": "Medium",
   "id": 455,
-  "img": "images/diagram-fogalom-table.jpg"
+  "img": "images/diagram-fogalom-table.jpg",
+  "imgBack": "images/diagram-fogalom-table-solution.jpg",
+  "label": "4"
  },
  {
   "section": "Ábra: Fogalmak és jelentésük",
@@ -3147,7 +3277,9 @@
   "a": "Lebontás (lizoszóma)",
   "difficulty": "Medium",
   "id": 456,
-  "img": "images/diagram-fogalom-table.jpg"
+  "img": "images/diagram-fogalom-table.jpg",
+  "imgBack": "images/diagram-fogalom-table-solution.jpg",
+  "label": "5"
  },
  {
   "section": "Ábra: Fogalmak és jelentésük",
@@ -3155,7 +3287,9 @@
   "a": "ATP-termelés (mitokondrium)",
   "difficulty": "Medium",
   "id": 457,
-  "img": "images/diagram-fogalom-table.jpg"
+  "img": "images/diagram-fogalom-table.jpg",
+  "imgBack": "images/diagram-fogalom-table-solution.jpg",
+  "label": "6"
  },
  {
   "section": "Ábra: Fogalmak és jelentésük",
@@ -3163,7 +3297,9 @@
   "a": "Passzív transzport (diffúzió)",
   "difficulty": "Medium",
   "id": 458,
-  "img": "images/diagram-fogalom-table.jpg"
+  "img": "images/diagram-fogalom-table.jpg",
+  "imgBack": "images/diagram-fogalom-table-solution.jpg",
+  "label": "7"
  },
  {
   "section": "Ábra: Fogalmak és jelentésük",
@@ -3171,7 +3307,9 @@
   "a": "Aktív transzport (Na+-K+-pumpa)",
   "difficulty": "Medium",
   "id": 459,
-  "img": "images/diagram-fogalom-table.jpg"
+  "img": "images/diagram-fogalom-table.jpg",
+  "imgBack": "images/diagram-fogalom-table-solution.jpg",
+  "label": "8"
  },
  {
   "section": "Ábra: Fogalmak és jelentésük",
@@ -3179,7 +3317,9 @@
   "a": "Anyagleadás (exocitózis)",
   "difficulty": "Medium",
   "id": 460,
-  "img": "images/diagram-fogalom-table.jpg"
+  "img": "images/diagram-fogalom-table.jpg",
+  "imgBack": "images/diagram-fogalom-table-solution.jpg",
+  "label": "9"
  },
  {
   "section": "Ábra: Fogalmak és jelentésük",
@@ -3187,7 +3327,9 @@
   "a": "Anyagfelvétel (endocitózis)",
   "difficulty": "Medium",
   "id": 461,
-  "img": "images/diagram-fogalom-table.jpg"
+  "img": "images/diagram-fogalom-table.jpg",
+  "imgBack": "images/diagram-fogalom-table-solution.jpg",
+  "label": "10"
  },
  {
   "section": "Ábra: Fogalmak és jelentésük",
@@ -3195,7 +3337,9 @@
   "a": "Fehérjék továbbítása (durva felszínű ER)",
   "difficulty": "Medium",
   "id": 462,
-  "img": "images/diagram-fogalom-table.jpg"
+  "img": "images/diagram-fogalom-table.jpg",
+  "imgBack": "images/diagram-fogalom-table-solution.jpg",
+  "label": "11"
  },
  {
   "section": "Ábra: Fogalmak és jelentésük",
@@ -3203,7 +3347,9 @@
   "a": "Biokémiai reakciók gyorsítása (enzim)",
   "difficulty": "Medium",
   "id": 463,
-  "img": "images/diagram-fogalom-table.jpg"
+  "img": "images/diagram-fogalom-table.jpg",
+  "imgBack": "images/diagram-fogalom-table-solution.jpg",
+  "label": "12"
  },
  {
   "section": "Ábra: A fehérje kiválasztásának lépései",
@@ -3211,7 +3357,9 @@
   "a": "A genetikai információ a sejtmagban található.",
   "difficulty": "Medium",
   "id": 464,
-  "img": "images/diagram-secretion-pathway.jpg"
+  "img": "images/diagram-secretion-pathway.jpg",
+  "imgBack": "images/diagram-secretion-pathway-solution.jpg",
+  "label": "1"
  },
  {
   "section": "Ábra: A fehérje kiválasztásának lépései",
@@ -3219,7 +3367,9 @@
   "a": "A riboszómák fehérjét állítanak elő.",
   "difficulty": "Medium",
   "id": 465,
-  "img": "images/diagram-secretion-pathway.jpg"
+  "img": "images/diagram-secretion-pathway.jpg",
+  "imgBack": "images/diagram-secretion-pathway-solution.jpg",
+  "label": "2"
  },
  {
   "section": "Ábra: A fehérje kiválasztásának lépései",
@@ -3227,7 +3377,9 @@
   "a": "A durva felszínű endoplazmatikus retikulumban a fehérje továbbalakul.",
   "difficulty": "Medium",
   "id": 466,
-  "img": "images/diagram-secretion-pathway.jpg"
+  "img": "images/diagram-secretion-pathway.jpg",
+  "imgBack": "images/diagram-secretion-pathway-solution.jpg",
+  "label": "3"
  },
  {
   "section": "Ábra: A fehérje kiválasztásának lépései",
@@ -3235,7 +3387,9 @@
   "a": "A Golgi-készülék módosítja és csomagolja a fehérjét.",
   "difficulty": "Medium",
   "id": 467,
-  "img": "images/diagram-secretion-pathway.jpg"
+  "img": "images/diagram-secretion-pathway.jpg",
+  "imgBack": "images/diagram-secretion-pathway-solution.jpg",
+  "label": "4"
  },
  {
   "section": "Ábra: A fehérje kiválasztásának lépései",
@@ -3243,7 +3397,9 @@
   "a": "A membránhólyag a megfelelő helyre szállítja.",
   "difficulty": "Medium",
   "id": 468,
-  "img": "images/diagram-secretion-pathway.jpg"
+  "img": "images/diagram-secretion-pathway.jpg",
+  "imgBack": "images/diagram-secretion-pathway-solution.jpg",
+  "label": "5"
  },
  {
   "section": "Ábra: A fehérje kiválasztásának lépései",
@@ -3251,7 +3407,9 @@
   "a": "Exocitózissal a váladék a sejtből kiürül.",
   "difficulty": "Medium",
   "id": 469,
-  "img": "images/diagram-secretion-pathway.jpg"
+  "img": "images/diagram-secretion-pathway.jpg",
+  "imgBack": "images/diagram-secretion-pathway-solution.jpg",
+  "label": "6"
  },
  {
   "section": "Ábra: A fehérje kiválasztásának lépései",
@@ -3259,6 +3417,8 @@
   "a": "A folyamathoz ATP szükséges.",
   "difficulty": "Medium",
   "id": 470,
-  "img": "images/diagram-secretion-pathway.jpg"
+  "img": "images/diagram-secretion-pathway.jpg",
+  "imgBack": "images/diagram-secretion-pathway-solution.jpg",
+  "label": "7"
  }
 ]

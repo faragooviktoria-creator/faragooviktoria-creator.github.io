@@ -61,10 +61,33 @@
     </div>
     <div class="quiz-card">
       <span class="tag" id="quizTag">Témakör</span>
-      <img class="card-image" id="quizImage" style="display:none;" alt="Ábra a kérdéshez">
-      <p class="quiz-question" id="quizQuestion">Kérdés</p>
-      <div class="options" id="quizOptions"></div>
-      <div class="feedback-box" id="quizFeedback"></div>
+
+      <div id="quizMcqBlock">
+        <img class="card-image" id="quizImage" style="display:none;" alt="Ábra a kérdéshez">
+        <p class="quiz-question" id="quizQuestion">Kérdés</p>
+        <div class="options" id="quizOptions"></div>
+        <div class="feedback-box" id="quizFeedback"></div>
+      </div>
+
+      <div id="quizMatchBlock" style="display:none;">
+        <p class="quiz-question">Párosítsd az ábra jelöléseit a megfelelő fogalmakkal!</p>
+        <img class="card-image" id="matchImage" style="width:600px; max-width:100%; height:auto; margin-bottom:16px;" alt="Ábra">
+        <div class="match-area">
+          <div class="match-slots">
+            <div class="match-slots-label">Az ábra jelölései</div>
+            <div id="matchSlots"></div>
+          </div>
+          <div class="match-bank">
+            <div class="match-bank-label">Válaszok (húzd vagy koppints)</div>
+            <div id="matchBankInner"></div>
+          </div>
+        </div>
+        <div class="feedback-box" id="matchFeedback"></div>
+        <div class="nav-row" style="justify-content:flex-start; padding-top:0; margin-top:14px;">
+          <button class="btn secondary" id="matchCheckBtn" onclick="checkMatching()" disabled>Ellenőrzés</button>
+        </div>
+      </div>
+
       <div class="nav-row">
         <button class="btn" id="quizNextBtn" onclick="quizNext()" disabled>Következő</button>
       </div>
@@ -101,12 +124,13 @@
         <div class="flashcard-inner" id="flashInner">
           <div class="flash-face front">
             <div class="eyebrow" id="flashTagFront">Témakör</div>
-            <img class="card-image" id="flashImage" style="display:none; width:100%; height:auto; max-height:180px; margin-bottom:8px;" alt="Ábra a kérdéshez">
+            <img class="card-image" id="flashImage" style="display:none; width:600px; max-width:100%; height:auto; margin-bottom:8px;" alt="Ábra a kérdéshez">
             <div class="content" id="flashFront">Kérdés</div>
             <div class="flash-hint">Kattints a megfordításhoz, húzd balra/jobbra a lapozáshoz</div>
           </div>
           <div class="flash-face back">
             <div class="eyebrow">Válasz</div>
+            <img class="card-image" id="flashImageBack" style="display:none; width:600px; max-width:100%; height:auto; margin-bottom:8px;" alt="Megoldás ábra">
             <div class="content" id="flashBack">Válasz</div>
           </div>
         </div>
@@ -174,6 +198,7 @@
 <script src="js/topics.js"></script>
 <script src="js/navigation.js"></script>
 <script src="js/quiz-engine.js"></script>
+<script src="js/matching.js"></script>
 <script src="js/quiz.js"></script>
 <script src="js/flashcards.js"></script>
 <script src="js/exam.js"></script>

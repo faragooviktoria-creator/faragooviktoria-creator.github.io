@@ -33,6 +33,9 @@ function renderFlash(){
   const flashImg = document.getElementById('flashImage');
   if(card.img){ flashImg.src = card.img; flashImg.style.display='block'; }
   else { flashImg.style.display='none'; flashImg.removeAttribute('src'); }
+  const flashImgBack = document.getElementById('flashImageBack');
+  if(card.imgBack){ flashImgBack.src = card.imgBack; flashImgBack.style.display='block'; }
+  else { flashImgBack.style.display='none'; flashImgBack.removeAttribute('src'); }
   document.getElementById('flashFront').textContent = card.q;
   document.getElementById('flashBack').textContent = card.a;
   document.getElementById('flashCounter').textContent = `${flashState.index+1} / ${deck.length}`;

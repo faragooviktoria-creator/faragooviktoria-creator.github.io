@@ -1,46 +1,72 @@
 /* =========================================================
    QUIZ MODE
+   Mixes ordinary multiple-choice questions with whole-diagram
+   drag-and-drop matching puzzles (js/matching.js) into one
+   quiz sequence.
    ========================================================= */
 
 let quizState = null;
 
-function beginQuiz(pool, sourcePoolOverride){
-  const base = sourcePoolOverride || pool;
-  const count = Math.min(10, base.length);
-  const questions = shuffleArr(base).slice(0, count);
+function buildQuizUnits(rawPool){
+  const abraSections = new Set(
+    rawPool.filter(c => c.section.startsWith('Ábra:')).map(c => c.section)
+  );
+  const textCards = rawPool.filter(c => !c.section.startsWith('Ábra:'));
+  const matchGroups = MATCH_GROUPS.filter(g => abraSections.has(g.section));
+
+  const mcqUnits = textCards.map(c => ({ type: 'mcq', card: c }));
+  const matchUnits = matchGroups.map(g => ({ type: 'match', group: g }));
+  return [...mcqUnits, ...matchUnits];
+}
+
+function beginQuiz(pool, rawPoolOverride){
+  const rawPool = rawPoolOverride || pool;
+  const unitPool = buildQuizUnits(rawPool);
+  const count = Math.min(10, unitPool.length);
+  const units = shuffleArr(unitPool).slice(0, count);
   quizState = {
-    pool: base,
-    questions,
+    rawPool,
+    units,
     index: 0,
     score: 0,
     answered: [],
-    currentOptions: null,
-    locked: false
+    locked: false,
+    correctBtn: null
   };
   showView('view-quiz');
-  renderQuizQuestion();
+  renderQuizUnit();
 }
 function restartCurrentQuiz(){
-  beginQuiz(getFilteredCards(), quizState.pool);
+  beginQuiz(getFilteredCards(), quizState.rawPool);
 }
 
-function renderQuizQuestion(){
-  const q = quizState.questions[quizState.index];
+function renderQuizUnit(){
+  const unit = quizState.units[quizState.index];
+  document.getElementById('quizProgressLabel').textContent = `${quizState.index+1} / ${quizState.units.length}`;
+  document.getElementById('quizProgressFill').style.width = `${(quizState.index/quizState.units.length)*100}%`;
+  document.getElementById('quizScorePill').textContent = `Pontszám: ${quizState.score % 1 === 0 ? quizState.score : quizState.score.toFixed(1)}`;
+  document.getElementById('quizNextBtn').disabled = true;
+  document.getElementById('quizNextBtn').textContent = (quizState.index === quizState.units.length-1) ? 'Eredmény megtekintése' : 'Következő';
+
+  if(unit.type === 'match'){
+    renderMatchUnit(unit.group);
+  } else {
+    document.getElementById('quizMatchBlock').style.display = 'none';
+    document.getElementById('quizMcqBlock').style.display = 'block';
+    renderQuizQuestion(unit.card);
+  }
+}
+
+function renderQuizQuestion(q){
   document.getElementById('quizTag').textContent = q.section;
   const quizImg = document.getElementById('quizImage');
   if(q.img){ quizImg.src = q.img; quizImg.style.display='block'; }
   else { quizImg.style.display='none'; quizImg.removeAttribute('src'); }
   document.getElementById('quizQuestion').textContent = q.q;
-  document.getElementById('quizProgressLabel').textContent = `${quizState.index+1} / ${quizState.questions.length}`;
-  document.getElementById('quizProgressFill').style.width = `${(quizState.index/quizState.questions.length)*100}%`;
-  document.getElementById('quizScorePill').textContent = `Pontszám: ${quizState.score}`;
   document.getElementById('quizFeedback').classList.remove('show');
   document.getElementById('quizFeedback').textContent = '';
-  document.getElementById('quizNextBtn').disabled = true;
-  document.getElementById('quizNextBtn').textContent = (quizState.index === quizState.questions.length-1) ? 'Eredmény megtekintése' : 'Következő';
 
-  const options = makeOptions(q, quizState.pool);
-  quizState.currentOptions = options;
+  const options = makeOptions(q, quizState.rawPool);
   quizState.locked = false;
 
   const wrap = document.getElementById('quizOptions');
@@ -66,7 +92,7 @@ function selectQuizOption(btn, opt, q){
   if(!correct) btn.classList.add('incorrect');
   else quizState.score++;
 
-  quizState.answered.push({ q, chosen: opt, correct });
+  quizState.answered.push({ type:'mcq', q, chosen: opt, correct });
 
   const fb = document.getElementById('quizFeedback');
   fb.classList.add('show');
@@ -74,38 +100,46 @@ function selectQuizOption(btn, opt, q){
     ? `<strong>Helyes!</strong> ${q.a}`
     : `<strong>Nem egészen.</strong> A helyes válasz: ${q.a}`;
 
-  document.getElementById('quizScorePill').textContent = `Pontszám: ${quizState.score}`;
+  document.getElementById('quizScorePill').textContent = `Pontszám: ${quizState.score % 1 === 0 ? quizState.score : quizState.score.toFixed(1)}`;
   document.getElementById('quizNextBtn').disabled = false;
 }
 
 function quizNext(){
-  if(quizState.index < quizState.questions.length-1){
+  if(quizState.index < quizState.units.length-1){
     quizState.index++;
-    renderQuizQuestion();
+    renderQuizUnit();
   } else {
     finishQuiz();
   }
 }
 
 function finishQuiz(){
-  const total = quizState.questions.length;
+  const total = quizState.units.length;
   const pct = Math.round((quizState.score/total)*100);
   document.getElementById('quizFinalScore').textContent = pct + '%';
-  document.getElementById('quizFinalSub').textContent = `${quizState.score} / ${total} helyes válasz`;
+  const scoreLabel = quizState.score % 1 === 0 ? quizState.score : quizState.score.toFixed(1);
+  document.getElementById('quizFinalSub').textContent = `${scoreLabel} / ${total} pont`;
 
-  const wrongs = quizState.answered.filter(a=>!a.correct);
   const list = document.getElementById('quizReviewList');
   list.innerHTML='';
-  if(wrongs.length){
+  const mistakes = quizState.answered.filter(a => a.type==='mcq' ? !a.correct : a.correctCount < a.total);
+  if(mistakes.length){
     const h = document.createElement('p');
     h.style.fontWeight='600'; h.style.marginBottom='10px'; h.textContent='Érdemes átnézni:';
     list.appendChild(h);
-    wrongs.forEach(w=>{
+    mistakes.forEach(m=>{
       const div = document.createElement('div');
       div.className='review-item';
-      div.innerHTML = `<div class="rq">${w.q.q}</div>
-        <div class="ra wrong">Te válaszod: ${w.chosen}</div>
-        <div class="ra right">Helyes válasz: ${w.q.a}</div>`;
+      if(m.type === 'mcq'){
+        div.innerHTML = `<div class="rq">${m.q.q}</div>
+          <div class="ra wrong">Te válaszod: ${m.chosen}</div>
+          <div class="ra right">Helyes válasz: ${m.q.a}</div>`;
+      } else {
+        const wrongRows = m.slots.filter(s => s.given !== s.answer)
+          .map(s => `<div class="ra wrong">${s.label}: ${s.given} <span class="ra right">→ ${s.answer}</span></div>`)
+          .join('');
+        div.innerHTML = `<div class="rq">${m.group.section} (${m.correctCount} / ${m.total} helyes)</div>${wrongRows}`;
+      }
       list.appendChild(div);
     });
   }

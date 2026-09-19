@@ -405,7 +405,7 @@
   }
   .flashcard{
     width:100%;
-    max-width:560px;
+    max-width:680px;
     height:400px;
     perspective:1400px;
   }
@@ -580,3 +580,63 @@
     .flashcard{ height:400px; }
     .qty-grid{ grid-template-columns: repeat(2,1fr); }
   }
+
+  /* ---------- Diagram matching puzzle (Quiz mode) ---------- */
+  .match-area{
+    display:flex;
+    gap:24px;
+    flex-wrap:wrap;
+    align-items:flex-start;
+  }
+  .match-slots, .match-bank{
+    flex:1 1 240px;
+    min-width:220px;
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+  }
+  .match-bank-label, .match-slots-label{
+    font-size:0.76rem;
+    color:var(--ink-soft);
+    margin-bottom:2px;
+  }
+  .match-slot{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    border:1.5px dashed rgba(58,54,46,0.25);
+    border-radius:14px;
+    padding:10px 14px;
+    background:var(--cream);
+    cursor:pointer;
+    transition: all .15s ease;
+  }
+  .match-slot:hover{ border-color: var(--lavender-deep); }
+  .match-slot.filled{ border-style:solid; background:var(--white); }
+  .match-slot.correct{ background: rgba(159,184,154,0.28); border-color:var(--sage-deep); border-style:solid; }
+  .match-slot.incorrect{ background: rgba(231,182,176,0.35); border-color:var(--blush-deep); border-style:solid; }
+  .match-slot-label{
+    flex-shrink:0;
+    width:28px; height:28px;
+    border-radius:50%;
+    background:var(--lavender);
+    color:var(--white);
+    display:flex; align-items:center; justify-content:center;
+    font-weight:700; font-size:0.78rem;
+  }
+  .match-slot-text{ font-size:0.88rem; color:var(--ink); line-height:1.35; }
+
+  .match-chip{
+    border:1.5px solid rgba(58,54,46,0.15);
+    background:var(--white);
+    border-radius:14px;
+    padding:10px 14px;
+    font-size:0.86rem;
+    line-height:1.35;
+    cursor:grab;
+    transition: all .15s ease;
+    box-shadow: var(--shadow-soft);
+  }
+  .match-chip:hover{ transform: translateY(-2px); box-shadow: var(--shadow); }
+  .match-chip.selected{ border-color:var(--gold); background: rgba(224,181,100,0.18); }
+  .match-chip:active{ cursor:grabbing; }

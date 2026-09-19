@@ -15,6 +15,7 @@ async function initApp(){
   try{
     await loadCards();
     initTopics();
+    initMatchGroups();
     buildTopicList();
     document.querySelectorAll('.mode-card').forEach(btn => btn.disabled = false);
   }catch(err){
