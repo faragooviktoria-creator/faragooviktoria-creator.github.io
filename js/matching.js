@@ -56,7 +56,10 @@ function renderMatchUI(){
     let cls = 'match-slot' + (slot.filled !== null ? ' filled' : '');
     if(matchState.checked) cls += (slot.filled === slot.answer ? ' correct' : ' incorrect');
     div.className = cls;
-    div.innerHTML = `<span class="match-slot-label">${slot.label}</span><span class="match-slot-text">${slot.filled !== null ? slot.filled : 'Koppints ide'}</span>`;
+    const removeIcon = slot.filled !== null && !matchState.checked
+      ? `<span class="match-slot-remove" title="Válasz eltávolítása">✕</span>`
+      : '';
+    div.innerHTML = `<span class="match-slot-label">${slot.label}</span>${removeIcon}<span class="match-slot-text">${slot.filled !== null ? slot.filled : 'Húzd ide a megoldást'}</span>`;
     div.onclick = () => onSlotClick(i);
     div.ondragover = (e) => e.preventDefault();
     div.ondrop = (e) => { e.preventDefault(); onSlotDrop(i, e.dataTransfer.getData('text/plain')); };

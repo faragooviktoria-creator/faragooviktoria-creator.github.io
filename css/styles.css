@@ -626,6 +626,18 @@
     display:flex; align-items:center; justify-content:center;
     font-weight:700; font-size:0.78rem;
   }
+  .match-slot-remove{
+    flex-shrink:0;
+    width:20px; height:20px;
+    border-radius:50%;
+    background:rgba(217,144,137,0.18);
+    color:var(--blush-deep);
+    display:flex; align-items:center; justify-content:center;
+    font-size:0.7rem;
+    line-height:1;
+    transition: background .15s ease, transform .15s ease;
+  }
+  .match-slot:hover .match-slot-remove{ background:rgba(217,144,137,0.32); transform:scale(1.08); }
   .match-slot-text{ font-size:0.88rem; color:var(--ink); line-height:1.35; }
 
   .match-chip{
