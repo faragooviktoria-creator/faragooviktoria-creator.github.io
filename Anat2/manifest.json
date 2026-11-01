@@ -1,0 +1,10 @@
+{
+  "name": "Kártyás tanuló",
+  "short_name": "Kártyák",
+  "lang": "hu",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f5fa",
+  "theme_color": "#2b6cb0"
+}
