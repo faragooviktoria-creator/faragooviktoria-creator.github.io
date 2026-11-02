@@ -3,14 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Csontvázrendszer – Tanulókártyák</title>
+<title>Mozgásrendszer – Tanulókártyák</title>
 <style>
   :root {
     --paper: #efe5d3;
     --paper-deep: #e4d7bf;
     --ink: #3a3633;
     --card: #3d3a37;
-    --card-line: #5a5550;
     --cream: #f3ead8;
     --muted-cream: #cfc4ad;
     --terracotta: #b8583f;
@@ -46,31 +45,10 @@
     padding: 22px 18px 32px;
   }
 
-  /* decorative arcs, like the reference */
-  .deco {
-    position: absolute;
-    pointer-events: none;
-    border-radius: 50%;
-    z-index: 0;
-  }
-  .deco.a {
-    width: 260px; height: 260px;
-    top: -110px; right: -120px;
-    border: 2px solid var(--terracotta-soft);
-    opacity: 0.8;
-  }
-  .deco.b {
-    width: 180px; height: 180px;
-    top: 40px; right: -70px;
-    background: var(--terracotta);
-    opacity: 0.18;
-  }
-  .deco.c {
-    width: 120px; height: 120px;
-    bottom: 60px; left: -60px;
-    border: 2px dashed var(--sage);
-    opacity: 0.6;
-  }
+  .deco { position: absolute; pointer-events: none; border-radius: 50%; z-index: 0; }
+  .deco.a { width: 260px; height: 260px; top: -110px; right: -120px; border: 2px solid var(--terracotta-soft); opacity: 0.8; }
+  .deco.b { width: 180px; height: 180px; top: 40px; right: -70px; background: var(--terracotta); opacity: 0.18; }
+  .deco.c { width: 120px; height: 120px; bottom: 60px; left: -60px; border: 2px dashed var(--sage); opacity: 0.6; }
 
   .content { position: relative; z-index: 1; }
 
@@ -84,43 +62,24 @@
     color: var(--ink);
     padding: 4px 2px 14px;
   }
-  .icon-btn {
-    background: none;
-    border: none;
-    color: var(--ink);
-    font-size: 22px;
-    cursor: pointer;
-    padding: 6px 8px;
-    line-height: 1;
-  }
-  .icon-btn:disabled { opacity: 0.25; cursor: default; }
+  .icon-btn { background: none; border: none; color: var(--ink); font-size: 22px; cursor: pointer; padding: 6px 8px; line-height: 1; }
 
   .heading { margin: 6px 2px 4px; }
-  .heading .eyebrow {
+  .eyebrow {
     font-family: "Trebuchet MS", Verdana, sans-serif;
     font-size: 11px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--terracotta);
   }
-  .heading h1 {
-    font-size: 26px;
-    font-weight: normal;
-    line-height: 1.2;
-    margin-top: 4px;
-  }
+  .heading h1 { font-size: 26px; font-weight: normal; line-height: 1.2; margin-top: 4px; }
   .heading h1 strong { font-weight: bold; }
 
   .view { display: none; }
   .view.active { display: block; }
 
   /* ---------- category selection ---------- */
-  .category-list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-top: 26px;
-  }
+  .category-list { display: flex; flex-direction: column; gap: 16px; margin-top: 26px; }
   .cat-card {
     position: relative;
     background: var(--card);
@@ -146,24 +105,15 @@
     border: 1.5px solid var(--terracotta-soft);
     opacity: 0.5;
   }
-  .cat-num {
-    font-family: "Trebuchet MS", Verdana, sans-serif;
-    font-size: 12px;
-    letter-spacing: 0.12em;
-    color: var(--mustard);
-    text-transform: uppercase;
-  }
-  .cat-title {
-    font-size: 20px;
-    margin: 6px 0 8px;
-    line-height: 1.25;
-    color: var(--cream);
-  }
-  .cat-desc {
-    font-size: 14px;
-    line-height: 1.5;
-    color: var(--muted-cream);
-  }
+  .cat-card.empty { background: var(--paper-deep); color: var(--ink); box-shadow: none; cursor: default; }
+  .cat-card.empty:active { transform: none; }
+  .cat-card.empty::before { border-color: var(--sage); }
+  .cat-num { font-family: "Trebuchet MS", Verdana, sans-serif; font-size: 12px; letter-spacing: 0.12em; color: var(--mustard); text-transform: uppercase; }
+  .cat-card.empty .cat-num { color: var(--sage); }
+  .cat-title { font-size: 20px; margin: 6px 0 8px; line-height: 1.25; color: var(--cream); }
+  .cat-card.empty .cat-title { color: var(--ink); }
+  .cat-desc { font-size: 14px; line-height: 1.5; color: var(--muted-cream); }
+  .cat-card.empty .cat-desc { color: var(--sage); }
   .cat-foot {
     display: flex;
     justify-content: space-between;
@@ -173,22 +123,12 @@
     font-size: 12px;
     color: var(--muted-cream);
   }
-  .cat-arrow {
-    font-size: 26px;
-    color: var(--terracotta-soft);
-  }
+  .cat-card.empty .cat-foot { color: var(--sage); }
+  .cat-arrow { font-size: 26px; color: var(--terracotta-soft); }
 
   /* ---------- deck view ---------- */
-  .deck-head {
-    margin-top: 6px;
-  }
-  .deck-head h2 {
-    font-size: 21px;
-    font-weight: normal;
-    margin-top: 4px;
-    line-height: 1.25;
-  }
-  .deck-head h2 strong { font-weight: bold; }
+  .deck-head { margin-top: 6px; }
+  .deck-head h2 { font-size: 21px; font-weight: normal; margin-top: 4px; line-height: 1.25; }
 
   .progress-row {
     display: flex;
@@ -199,24 +139,10 @@
     color: var(--ink);
     margin: 18px 2px 8px;
   }
-  .progress {
-    height: 6px;
-    background: var(--paper-deep);
-    border-radius: 6px;
-    overflow: hidden;
-  }
-  .progress-fill {
-    height: 100%;
-    width: 0%;
-    background: var(--terracotta);
-    transition: width 0.3s ease;
-  }
+  .progress { height: 6px; background: var(--paper-deep); border-radius: 6px; overflow: hidden; }
+  .progress-fill { height: 100%; width: 0%; background: var(--terracotta); transition: width 0.3s ease; }
 
-  .scene {
-    perspective: 1200px;
-    margin-top: 18px;
-    height: 360px;
-  }
+  .scene { perspective: 1200px; margin-top: 18px; height: 360px; }
   .flipper {
     position: relative;
     width: 100%;
@@ -239,10 +165,7 @@
     box-shadow: 0 10px 22px var(--shadow);
     overflow: hidden;
   }
-  .face.front {
-    background: var(--card);
-    color: var(--cream);
-  }
+  .face.front { background: var(--card); color: var(--cream); }
   .face.back {
     background: var(--cream);
     color: var(--ink);
@@ -268,16 +191,8 @@
   }
   .face.front .face-label { color: var(--mustard); }
   .face.back .face-label { color: var(--terracotta); }
-
-  .face-text {
-    font-size: 19px;
-    line-height: 1.45;
-    overflow-y: auto;
-    flex: 1;
-    padding-right: 4px;
-  }
+  .face-text { font-size: 19px; line-height: 1.45; overflow-y: auto; flex: 1; padding-right: 4px; }
   .face.back .face-text { font-size: 17px; }
-
   .face-hint {
     font-family: "Trebuchet MS", Verdana, sans-serif;
     font-size: 12px;
@@ -287,13 +202,7 @@
   }
   .face.back .face-hint { color: var(--sage); }
 
-  .controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 22px;
-    gap: 10px;
-  }
+  .controls { display: flex; justify-content: space-between; align-items: center; margin-top: 22px; gap: 10px; }
   .nav-btn {
     background: none;
     border: 1.5px solid var(--ink);
@@ -305,20 +214,10 @@
     cursor: pointer;
   }
   .nav-btn:disabled { opacity: 0.3; cursor: default; }
-  .nav-btn.arrow {
-    border: none;
-    color: var(--terracotta);
-    font-size: 30px;
-    padding: 0 6px;
-    line-height: 1;
-  }
+  .nav-btn.arrow { border: none; color: var(--terracotta); font-size: 30px; padding: 0 6px; line-height: 1; }
   .nav-btn.arrow:disabled { color: var(--ink); }
 
-  .mark-row {
-    display: flex;
-    gap: 10px;
-    margin-top: 16px;
-  }
+  .mark-row { display: flex; gap: 10px; margin-top: 16px; }
   .mark-btn {
     flex: 1;
     font-family: "Trebuchet MS", Verdana, sans-serif;
@@ -388,8 +287,8 @@
 
   <div class="content">
     <div class="topbar">
-      <span>Csontvázrendszer</span>
-      <span id="topRight">☰</span>
+      <span>Mozgásrendszer</span>
+      <span>☰</span>
     </div>
 
     <!-- HOME: category selection -->
@@ -411,7 +310,7 @@
       </div>
 
       <div class="deck-head">
-        <div class="eyebrow heading" style="margin:0"><span class="eyebrow" id="deckEyebrow"></span></div>
+        <div class="eyebrow" id="deckEyebrow"></div>
         <h2 id="deckTitle"></h2>
       </div>
 
@@ -464,8 +363,8 @@
   const CATEGORIES = [
     {
       id: 1,
-      title: "Az emberi test alapjai és a mozgásrendszer",
-      desc: "Szerkezeti elvek, szelvényezettség, aktív és passzív mozgásrendszer.",
+      title: "Csontvázrendszer",
+      desc: "A csontváz felépítése, feladatai, a csontszövet, a csontok alakja, ízületek, síkok és súlyvonal.",
       cards: [
         { q: "Mi a bilaterális szimmetria?", a: "A test jobb és bal oldala alapvetően egymás tükörképe. A középsík (median sagittalis sík) osztja jobb és bal félre." },
         { q: "Mi a szelvényezettség (szegmentáció)?", a: "A test bizonyos részei hasonló, ismétlődő szakaszokból, szelvényekből épülnek fel." },
@@ -473,14 +372,7 @@
         { q: "Mi a mozgásrendszer feladata?", a: "Lehetővé teszi a test helyzetének megváltoztatását, a helyváltoztatást és a testtartás fenntartását." },
         { q: "Mi tartozik a passzív mozgásrendszerhez?", a: "Csontok, ízületek, ízületi szalagok és porcok. Feladata: a test támasztása, védelme és a mozgás kereteinek biztosítása." },
         { q: "Mi tartozik az aktív mozgásrendszerhez?", a: "Vázizmok és izmok inai. Az izom-összehúzódással létrehozza a mozgást, fenntartja a testtartást és stabilizálja az ízületeket." },
-        { q: "Melyik rész hozza létre a mozgást: az aktív vagy a passzív?", a: "Az aktív rész. A passzív rész a mozgás kereteit adja." }
-      ]
-    },
-    {
-      id: 2,
-      title: "A csontváz és a csontszövet",
-      desc: "Csontváz feladatai, csontszövet összetétele, csontsejtek, a csont részei, csöves és alak szerinti csontok.",
-      cards: [
+        { q: "Melyik rész hozza létre a mozgást: az aktív vagy a passzív?", a: "Az aktív rész. A passzív rész a mozgás kereteit adja." },
         { q: "Hány csontból áll egy felnőtt csontváza?", a: "Általában 206 csontból." },
         { q: "Sorold fel a csontváz hat feladatát!", a: "Támasztás, védelem, mozgás, vérképzés, ásványianyag-raktározás, energiaraktározás." },
         { q: "Mely részek alkotják a tengelyvázat?", a: "A koponya, a gerincoszlop és a mellkas." },
@@ -499,14 +391,7 @@
         { q: "Adj példát rövid csontra!", a: "Kéztőcsontok, lábtőcsontok. Hosszúságuk, szélességük és vastagságuk közel azonos." },
         { q: "Adj példát lapos csontra!", a: "Lapocka, szegycsont, bordák, koponyacsontok. Védő és izomtapadási szerepük van." },
         { q: "Adj példát szabálytalan csontra!", a: "Csigolyák, egyes arckoponyacsontok. Bonyolult, változatos alakúak." },
-        { q: "Mi a szezámcsont, és mi a példája?", a: "Inakban kialakuló kis csont, amely védi az inat és javítja az izom erőkarját. Példa: térdkalács (patella)." }
-      ]
-    },
-    {
-      id: 3,
-      title: "Csontösszeköttetések és ízületek",
-      desc: "Folytonos és megszakított összeköttetések, ízülettípusok, ízületi felépítés, stabilitás és mobilitás.",
-      cards: [
+        { q: "Mi a szezámcsont, és mi a példája?", a: "Inakban kialakuló kis csont, amely védi az inat és javítja az izom erőkarját. Példa: térdkalács (patella)." },
         { q: "Mi jellemzi a folytonos csontösszeköttetéseket (synarthrosis)?", a: "A csontokat kötőszövet vagy porc köti össze. Nincs valódi ízületi rés." },
         { q: "Adj példát syndesmosisra!", a: "A sípcsont és a szárkapocscsont közötti összeköttetés." },
         { q: "Adj példát sutura típusú összeköttetésre!", a: "A koponyacsontok között." },
@@ -523,14 +408,7 @@
         { q: "Mi az egyszerű ízület (articulatio simplex)?", a: "Olyan ízület, amelyben két csont vesz részt. Példa: vállízület." },
         { q: "Mi a komplex ízület (articulatio complexa)? Példa?", a: "Az ízületi üregben porcos korong vagy meniscus is található. Példa: térdízület." },
         { q: "Mi a kapcsolat az ízületek stabilitása és mobilitása között?", a: "Általában fordított: a nagyobb mobilitás gyakran kisebb stabilitással, a nagyobb stabilitás kisebb mozgásterjedelemmel jár." },
-        { q: "Mit jelent az ízületről-ízületre elv?", a: "Az ízületek felváltva igényelnek mobilitást vagy stabilitást. Például a bokaízület mobilitást, a térdízület stabilitást igényel. Ha egy ízület nem látja el feladatát, a szomszédos ízületek túlterhelődhetnek." }
-      ]
-    },
-    {
-      id: 4,
-      title: "Mozgássíkok, tengelyek és a súlyvonal",
-      desc: "Anatómiai síkok, mozgástengelyek, súlypont és a súlyvonal lefutása.",
-      cards: [
+        { q: "Mit jelent az ízületről-ízületre elv?", a: "Az ízületek felváltva igényelnek mobilitást vagy stabilitást. Például a bokaízület mobilitást, a térdízület stabilitást igényel. Ha egy ízület nem látja el feladatát, a szomszédos ízületek túlterhelődhetnek." },
         { q: "Melyik sík osztja a testet jobb és bal oldalra? Milyen mozgások jellemzik?", a: "A sagittalis (nyílirányú) sík. Jellemző mozgások: flexio és extensio. Példa: guggolás, könyökhajlítás." },
         { q: "Melyik sík osztja a testet elülső és hátulsó részre? Milyen mozgások?", a: "A frontalis (homloksík, coronalis sík). Jellemző mozgások: abductio, adductio, oldalra hajlítás. Példa: karemelés oldalra." },
         { q: "Melyik sík osztja a testet felső és alsó részre? Milyen mozgások?", a: "A transversalis (vízszintes) sík. Jellemző mozgások: rotatio, horizontális abductio és adductio. Példa: törzsfordítás." },
@@ -544,6 +422,151 @@
         { q: "Hol halad a súlyvonal a térdízülethez képest?", a: "Kissé a térdízület forgástengelye előtt." },
         { q: "Hol halad a súlyvonal a csípőízülethez képest?", a: "Kissé a csípőízület forgástengelye mögött." },
         { q: "Hol halad a súlyvonal a fej területén?", a: "A külső hallójárat közelében." }
+      ]
+    },
+    {
+      id: 2,
+      title: "Izomzat",
+      desc: "A vázizomzat felépítése, izomműködési formák, izomrostok, izomerő, izomláz és az izomegyensúly.",
+      cards: [
+        { q: "Mi a mozgásrendszer aktív része?", a: "A vázizomzat (musculi skeletales), amely az összehúzódásával mozgást hoz létre." },
+        { q: "Melyek a vázizmok fő funkciói?", a: "Mozgás, testtartás fenntartása, ízületek stabilizálása, hőtermelés és a belső szervek védelme." },
+        { q: "Melyek egy vázizom fő részei?", a: "Eredés (origo), tapadás (insertio) és izomhas (venter)." },
+        { q: "Mi az eredés és a tapadás?", a: "Az eredés az izom egyik rögzülési pontja, a tapadás a másik. Összehúzódáskor a két pont közeledhet egymáshoz." },
+        { q: "Hogyan épül fel a vázizom?", a: "Izomrostkötegekből, azokat alkotó izomrostokból, miofibrillumokból és szarkomerekből." },
+        { q: "Mi az izomrost, miofibrillum és szarkomer?", a: "Az izomrost egy izomsejt; benne miofibrillumok találhatók, amelyek ismétlődő szarkomerekből épülnek fel." },
+        { q: "Mi az aktin és a miozin?", a: "Az aktin vékony, a miozin vastag kontraktilis fehérjefonal, amelyek kölcsönhatása az izom összehúzódását eredményezi." },
+        { q: "Mi jellemzi a fázisos és tónusos izmokat?", a: "A fázisos izmok főként dinamikus mozgásban, a tónusos izmok tartós testtartási feladatokban vesznek részt." },
+        { q: "Milyen izomrosttípusok vannak?", a: "I-es típusú lassú, oxidatív rostok; IIa típusú gyors, kevert rostok; IIx típusú gyors, glikolitikus rostok." },
+        { q: "Mi az agonista izom?", a: "Az adott mozgást elsődlegesen létrehozó izom." },
+        { q: "Mi az antagonista izom?", a: "Az agonistával ellentétes mozgást végző izom." },
+        { q: "Mi a szinergista izom?", a: "Az agonista működését segítő, a mozgást támogató izom." },
+        { q: "Mi a fixátor izom?", a: "Stabilizálja az adott testrészt, hogy a mozgás megfelelően végrehajtható legyen." },
+        { q: "Mit jelent az izomegyensúly?", a: "Az egymással ellentétes vagy együttműködő izmok megfelelő erő- és működésbeli egyensúlya." },
+        { q: "Mi a koncentrikus izomműködés?", a: "Az izom összehúzódás közben megrövidül, például a súly felemelésekor." },
+        { q: "Mi az excentrikus izomműködés?", a: "Az izom feszülés közben megnyúlik, például a súly lassú leengedésekor." },
+        { q: "Mi az izometriás izomműködés?", a: "Az izom feszül, de a hossza lényegében nem változik." },
+        { q: "Mi az izokinetikus izomműködés?", a: "Állandó mozgási sebesség mellett változó ellenállással történő izomműködés." },
+        { q: "Mi az izomtónus?", a: "Az izmok folyamatos, alacsony szintű alapfeszülése nyugalomban is." },
+        { q: "Mi az izomláz?", a: "Terhelés után kialakuló izomfájdalom és érzékenység, amely gyakran szokatlan vagy excentrikus terhelést követ." },
+        { q: "Hogyan növekedhet az izomerő izomtömeg-növekedés nélkül?", a: "Neurális adaptációval: hatékonyabb motorosegység-rekrutációval, idegi aktivációval és koordinációval." },
+        { q: "Mit jelent a motoros egységek rekrutációja?", a: "Az erőkifejtéshez egyre több motoros egység bekapcsolása." },
+        { q: "Mit jelent a motoros egységek tüzelési frekvenciája?", a: "Az idegsejt által az izomrostoknak küldött ingerületek gyakorisága." },
+        { q: "Miért lehet egy kisebb izomtömegű ember erősebb?", a: "Hatékonyabb idegi aktiváció, koordináció, technika és kedvezőbb anatómiai erőkarok miatt." },
+        { q: "Mi a keresztadaptáció (cross-education)?", a: "Az egyik végtag edzése a másik, nem edzett végtag erejét is növelheti idegrendszeri alkalmazkodás révén." },
+        { q: "Mi a szöveti adaptáció az erőedzés során?", a: "Az izomrostok keresztmetszetének és kontraktilis elemeinek növekedése, valamint a kötőszövet alkalmazkodása." },
+        { q: "Mi a miofibrilláris hipertrófia?", a: "A kontraktilis miofibrillumok és fehérjék mennyiségének növekedése." },
+        { q: "Mi a szarkoplazmatikus hipertrófia?", a: "Az izomsejtek szarkoplazmájának, glikogén- és folyadéktartalmának növekedése." },
+        { q: "Miért nem jelent automatikusan nagyobb izomtömeg nagyobb funkcionális erőt?", a: "Mert az erőhöz idegrendszeri koordináció, technika, stabilitás és megfelelő mozgástartomány is szükséges." },
+        { q: "Mi a különbség a neurális és szöveti erőnövekedés között?", a: "A neurális idegrendszeri alkalmazkodás, a szöveti pedig az izom és más szövetek szerkezeti változása." },
+        { q: "Melyek a vázizmot körülvevő kötőszövetes burkok?", a: "Endomysium, perimysium és epimysium." },
+        { q: "Mit vesz körül az endomysium?", a: "Az egyes izomrostokat." },
+        { q: "Mit vesz körül a perimysium?", a: "Az izomrostok kötegeit (fasciculusokat)." },
+        { q: "Mit vesz körül az epimysium?", a: "A teljes izmot." },
+        { q: "Mi a motoros egység?", a: "Egy mozgató idegsejt és az általa beidegzett izomrostok összessége." },
+        { q: "Mi a szarkomer?", a: "A miofibrillum legkisebb összehúzódó szerkezeti egysége." },
+        { q: "Mely fehérjék végzik az izom összehúzódását?", a: "Az aktin (vékony) és a miozin (vastag) filamentumok." },
+        { q: "Mi történik a csúszó filamentumok elmélete szerint?", a: "Az aktinfilamentumok a miozinok között elcsúsznak; a szarkomer megrövidül." },
+        { q: "Mi a kalciumion (Ca²⁺) szerepe az izom-összehúzódásban?", a: "Lehetővé teszi az aktin és miozin kapcsolódását." },
+        { q: "Mi az ATP szerepe az izomműködésben?", a: "Energiát biztosít a kereszthidak működéséhez és az elernyedéshez." },
+        { q: "Milyen szerepe van a szarkoplazmás retikulumnak?", a: "Tárolja és felszabadítja az izom-összehúzódást szabályozó Ca²⁺-ionokat." },
+        { q: "Milyen tényezők befolyásolják az izomerőt?", a: "Izomkeresztmetszet, idegi aktiváció, rosttípus, izomhossz, ízületi szög és technika." },
+        { q: "Mi történhet tartós inaktivitás során az izmokkal?", a: "Izomsorvadás (atrophia), erőcsökkenés és a mozgástartomány beszűkülése." },
+        { q: "Mit jelent az izom rövidülése vagy megrövidült állapota?", a: "Az izom nyugalmi hossza csökkenhet, ami korlátozhatja az ízületi mozgást." },
+        { q: "Milyen következménye lehet az izomegyensúly felborulásának?", a: "Testtartási eltérés, mozgásbeszűkülés és fokozott ízületi terhelés." },
+        { q: "Mi okozza leginkább a késleltetett izomlázat (DOMS)?", a: "Szokatlan, főként excentrikus terhelés után kialakuló mikrosérülések és gyulladásos folyamatok." },
+        { q: "Mikor jelentkezik általában a késleltetett izomláz?", a: "Gyakran 12–24 óra múlva, és 24–72 óra körül a legerősebb." },
+        { q: "Mi segítheti az izom regenerációját?", a: "Megfelelő pihenés, alvás, táplálkozás és fokozatos terhelés." },
+        { q: "Mi a fő különbség a miofibrilláris és szarkoplazmatikus hipertrófia között?", a: "Miofibrilláris: kontraktilis elemek növekedése; szarkoplazmatikus: sejtplazma-térfogat növekedése." }
+      ]
+    },
+    {
+      id: 3,
+      title: "Izom növekedés",
+      desc: "Az izomtömeg növekedésének mechanizmusai, edzési és táplálkozási tényezők, regeneráció és hormonok.",
+      cards: [
+        { q: "Mit jelent az izomzat növekedése?", a: "Az izom méretének és keresztmetszetének növekedését, amelyet elsősorban az izomrostok hipertrófiája okoz." },
+        { q: "Mi a hipertrófia?", a: "A sejtek méretének növekedése. Az izomban az izomrostok keresztmetszete növekszik." },
+        { q: "Mi a hiperplázia?", a: "A sejtek számának növekedése. Emberben az izomnövekedésben betöltött szerepe nem bizonyított egyértelműen." },
+        { q: "Mi a különbség a hipertrófia és a hiperplázia között?", a: "Hipertrófia: a sejtek mérete nő. Hiperplázia: a sejtek száma nő." },
+        { q: "Mi váltja ki elsősorban az izomnövekedést?", a: "A megfelelő ellenállásos edzés, a mechanikai feszülés, az anyagcsere-folyamatok és a megfelelő regeneráció." },
+        { q: "Mi a mechanikai feszülés szerepe az izomnövekedésben?", a: "Az izomra ható terhelés olyan jelzéseket indít el, amelyek serkentik az izomfehérjék képződését." },
+        { q: "Mit jelent az izomfehérje-szintézis?", a: "Új izomfehérjék, például aktin és miozin előállítását." },
+        { q: "Mi az izomfehérje-lebontás?", a: "A meglévő izomfehérjék lebontása a szervezetben." },
+        { q: "Mikor növekszik az izomtömeg?", a: "Ha hosszabb távon az izomfehérje-szintézis meghaladja az izomfehérje-lebontást." },
+        { q: "Mi a mTOR szerepe az izomnövekedésben?", a: "A sejten belüli jelátviteli útvonal része, amely szabályozza és serkenti a fehérjeszintézist." },
+        { q: "Mi a műholdsejtek (szatellitsejtek) szerepe?", a: "Segítik az izomrostok regenerációját és növekedését, valamint új sejtmagokkal járulhatnak hozzá az izomrostok működéséhez." },
+        { q: "Miért fontosak a sejtmagok az izomrostban?", a: "A sejtmagok szabályozzák a fehérjeszintézishez szükséges folyamatokat." },
+        { q: "Mi a miofibrilláris hipertrófia?", a: "A kontraktilis fehérjék és miofibrillumok mennyiségének növekedése." },
+        { q: "Mi a szarkoplazmatikus hipertrófia?", a: "Az izomrost sejtplazmájának és egyéb nem kontraktilis alkotóelemeinek térfogatnövekedése." },
+        { q: "Milyen szerepe van a progresszív túlterhelésnek?", a: "A terhelés fokozatos növelésével új alkalmazkodási ingert biztosít az izmok számára." },
+        { q: "Mit jelent a progresszív túlterhelés?", a: "Az edzés terhelésének fokozatos növelését, például nagyobb súly, több ismétlés vagy több sorozat alkalmazását." },
+        { q: "Miért fontos az edzés intenzitása?", a: "Mert megfelelően nagy terhelés szükséges az izom alkalmazkodási folyamatainak kiváltásához." },
+        { q: "Miért fontos az edzésvolumen?", a: "Az összes elvégzett edzésmunka mennyisége befolyásolja az izomra jutó ingert." },
+        { q: "Mit jelent az edzésvolumen?", a: "Az edzés során végzett munka mennyiségét; gyakran sorozat × ismétlés × súly alapján becsülik." },
+        { q: "Miért fontos a megfelelő ismétlésszám?", a: "A különböző ismétléstartományok eltérő módon teszik lehetővé a terhelés szabályozását, de megfelelő erőkifejtés mellett több tartomány is elősegítheti a hipertrófiát." },
+        { q: "Miért fontos az izom regenerációja?", a: "Mert az alkalmazkodási és helyreállítási folyamatok az edzések közötti időszakban zajlanak." },
+        { q: "Mi történik az izommal pihenés közben?", a: "Helyreállnak a terhelés okozta változások, és megfelelő feltételek mellett növekedhet az izomfehérjék mennyisége." },
+        { q: "Miért fontos az alvás az izomnövekedésben?", a: "Támogatja a regenerációt, a hormonális szabályozást és a megfelelő idegrendszeri működést." },
+        { q: "Miért fontos a fehérjebevitel?", a: "A fehérjék aminosavakat biztosítanak az izomfehérjék felépítéséhez és helyreállításához." },
+        { q: "Milyen szerepe van a szénhidrátoknak az izomépítésben?", a: "Energiát biztosítanak az edzéshez, és segítik az izom glikogénraktárainak feltöltését." },
+        { q: "Mi a glikogén?", a: "A glükóz raktározott formája, amely fontos energiaforrás az izmok számára." },
+        { q: "Miért fontos a megfelelő energiabevitel?", a: "A túl alacsony energiabevitel ronthatja a regenerációt és korlátozhatja az izomnövekedést." },
+        { q: "Milyen szerepe van a hormonoknak az izomnövekedésben?", a: "Szabályozzák az anyagcserét, a fehérjeszintézist és az izomszövet alkalmazkodását." },
+        { q: "Milyen hormonok kapcsolódnak az izomnövekedéshez?", a: "Például tesztoszteron, növekedési hormon és IGF-1." },
+        { q: "Mi a különbség az izomerő növekedése és az izomtömeg növekedése között?", a: "Az erő idegrendszeri alkalmazkodással is nőhet, míg az izomtömeg növekedése főként szerkezeti változás." },
+        { q: "Miért nem nő mindenkinél ugyanolyan gyorsan az izomtömeg?", a: "Genetikai adottságok, életkor, hormonális háttér, edzésmúlt, táplálkozás és regeneráció miatt." },
+        { q: "Milyen szerepe van a genetikának az izomnövekedésben?", a: "Befolyásolja az izomrosttípusok arányát, az izomformát, a növekedési potenciált és az alkalmazkodás mértékét." },
+        { q: "Mi az izomsorvadás (atrophia)?", a: "Az izomrostok méretének és az izomtömegnek a csökkenése." },
+        { q: "Mi okozhat izomsorvadást?", a: "Tartós inaktivitás, immobilizáció, elégtelen táplálkozás, betegségek és idegi beidegzési zavarok." },
+        { q: "Mi az izomadaptáció?", a: "Az izom alkalmazkodása a rendszeresen ismétlődő terheléshez szerkezeti és működésbeli változásokkal." },
+        { q: "Miért fontos a rendszeresség az izomnövekedésben?", a: "Mert a rendszeresen ismételt edzésingerek tartós alkalmazkodást eredményezhetnek." },
+        { q: "Mi történik, ha hosszabb időre abbahagyjuk az edzést?", a: "Csökkenhet az izomtömeg és az erő, ezt detrainingnek nevezzük." },
+        { q: "Mi a különbség a kezdő és a haladó edzettek izomnövekedése között?", a: "Kezdőknél általában gyorsabb a kezdeti fejlődés, haladóknál lassabb és kisebb mértékű lehet a növekedés." },
+        { q: "Miért fontos az edzéstechnika az izomnövekedésben?", a: "Segít a célizom megfelelő terhelésében, és csökkenti a sérülésveszélyt." },
+        { q: "Mi a túledzés?", a: "Tartósan túl nagy edzésterhelés és elégtelen regeneráció miatt kialakuló állapot, amely teljesítményromlással járhat." },
+        { q: "Milyen jelei lehetnek a túlterhelésnek?", a: "Tartós fáradtság, teljesítménycsökkenés, alvászavar, motivációvesztés és elhúzódó izomfájdalom." },
+        { q: "Mi a különbség az izomépítés és a zsírtömeg növekedése között?", a: "Az izomépítés az izomszövet növekedése, míg a zsírtömeg növekedése a zsírszövet mennyiségének emelkedése." },
+        { q: "Miért fontos a megfelelő edzésterv?", a: "Biztosítja a terhelés fokozatosságát, a megfelelő edzésvolument és a regenerációt." },
+        { q: "Mit jelent az izomépítés szempontjából a kalóriatöbblet?", a: "A szervezet több energiát kap, mint amennyit felhasznál; ez támogathatja az izomnövekedést." },
+        { q: "Lehetséges-e izmot építeni kalóriadeficitben?", a: "Igen, főként kezdőknél, újrakezdőknél vagy nagyobb zsírtartalékkal rendelkezőknél, megfelelő edzéssel és fehérjebevitellel." }
+      ]
+    },
+    {
+      id: 4,
+      title: "Nyújtás",
+      desc: "Stretching, mobilitás és flexibilitás, AROM és PROM, fascia, SMR és az idegrendszeri nyújtási mechanizmusok.",
+      cards: [
+        { q: "Mi a stretching?", a: "Az izmok és a környező szövetek nyújtása a mozgásterjedelem növelése vagy fenntartása érdekében." },
+        { q: "Mi a mobilizáció?", a: "Az ízületek és a környező szövetek mozgásterjedelmét fejlesztő, aktív vagy passzív mozgás." },
+        { q: "Mi a különbség a stretching és a mobilizáció között?", a: "A stretching főként a lágyrészek nyújtására, a mobilizáció az ízületi mozgásterjedelem fejlesztésére irányul." },
+        { q: "Mit jelent a mobilitás?", a: "Az ízület aktív, kontrollált mozgásterjedelme." },
+        { q: "Mit jelent a flexibilitás?", a: "Az izmok és más lágyrészek nyújthatósága, megnyújthatósága." },
+        { q: "Milyen tényezők befolyásolják a mobilitást és flexibilitást?", a: "Izom- és kötőszöveti tulajdonságok, ízületi felépítés, idegrendszer, életkor, hőmérséklet és aktivitás." },
+        { q: "Mi az AROM?", a: "Active Range of Motion: aktív mozgásterjedelem, amelyet saját izomerővel végzünk." },
+        { q: "Mi a PROM?", a: "Passive Range of Motion: passzív mozgásterjedelem, amelyet külső erő vagy segítség hoz létre." },
+        { q: "Mi a különbség az AROM és a PROM között?", a: "AROM esetén saját izmaink mozgatják az ízületet, PROM esetén külső erő végzi a mozgást." },
+        { q: "Hogyan hat a tartós inaktivitás az izmokra?", a: "Izomsorvadást, erőcsökkenést, merevséget és a mozgástartomány beszűkülését okozhatja." },
+        { q: "Mi történhet a szarkomerekkel tartós immobilizáció során?", a: "A tartósan rövid helyzetben tartott izomban csökkenhet a soros szarkomerek száma." },
+        { q: "Hogyan változhat a kollagén tartós inaktivitás hatására?", a: "A kötőszövet merevebbé válhat, és csökkenhet a szövetek rugalmassága." },
+        { q: "Miért nem elegendő önmagában a nyújtás a beszűkült mozgásterjedelem javításához?", a: "Mert a beszűkülés oka lehet izomgyengeség, ízületi korlátozottság vagy idegrendszeri tényező is." },
+        { q: "Milyen módszerek segíthetik a mobilitás fejlesztését?", a: "Dinamikus mobilizáció, aktív nyújtás, erősítés, kontrollált ízületi mozgások és SMR." },
+        { q: "Mi a fascia?", a: "A test egészét átszövő kötőszövetes hálózat, amely körülveszi és összekapcsolja az izmokat és más struktúrákat." },
+        { q: "Mi a fascia szerepe?", a: "Támaszt, összeköttetést és erőátvitelt biztosít, valamint részt vesz a mozgásban és a szövetek mechanikai működésében." },
+        { q: "Mi az SMR?", a: "Self-Myofascial Release: önmasszázs hengerrel vagy más eszközzel, amely a lágyrészek kezelését célozza." },
+        { q: "Milyen hatása lehet az SMR-nek?", a: "Rövid távon javíthatja a mozgásterjedelmet és csökkentheti a merevségérzetet." },
+        { q: "Miért hasznos a megnyújtott helyzetben végzett erősítés?", a: "Erősíti az izmokat nagyobb izomhossznál, és segítheti az aktív mozgásterjedelem fejlesztését." },
+        { q: "Mi az a soros szarkomer-adaptáció?", a: "Az izomrostban a szarkomerek száma soros irányban növekedhet, ami hozzájárulhat a hosszabb izomhosszhoz." },
+        { q: "Mi a reciprok gátlás?", a: "Az agonista izom összehúzódása idegrendszeri úton csökkentheti az antagonista izom aktivitását." },
+        { q: "Mondj példát a reciprok gátlásra!", a: "Térdnyújtáskor a combfeszítő izmok aktiválódnak, miközben a combhajlítók aktivitása csökkenhet." },
+        { q: "Mi a nyújtási vagy miotatikus reflex?", a: "Az izom gyors megnyúlására bekövetkező reflexes összehúzódás." },
+        { q: "Mi az izomorsó szerepe?", a: "Érzékeli az izom hosszának változását és a megnyúlás sebességét." },
+        { q: "Mi az autogén gátlás?", a: "Az izom saját feszüléséhez kapcsolódó idegrendszeri folyamat, amely csökkentheti ugyanazon izom aktivitását." },
+        { q: "Mi a Golgi-féle ínorsó szerepe?", a: "Érzékeli az izom-ín rendszer feszülését, és információt küld az idegrendszernek." },
+        { q: "Hogyan kapcsolódik az autogén gátlás a paścimottānāsanához?", a: "A tartós, kontrollált előrehajlás során az izom-ín rendszer feszülése és az idegrendszeri szabályozás is befolyásolhatja a nyújtásérzetet." },
+        { q: "Mi a ko-kontrakció?", a: "Az agonista és antagonista izmok egyidejű összehúzódása." },
+        { q: "Miért fontos a ko-kontrakció guggolás közben?", a: "Segíti az ízületek stabilizálását és a mozgás kontrollját." },
+        { q: "Mi a különbség a mobilitás és a flexibilitás között?", a: "A flexibilitás a lágyrészek nyújthatósága, a mobilitás pedig az aktív, kontrollált ízületi mozgásképesség." }
       ]
     }
   ];
@@ -569,20 +592,22 @@
     const list = $("categoryList");
     list.innerHTML = "";
     CATEGORIES.forEach((cat, i) => {
+      const empty = cat.cards.length === 0;
       const btn = document.createElement("button");
-      btn.className = "cat-card";
+      btn.className = "cat-card" + (empty ? " empty" : "");
+      btn.disabled = empty;
       btn.innerHTML = `
         <div class="cat-num">Témakör ${cat.id}</div>
         <div class="cat-title"></div>
         <div class="cat-desc"></div>
         <div class="cat-foot">
           <span></span>
-          <span class="cat-arrow">→</span>
+          <span class="cat-arrow">${empty ? "" : "→"}</span>
         </div>`;
       btn.querySelector(".cat-title").textContent = cat.title;
       btn.querySelector(".cat-desc").textContent = cat.desc;
-      btn.querySelector(".cat-foot span").textContent = cat.cards.length + " kártya";
-      btn.addEventListener("click", () => openCategory(i));
+      btn.querySelector(".cat-foot span").textContent = empty ? "Hamarosan" : cat.cards.length + " kártya";
+      if (!empty) btn.addEventListener("click", () => openCategory(i));
       list.appendChild(btn);
     });
   }
@@ -612,9 +637,7 @@
     const cat = CATEGORIES[i];
     $("deckTopLabel").textContent = "Témakör " + cat.id;
     $("deckEyebrow").textContent = "Témakör " + cat.id;
-    $("deckTitle").innerHTML = "";
     $("deckTitle").textContent = cat.title;
-    $("practiceBtn").textContent = "Csak a „gyakorlom” kártyák";
     showView("deck");
     setFlipped(false, true);
     renderCard();
@@ -636,12 +659,13 @@
 
   function renderCard() {
     const total = order.length;
+    const cat = CATEGORIES[catIndex];
     const card = currentCard();
     $("frontText").textContent = card.q;
     $("backText").textContent = card.a;
     $("counter").textContent = (pos + 1) + " / " + total;
-    $("knownCount").textContent = "Tudom: " + known.size + " / " + CATEGORIES[catIndex].cards.length;
-    $("progressFill").style.width = ((known.size / CATEGORIES[catIndex].cards.length) * 100) + "%";
+    $("knownCount").textContent = "Tudom: " + known.size + " / " + cat.cards.length;
+    $("progressFill").style.width = ((known.size / cat.cards.length) * 100) + "%";
     $("prevBtn").disabled = pos === 0;
     $("nextBtn").disabled = pos === total - 1;
 
@@ -650,9 +674,7 @@
     $("markAgain").classList.toggle("active", !known.has(idx));
 
     $("doneBox").classList.remove("show");
-    $("practiceBtn").textContent = practiceOnly
-      ? "Mind a kártyák"
-      : "Csak a „gyakorlom” kártyák";
+    $("practiceBtn").textContent = practiceOnly ? "Mind a kártyák" : "Csak a „gyakorlom” kártyák";
   }
 
   function goTo(newPos) {
@@ -715,7 +737,7 @@
   }
 
   // ---------- events ----------
-  $("backHome").addEventListener("click", () => { showView("home"); });
+  $("backHome").addEventListener("click", () => showView("home"));
   $("flipper").addEventListener("click", () => setFlipped(!flipped));
   $("flipper").addEventListener("keydown", (e) => {
     if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setFlipped(!flipped); }
@@ -735,7 +757,6 @@
     else if (e.key === " ") { e.preventDefault(); setFlipped(!flipped); }
   });
 
-  // swipe support
   let touchX = null;
   const scene = document.querySelector(".scene");
   scene.addEventListener("touchstart", (e) => { touchX = e.touches[0].clientX; }, { passive: true });
