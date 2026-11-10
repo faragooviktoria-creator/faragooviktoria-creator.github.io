@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#4a5f4c">
+<meta name="theme-color" content="#353d37">
 <title>Szanszkrit hangtan · Tanulókártyák</title>
 <style>
   :root{
-    --bg-1:#5b7560;
-    --bg-2:#3d503f;
+    --bg-1:#4a5a4f;
+    --bg-2:#2f362f;
     --card-1:#3b433d;
     --card-2:#262b27;
     --panel:#2b312c;
@@ -31,6 +31,10 @@
     -webkit-font-smoothing:antialiased;
     -webkit-tap-highlight-color:transparent;
     overscroll-behavior-x:none;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+    background:rgba(0,0,0,.2);
   }
   button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;padding:0}
   button:focus-visible,.card:focus-visible{outline:2px solid var(--sage-2);outline-offset:3px}
