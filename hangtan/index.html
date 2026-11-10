@@ -3,22 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#353d37">
+<meta name="theme-color" content="#4a5f4c">
 <title>Szanszkrit hangtan · Tanulókártyák</title>
 <style>
   :root{
-    --bg-1:#4a5a4f;
-    --bg-2:#2f362f;
+    --bg-1:#5b7560;
+    --bg-2:#3d503f;
     --card-1:#3b433d;
     --card-2:#262b27;
     --panel:#2b312c;
-    --chip:#363d37;
     --ink:#1d221e;
     --text:#eef3ec;
     --muted:#a3ae9f;
     --sage:#a9c9a1;
     --sage-2:#c9dfc3;
-    --line:rgba(255,255,255,.12);
     --amber:#e2b964;
   }
   *{box-sizing:border-box}
@@ -32,6 +30,7 @@
     font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     -webkit-font-smoothing:antialiased;
     -webkit-tap-highlight-color:transparent;
+    overscroll-behavior-x:none;
   }
   button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;padding:0}
   button:focus-visible,.card:focus-visible{outline:2px solid var(--sage-2);outline-offset:3px}
@@ -51,22 +50,15 @@
     font-size:.85rem;white-space:nowrap;font-variant-numeric:tabular-nums;
   }
 
-  /* Chips */
-  .chips{display:flex;gap:8px;margin-top:20px;overflow-x:auto;scrollbar-width:none}
-  .chips::-webkit-scrollbar{display:none}
-  .chip{
-    flex:0 0 auto;padding:9px 15px;border-radius:999px;
-    border:1px solid rgba(255,255,255,.2);color:var(--muted);font-size:.9rem;
-  }
-  .chip[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--text)}
-
-  /* Panels & switch */
+  /* Filter panel (top) */
   .panel{
-    margin-top:14px;padding:14px 16px;border-radius:20px;
+    margin-top:18px;padding:6px 16px;border-radius:20px;
     background:var(--panel);box-shadow:0 10px 26px rgba(0,0,0,.18);
   }
-  .row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0}
+  .row + .row{border-top:1px solid rgba(255,255,255,.08)}
   .label{font-size:.95rem}
+  .label small{display:block;color:var(--muted);font-size:.76rem;margin-top:2px}
   .switch{
     position:relative;width:54px;height:30px;border-radius:999px;flex:0 0 auto;
     background:#d9ddd5;transition:background .25s;
@@ -78,15 +70,23 @@
   .switch[aria-checked="true"]{background:var(--sage)}
   .switch[aria-checked="true"] .knob{transform:translateX(24px)}
 
-  .meta{display:flex;justify-content:space-between;margin:14px 2px 8px;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+  /* Chips */
+  .chips{display:flex;gap:8px;margin-top:14px;overflow-x:auto;scrollbar-width:none}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{
+    flex:0 0 auto;padding:9px 15px;border-radius:999px;
+    border:1px solid rgba(255,255,255,.2);color:var(--muted);font-size:.9rem;
+  }
+  .chip[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--text)}
+
+  .meta{display:flex;justify-content:space-between;margin:16px 2px 8px;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
   .progress{height:8px;border-radius:999px;background:rgba(255,255,255,.1);overflow:hidden}
   .bar{height:100%;width:0;border-radius:999px;background:var(--sage);transition:width .4s ease}
 
   /* Flip card */
-  .stage{margin-top:18px;perspective:1200px}
+  .stage{margin-top:18px;perspective:1200px;touch-action:pan-y;user-select:none;-webkit-user-select:none}
   .card{
-    position:relative;height:min(60vh,430px);min-height:330px;
-    cursor:pointer;user-select:none;-webkit-user-select:none;
+    position:relative;height:min(60vh,430px);min-height:330px;cursor:pointer;
   }
   .card-inner{
     position:relative;width:100%;height:100%;
@@ -111,8 +111,7 @@
 
   .pl{
     position:absolute;top:24px;left:26px;right:26px;
-    font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
-    text-align:left;
+    font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:left;
   }
   .tap{
     position:absolute;bottom:22px;left:0;right:0;
@@ -156,16 +155,15 @@
     background:var(--sage);margin-right:7px;vertical-align:middle;position:relative;top:-1px;
   }
 
-  /* Actions */
-  .actions{display:flex;gap:10px;margin-top:20px}
-  .btn{
-    flex:1;padding:15px 14px;border-radius:999px;font-size:.98rem;font-weight:600;
-    text-align:center;transition:transform .15s,opacity .2s;
+  /* Known button (centered) */
+  .actions{display:flex;justify-content:center;margin-top:22px}
+  .btn-known{
+    min-width:200px;padding:15px 28px;border-radius:999px;font-size:1rem;font-weight:600;
+    border:1px solid rgba(255,255,255,.28);color:var(--text);background:transparent;
+    transition:background .2s,color .2s,border-color .2s,transform .15s;
   }
-  .btn:active{transform:scale(.98)}
-  .btn.primary{background:var(--sage);color:var(--ink)}
-  .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.26);color:var(--text)}
-  .btn.warn{border-color:var(--amber);color:var(--amber)}
+  .btn-known:active{transform:scale(.98)}
+  .btn-known[aria-pressed="true"]{background:var(--sage);border-color:var(--sage);color:var(--ink)}
   .hint{margin:14px 0 0;text-align:center;font-size:.8rem;color:var(--muted);min-height:1.2em}
 
   /* Done */
@@ -230,19 +228,30 @@
 
   <!-- STUDY VIEW -->
   <section id="viewStudy">
-    <div class="chips" role="tablist" aria-label="Hangok szűrése">
-      <button class="chip" role="tab" data-filter="all" aria-selected="true">Összes</button>
-      <button class="chip" role="tab" data-filter="consonant" aria-selected="false">Mássalhangzók</button>
-      <button class="chip" role="tab" data-filter="vowel" aria-selected="false">Magánhangzók</button>
-    </div>
 
     <div class="panel">
       <div class="row">
-        <span class="label">Fordított mód <span style="color:var(--muted)">(tulajdonság → betű)</span></span>
+        <span class="label">Csak amit még nem tudok
+          <small>A „Tudtam” jelöltek elrejtése</small>
+        </span>
+        <button class="switch" id="unknownSwitch" role="switch" aria-checked="false" aria-label="Csak amit még nem tudok">
+          <span class="knob"></span>
+        </button>
+      </div>
+      <div class="row">
+        <span class="label">Fordított mód
+          <small>Tulajdonság → betű</small>
+        </span>
         <button class="switch" id="reverseSwitch" role="switch" aria-checked="false" aria-label="Fordított mód">
           <span class="knob"></span>
         </button>
       </div>
+    </div>
+
+    <div class="chips" role="tablist" aria-label="Hangok szűrése">
+      <button class="chip" role="tab" data-filter="all" aria-selected="true">Összes</button>
+      <button class="chip" role="tab" data-filter="consonant" aria-selected="false">Mássalhangzók</button>
+      <button class="chip" role="tab" data-filter="vowel" aria-selected="false">Magánhangzók</button>
     </div>
 
     <div class="meta">
@@ -260,14 +269,12 @@
     </div>
 
     <div class="done" id="done" hidden>
-      <h2>Gratulálok, végigértél!</h2>
+      <h2 id="doneTitle">Gratulálok!</h2>
       <p id="doneText"></p>
     </div>
 
-    <div class="actions">
-      <button class="btn ghost" id="flipBtn">Megfordítás</button>
-      <button class="btn primary" id="knownBtn" hidden>Tudtam ✓</button>
-      <button class="btn ghost warn" id="missBtn" hidden>Ismétlem</button>
+    <div class="actions" id="actions">
+      <button class="btn-known" id="knownBtn" aria-pressed="false">Tudtam</button>
     </div>
     <p class="hint" id="hint"></p>
   </section>
@@ -366,61 +373,95 @@ const tilesHTML = x =>
   ).join('')}</div>`;
 
 /* ---------- state ---------- */
-let filter = 'all';
+let order = [];          // shuffled full list of sounds (one session)
+let knownSet = new Set(); // symbols marked "Tudtam"
+let filterType = 'all';
+let unknownOnly = false;
 let reverse = false;
-let deck = [];
-let index = 0;
-let missed = [];
-let known = 0;
-let attempts = 0;
+let idx = 0;
+let current = null;      // card currently shown
+let pinned = null;       // keeps the current card visible in "unknown only" mode until you navigate away
 
 const card = $('card');
 
-/* ---------- card rendering ---------- */
+const inFilter = x => filterType === 'all' || x.type === filterType;
+
+function getDeck() {
+  return order.filter(x =>
+    inFilter(x) &&
+    (!unknownOnly || !knownSet.has(x.symbol) || x.symbol === pinned)
+  );
+}
+
+/* ---------- rendering ---------- */
 function setFlipped(flipped, instant = false) {
   if (instant) card.classList.add('no-anim');
   card.classList.toggle('flipped', flipped);
   if (instant) {
-    void card.offsetWidth; // force reflow so the change is not animated
+    void card.offsetWidth; // reflow so the reset is not animated
     card.classList.remove('no-anim');
   }
-  $('flipBtn').hidden = flipped;
-  $('knownBtn').hidden = !flipped;
-  $('missBtn').hidden = !flipped;
   $('hint').textContent = flipped
-    ? 'Ellenőrizd a választ, majd értékeld magad.'
-    : 'Próbáld fejben, majd fordítsd meg a kártyát.';
+    ? 'Ellenőrizd a választ, majd jelöld, ha tudod.'
+    : 'Koppints a megfordításhoz · húzd balra vagy jobbra a léptetéshez';
+}
+
+function updateKnownBtn() {
+  if (!current) return;
+  const on = knownSet.has(current.symbol);
+  $('knownBtn').setAttribute('aria-pressed', on ? 'true' : 'false');
+  $('knownBtn').textContent = on ? '✓ Tudtam' : 'Tudtam';
+}
+
+function updateMeta(deck) {
+  const total = all.filter(inFilter).length;
+  const known = all.filter(x => inFilter(x) && knownSet.has(x.symbol)).length;
+  $('stats').textContent = `Kártya ${idx + 1}/${deck.length} · Tudtam: ${known}/${total}`;
+  $('counter').textContent = `${known}/${total}`;
+  $('bar').style.width = (total ? known / total * 100 : 0) + '%';
+}
+
+function showDone() {
+  current = null;
+  $('stage').hidden = true;
+  $('actions').hidden = true;
+  $('hint').textContent = '';
+  $('done').hidden = false;
+  const total = all.filter(inFilter).length;
+  const known = all.filter(x => inFilter(x) && knownSet.has(x.symbol)).length;
+  $('doneTitle').textContent = known === total ? 'Gratulálok, végigértél!' : 'Nincs több hang';
+  $('doneText').textContent = `Minden kiválasztott hangot megjelöltél. Tudtam: ${known}/${total}`;
+  $('stats').textContent = '';
+  $('counter').textContent = `${known}/${total}`;
+  $('bar').style.width = (total ? known / total * 100 : 0) + '%';
 }
 
 function renderCard() {
-  if (index >= deck.length) {
-    if (missed.length) {
-      deck = shuffle(missed.slice());
-      missed = [];
-      index = 0;
-    } else {
-      return showDone();
-    }
-  }
+  const deck = getDeck();
+  if (!deck.length) return showDone();
 
-  const x = deck[index];
+  if (idx >= deck.length) idx = deck.length - 1;
+  if (idx < 0) idx = 0;
+
+  const x = deck[idx];
+  current = x;
+  pinned = x.symbol;
+
   $('done').hidden = true;
-  card.hidden = false;
   $('stage').hidden = false;
-  document.querySelector('.actions').hidden = false;
+  $('actions').hidden = false;
 
   if (reverse) {
-    $('front').innerHTML = `<span class="pl">${x.place}</span>
+    $('front').innerHTML = `
       <p class="question">Melyik hang illik ide?</p>${tilesHTML(x)}
       <span class="tap">Koppints a megfordításhoz</span>`;
     $('back').innerHTML = `<span class="back-title">Megoldás</span>
-      <div class="back-sym">
-        <span class="sym">${solutionOf(x)}</span>
-      </div>
+      <div class="back-sym"><span class="sym">${solutionOf(x)}</span></div>
       <div class="back-sym" style="margin-top:6px">${glyph(x.symbol)}</div>
       <p class="solution-note">${x.type === 'vowel' ? 'Magánhangzó' : 'Mássalhangzó'} · ${x.place}</p>`;
   } else {
-    $('front').innerHTML = `<span class="pl">${x.place}</span>
+    // Letter side: only the letter and its Devanagari form (no place label)
+    $('front').innerHTML = `
       <span class="sym">${x.symbol}</span>
       <div class="deva-wrap">${glyph(x.symbol)}</div>
       <span class="tap">Koppints a megfordításhoz</span>`;
@@ -429,58 +470,95 @@ function renderCard() {
   }
 
   setFlipped(false, true);
-  updateMeta();
-}
-
-function updateMeta() {
-  const total = deck.length || 1;
-  const pos = Math.min(index + 1, deck.length);
-  $('stats').textContent = `Kártya ${pos}/${deck.length} · Tudtam: ${known} · Ismétlendő: ${missed.length}`;
-  $('counter').textContent = `${Math.min(index, total)}/${total}`;
-  $('bar').style.width = (index / total * 100) + '%';
-}
-
-function showDone() {
-  card.hidden = true;
-  document.querySelector('.actions').hidden = true;
-  $('hint').textContent = '';
-  $('done').hidden = false;
-  $('doneText').textContent = `Sikeresen megtanult hangok: ${known} · Összes próbálkozás: ${attempts}`;
-  $('bar').style.width = '100%';
-  $('counter').textContent = `${deck.length}/${deck.length}`;
-  $('stats').textContent = `Kész · Tudtam: ${known}`;
+  updateKnownBtn();
+  updateMeta(deck);
 }
 
 /* ---------- actions ---------- */
-function buildDeck() {
-  deck = shuffle(all.filter(x => filter === 'all' || x.type === filter));
-  index = 0;
-  missed = [];
-  known = 0;
-  attempts = 0;
+function flip() {
+  if (!current) return;
+  setFlipped(!card.classList.contains('flipped'));
+}
+
+function toggleKnown() {
+  if (!current) return;
+  const s = current.symbol;
+  knownSet.has(s) ? knownSet.delete(s) : knownSet.add(s);
+  updateKnownBtn();
+  updateMeta(getDeck());
+}
+
+// dir: +1 = next (swipe left), -1 = previous (swipe right)
+function navigate(dir) {
+  if (!current) return;
+  const cur = current;
+  pinned = null;
+  const deck = getDeck();
+  const pos = deck.indexOf(cur);
+  let newIdx;
+  if (pos === -1) {
+    // card was removed (known while in "unknown only" mode)
+    newIdx = dir > 0 ? idx : idx - 1;
+  } else {
+    newIdx = pos + dir;
+  }
+  if (deck.length) {
+    newIdx = ((newIdx % deck.length) + deck.length) % deck.length; // wrap around
+  }
+  idx = newIdx;
+  renderCard();
+}
+
+function resetPosition() {
+  idx = 0;
+  pinned = null;
   renderCard();
   renderList();
 }
 
-function flip() {
-  if (!deck[index] || $('done').hidden === false) return;
-  setFlipped(!card.classList.contains('flipped'));
-}
+/* ---------- swipe ---------- */
+let sx = 0, sy = 0, swiped = false;
+const stage = $('stage');
 
-function mark(ok) {
-  attempts++;
-  if (ok) known++;
-  else missed.push(deck[index]);
-  index++;
-  renderCard();
-}
+stage.addEventListener('pointerdown', e => {
+  sx = e.clientX;
+  sy = e.clientY;
+  swiped = false;
+});
+
+stage.addEventListener('pointerup', e => {
+  const dx = e.clientX - sx;
+  const dy = e.clientY - sy;
+  if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.3) {
+    swiped = true;
+    navigate(dx < 0 ? 1 : -1);
+  }
+});
+
+card.addEventListener('click', () => {
+  if (swiped) { swiped = false; return; } // a swipe should not also flip
+  flip();
+});
+
+card.addEventListener('keydown', e => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    flip();
+  }
+});
+
+document.addEventListener('keydown', e => {
+  if ($('viewStudy').hidden) return;
+  if (e.key === 'ArrowRight') navigate(-1);
+  if (e.key === 'ArrowLeft') navigate(1);
+});
 
 /* ---------- list view ---------- */
 function renderList() {
-  const list = filter === 'all' ? all : all.filter(x => x.type === filter);
+  const list = all.filter(inFilter);
   $('groups').innerHTML = rows
     .map(([place, items]) => {
-      const sub = items.filter(([s]) => list.some(x => x.symbol === s));
+      const sub = items.filter(([s, kind]) => list.some(x => x.symbol === s));
       if (!sub.length) return '';
       return `<div class="group">
         <h2>${place}</h2>
@@ -508,42 +586,43 @@ function showView(name) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-/* ---------- events ---------- */
-card.addEventListener('click', flip);
-card.addEventListener('keydown', e => {
-  if (e.key === 'Enter' || e.key === ' ') {
-    e.preventDefault();
-    flip();
-  }
-});
-$('flipBtn').addEventListener('click', flip);
-$('knownBtn').addEventListener('click', () => mark(true));
-$('missBtn').addEventListener('click', () => mark(false));
+/* ---------- controls ---------- */
+$('knownBtn').addEventListener('click', toggleKnown);
 
 document.querySelectorAll('.chip').forEach(btn => {
   btn.addEventListener('click', () => {
-    filter = btn.dataset.filter;
+    filterType = btn.dataset.filter;
     document.querySelectorAll('.chip').forEach(c =>
       c.setAttribute('aria-selected', c === btn ? 'true' : 'false'));
-    buildDeck();
+    resetPosition();
   });
+});
+
+$('unknownSwitch').addEventListener('click', () => {
+  unknownOnly = !unknownOnly;
+  $('unknownSwitch').setAttribute('aria-checked', unknownOnly ? 'true' : 'false');
+  resetPosition();
 });
 
 $('reverseSwitch').addEventListener('click', () => {
   reverse = !reverse;
   $('reverseSwitch').setAttribute('aria-checked', reverse ? 'true' : 'false');
-  buildDeck();
+  renderCard();
 });
 
 $('navStudy').addEventListener('click', () => showView('study'));
 $('navList').addEventListener('click', () => showView('list'));
 $('navShuffle').addEventListener('click', () => {
+  order = shuffle(all.slice());
+  knownSet = new Set();
   showView('study');
-  buildDeck();
+  resetPosition();
 });
 
 /* ---------- start ---------- */
-buildDeck();
+order = shuffle(all.slice());
+renderCard();
+renderList();
 </script>
 </body>
 </html>
