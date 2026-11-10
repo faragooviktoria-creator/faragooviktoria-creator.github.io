@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#353d37">
+<title>Szanszkrit hangtan · Tanulókártyák</title>
+<style>
+  :root{
+    --bg-1:#4a5a4f;
+    --bg-2:#2f362f;
+    --card-1:#3b433d;
+    --card-2:#262b27;
+    --panel:#2b312c;
+    --chip:#363d37;
+    --ink:#1d221e;
+    --text:#eef3ec;
+    --muted:#a3ae9f;
+    --sage:#a9c9a1;
+    --sage-2:#c9dfc3;
+    --line:rgba(255,255,255,.12);
+    --amber:#e2b964;
+  }
+  *{box-sizing:border-box}
+  [hidden]{display:none !important}
+  html,body{margin:0;min-height:100%}
+  body{
+    min-height:100vh;
+    min-height:100dvh;
+    background:linear-gradient(180deg,var(--bg-1) 0%,var(--bg-2) 100%);
+    color:var(--text);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    -webkit-tap-highlight-color:transparent;
+  }
+  button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;padding:0}
+  button:focus-visible,.card:focus-visible{outline:2px solid var(--sage-2);outline-offset:3px}
+
+  .app{
+    max-width:480px;
+    margin:0 auto;
+    padding:calc(18px + env(safe-area-inset-top,0px)) 18px calc(118px + env(safe-area-inset-bottom,0px));
+  }
+
+  /* Header */
+  .top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .eyebrow{margin:0;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  h1{margin:4px 0 0;font-size:1.6rem;font-weight:600;letter-spacing:.01em}
+  .counter{
+    padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.08);
+    font-size:.85rem;white-space:nowrap;font-variant-numeric:tabular-nums;
+  }
+
+  /* Chips */
+  .chips{display:flex;gap:8px;margin-top:20px;overflow-x:auto;scrollbar-width:none}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{
+    flex:0 0 auto;padding:9px 15px;border-radius:999px;
+    border:1px solid rgba(255,255,255,.2);color:var(--muted);font-size:.9rem;
+  }
+  .chip[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--text)}
+
+  /* Panels & switch */
+  .panel{
+    margin-top:14px;padding:14px 16px;border-radius:20px;
+    background:var(--panel);box-shadow:0 10px 26px rgba(0,0,0,.18);
+  }
+  .row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .label{font-size:.95rem}
+  .switch{
+    position:relative;width:54px;height:30px;border-radius:999px;flex:0 0 auto;
+    background:#d9ddd5;transition:background .25s;
+  }
+  .switch .knob{
+    position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;
+    background:var(--ink);transition:transform .25s;
+  }
+  .switch[aria-checked="true"]{background:var(--sage)}
+  .switch[aria-checked="true"] .knob{transform:translateX(24px)}
+
+  .meta{display:flex;justify-content:space-between;margin:14px 2px 8px;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+  .progress{height:8px;border-radius:999px;background:rgba(255,255,255,.1);overflow:hidden}
+  .bar{height:100%;width:0;border-radius:999px;background:var(--sage);transition:width .4s ease}
+
+  /* Flip card */
+  .stage{margin-top:18px;perspective:1200px}
+  .card{
+    position:relative;height:min(60vh,430px);min-height:330px;
+    cursor:pointer;user-select:none;-webkit-user-select:none;
+  }
+  .card-inner{
+    position:relative;width:100%;height:100%;
+    transform-style:preserve-3d;
+    transition:transform .65s cubic-bezier(.4,.2,.2,1);
+  }
+  .card.flipped .card-inner{transform:rotateY(180deg)}
+  .card.no-anim .card-inner{transition:none}
+
+  .face{
+    position:absolute;inset:0;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    padding:26px 22px;border-radius:30px;
+    background:
+      radial-gradient(circle at 85% 8%,rgba(169,201,161,.22),transparent 45%),
+      linear-gradient(160deg,var(--card-1),var(--card-2));
+    box-shadow:0 22px 44px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.07);
+    backface-visibility:hidden;-webkit-backface-visibility:hidden;
+    text-align:center;
+  }
+  .face.back{transform:rotateY(180deg)}
+
+  .pl{
+    position:absolute;top:24px;left:26px;right:26px;
+    font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+    text-align:left;
+  }
+  .tap{
+    position:absolute;bottom:22px;left:0;right:0;
+    font-size:.78rem;color:var(--muted);
+  }
+  .sym{
+    font-size:clamp(84px,27vw,124px);font-weight:300;line-height:1;letter-spacing:.02em;
+  }
+  .deva-wrap{margin-top:10px;min-height:2.4rem;display:flex;align-items:center;justify-content:center}
+  .deva{
+    font-family:"Noto Sans Devanagari","Nirmala UI","Mangal",sans-serif;
+    font-size:2.4rem;color:var(--sage-2);line-height:1.2;
+  }
+  .ref{
+    height:2rem;width:auto;max-width:3rem;object-fit:contain;
+    filter:invert(1);mix-blend-mode:screen;
+  }
+
+  .question{font-size:1.2rem;font-weight:500;margin:0 0 14px}
+  .back-title{
+    position:absolute;top:24px;left:26px;right:26px;
+    font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:left;
+  }
+  .back-sym{display:flex;align-items:baseline;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+  .back-sym .sym{font-size:clamp(64px,20vw,88px)}
+  .solution-note{margin:8px 0 0;font-size:.8rem;color:var(--muted)}
+
+  .tiles{
+    width:100%;margin-top:26px;
+    display:grid;grid-template-columns:1fr 1fr;gap:10px;
+  }
+  .tile{
+    padding:13px 13px 12px;border-radius:18px;text-align:left;
+    background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.06);
+    display:flex;flex-direction:column;gap:6px;min-height:72px;
+  }
+  .tile-l{font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .tile-v{font-size:.9rem;line-height:1.35}
+  .tile-v::before{
+    content:"";display:inline-block;width:7px;height:7px;border-radius:50%;
+    background:var(--sage);margin-right:7px;vertical-align:middle;position:relative;top:-1px;
+  }
+
+  /* Actions */
+  .actions{display:flex;gap:10px;margin-top:20px}
+  .btn{
+    flex:1;padding:15px 14px;border-radius:999px;font-size:.98rem;font-weight:600;
+    text-align:center;transition:transform .15s,opacity .2s;
+  }
+  .btn:active{transform:scale(.98)}
+  .btn.primary{background:var(--sage);color:var(--ink)}
+  .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.26);color:var(--text)}
+  .btn.warn{border-color:var(--amber);color:var(--amber)}
+  .hint{margin:14px 0 0;text-align:center;font-size:.8rem;color:var(--muted);min-height:1.2em}
+
+  /* Done */
+  .done{
+    margin-top:18px;padding:30px 22px;border-radius:30px;text-align:center;
+    background:linear-gradient(160deg,var(--card-1),var(--card-2));
+    box-shadow:0 22px 44px rgba(0,0,0,.35);
+  }
+  .done h2{margin:0 0 10px;font-size:1.4rem;font-weight:600}
+  .done p{margin:0;color:var(--muted);line-height:1.5}
+
+  /* List view */
+  .group{margin-top:22px}
+  .group h2{
+    margin:0 2px 10px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;
+  }
+  .sounds{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+  .sound{
+    padding:13px 8px 11px;border-radius:18px;text-align:center;
+    background:var(--panel);box-shadow:0 8px 18px rgba(0,0,0,.14);
+    display:flex;flex-direction:column;align-items:center;gap:4px;
+  }
+  .sound .s{font-size:1.7rem;font-weight:400;line-height:1.1}
+  .sound .d{font-size:1rem;color:var(--sage-2);min-height:1.3rem;display:flex;align-items:center}
+  .sound .d .ref{height:1.1rem;max-width:1.6rem}
+  .sound .f{font-size:.66rem;color:var(--muted);line-height:1.35;margin-top:2px}
+
+  /* Bottom nav */
+  .bottom-nav{
+    position:fixed;left:50%;transform:translateX(-50%);
+    bottom:calc(14px + env(safe-area-inset-bottom,0px));
+    width:calc(100% - 28px);max-width:452px;
+    display:flex;justify-content:space-around;padding:8px;border-radius:999px;
+    background:var(--ink);box-shadow:0 14px 30px rgba(0,0,0,.4);
+  }
+  .nav-btn{
+    flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;
+    padding:6px 4px;font-size:.7rem;color:var(--muted);border-radius:999px;
+  }
+  .nav-btn svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .nav-btn[aria-current="page"]{color:var(--text)}
+  .nav-btn[aria-current="page"] .ico{background:var(--sage);color:var(--ink)}
+  .ico{width:44px;height:30px;border-radius:999px;display:flex;align-items:center;justify-content:center;transition:background .2s}
+
+  @media (min-width:600px){
+    .app{max-width:520px;padding-top:32px}
+    h1{font-size:1.9rem}
+    .card{height:460px}
+  }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <header class="top">
+    <div>
+      <p class="eyebrow">Szanszkrit hangtan</p>
+      <h1>Tanulókártyák</h1>
+    </div>
+    <div class="counter" id="counter">0/0</div>
+  </header>
+
+  <!-- STUDY VIEW -->
+  <section id="viewStudy">
+    <div class="chips" role="tablist" aria-label="Hangok szűrése">
+      <button class="chip" role="tab" data-filter="all" aria-selected="true">Összes</button>
+      <button class="chip" role="tab" data-filter="consonant" aria-selected="false">Mássalhangzók</button>
+      <button class="chip" role="tab" data-filter="vowel" aria-selected="false">Magánhangzók</button>
+    </div>
+
+    <div class="panel">
+      <div class="row">
+        <span class="label">Fordított mód <span style="color:var(--muted)">(tulajdonság → betű)</span></span>
+        <button class="switch" id="reverseSwitch" role="switch" aria-checked="false" aria-label="Fordított mód">
+          <span class="knob"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="meta">
+      <span id="stats"></span>
+    </div>
+    <div class="progress"><div class="bar" id="bar"></div></div>
+
+    <div class="stage" id="stage">
+      <div class="card" id="card" tabindex="0" role="button" aria-label="Kártya megfordítása">
+        <div class="card-inner">
+          <div class="face front" id="front"></div>
+          <div class="face back" id="back"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="done" id="done" hidden>
+      <h2>Gratulálok, végigértél!</h2>
+      <p id="doneText"></p>
+    </div>
+
+    <div class="actions">
+      <button class="btn ghost" id="flipBtn">Megfordítás</button>
+      <button class="btn primary" id="knownBtn" hidden>Tudtam ✓</button>
+      <button class="btn ghost warn" id="missBtn" hidden>Ismétlem</button>
+    </div>
+    <p class="hint" id="hint"></p>
+  </section>
+
+  <!-- LIST VIEW -->
+  <section id="viewList" hidden>
+    <div id="groups"></div>
+  </section>
+
+</div>
+
+<nav class="bottom-nav" aria-label="Főmenü">
+  <button class="nav-btn" id="navStudy" aria-current="page">
+    <span class="ico">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="3"/><path d="M8 3.5h8"/></svg>
+    </span>
+    Kártyák
+  </button>
+  <button class="nav-btn" id="navList">
+    <span class="ico">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+    </span>
+    Hangok
+  </button>
+  <button class="nav-btn" id="navShuffle">
+    <span class="ico">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h3c4 0 5 10 9 10h4M4 17h3c1.6 0 2.6-1.6 3.4-3.6M14.6 9.6C15.4 7.6 16.4 7 17 7h3"/><path d="M18 4.5 20.5 7 18 9.5M18 14.5l2.5 2.5-2.5 2.5"/></svg>
+    </span>
+    Újrakever
+  </button>
+</nav>
+
+<script>
+const rows=[
+['torokhang (velaris)',[['k','zárhang (explosiva)','zöngétlen, hehezetlen'],['kh','zárhang (explosiva)','zöngétlen, hehezetes'],['g','zárhang (explosiva)','zöngés, hehezetlen'],['gh','zárhang (explosiva)','zöngés, hehezetes'],['ṅ','orrhang (nasalis)','zöngés'],['h','folyékony / félhangzó (liquida)','zöngés'],['ḥ','réshang (spirans)','zöngétlen'],['a','egyes magánhangzó (monophthongus)','rövid'],['ā','egyes magánhangzó (monophthongus)','hosszú']]],
+['ínyhang (palatalis)',[['c','zárhang (explosiva)','zöngétlen, hehezetlen'],['ch','zárhang (explosiva)','zöngétlen, hehezetes'],['j','zárhang (explosiva)','zöngés, hehezetlen'],['jh','zárhang (explosiva)','zöngés, hehezetes'],['ñ','orrhang (nasalis)','zöngés'],['y','folyékony / félhangzó (liquida)','zöngés'],['ś','réshang (spirans)','zöngétlen'],['i','egyes magánhangzó (monophthongus)','rövid'],['ī','egyes magánhangzó (monophthongus)','hosszú'],['e','kettős magánhangzó (diphthongus)','hosszú'],['ai','kettős magánhangzó (diphthongus)','hosszú']]],
+['nyelvcsúcshang (cerebralis)',[['ṭ','zárhang (explosiva)','zöngétlen, hehezetlen'],['ṭh','zárhang (explosiva)','zöngétlen, hehezetes'],['ḍ','zárhang (explosiva)','zöngés, hehezetlen'],['ḍh','zárhang (explosiva)','zöngés, hehezetes'],['ṇ','orrhang (nasalis)','zöngés'],['r','folyékony / félhangzó (liquida)','zöngés'],['ṣ','réshang (spirans)','zöngétlen'],['ṛ','egyes magánhangzó (monophthongus)','rövid'],['ṝ','egyes magánhangzó (monophthongus)','hosszú']]],
+['foghang (dentalis)',[['t','zárhang (explosiva)','zöngétlen, hehezetlen'],['th','zárhang (explosiva)','zöngétlen, hehezetes'],['d','zárhang (explosiva)','zöngés, hehezetlen'],['dh','zárhang (explosiva)','zöngés, hehezetes'],['n','orrhang (nasalis)','zöngés'],['l','folyékony / félhangzó (liquida)','zöngés'],['s','réshang (spirans)','zöngétlen'],['ḷ','egyes magánhangzó (monophthongus)','rövid'],['ḹ','egyes magánhangzó (monophthongus)','hosszú']]],
+['ajakhang (labialis)',[['p','zárhang (explosiva)','zöngétlen, hehezetlen'],['ph','zárhang (explosiva)','zöngétlen, hehezetes'],['b','zárhang (explosiva)','zöngés, hehezetlen'],['bh','zárhang (explosiva)','zöngés, hehezetes'],['m','orrhang (nasalis)','zöngés'],['v','folyékony / félhangzó (liquida)','zöngés'],['u','egyes magánhangzó (monophthongus)','rövid'],['ū','egyes magánhangzó (monophthongus)','hosszú'],['o','kettős magánhangzó (diphthongus)','hosszú'],['au','kettős magánhangzó (diphthongus)','hosszú']]]];
+// A devanagari jelek a csatolt Devanagari_abece.pdf alapján.
+// A mássalhangzók önálló betűjele alapértelmezetten az „a” hangot is tartalmazza.
+// A ḥ (visarga) önálló betű helyett függő jel: ◌ः.
+const devanagari={
+'a':'अ','ā':'आ','i':'इ','ī':'ई','u':'उ','ū':'ऊ','ṛ':'ऋ','ṝ':'ॠ','ḷ':'ऌ','ḹ':'ॡ','e':'ए','ai':'ऐ','o':'ओ','au':'औ',
+'k':'क','kh':'ख','g':'ग','gh':'घ','ṅ':'ङ','c':'च','ch':'छ','j':'ज','jh':'झ','ñ':'ञ',
+'ṭ':'ट','ṭh':'ठ','ḍ':'ड','ḍh':'ढ','ṇ':'ण','t':'त','th':'थ','d':'द','dh':'ध','n':'न',
+'p':'प','ph':'फ','b':'ब','bh':'भ','m':'म','y':'य','r':'र','l':'ल','v':'व',
+'ś':'श','ṣ':'ष','s':'स','h':'ह','ḥ':'◌ः'
+};
+const referenceGlyphs={"ṝ":"data:image/png;base64,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","ṛ":"data:image/png;base64,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","r": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAiCAYAAAA+stv/AAABCElEQVR4nO2XsQrCMBBAX1VwdFVEf8IfcHTyExydXQQ3cfUf/A8/wg9xdFWUOhihhDRp7iJV6UFp6CV3L5fkLs3GoyF1SqtW7w1AA/ANAB2Prg3cFba7wC3UyReBh8I5wLVKp9ASZEqImRbgDVH2LAr9pg79MWg8QSrOzfsMDGIHpzwFfcmg2o9hAxALsOe16S7ABJhrAXyZ0JYlsDbtHnCy9KLEFROBTUAfMxkRwMGjW0mcQ3wiyh3fKhWdMhGFzYi2TgDxp6Do1BWNjwMAbAttzX0BkBcje/bi5ZBmQtuheDk0qTgJhLYWuCB2UQYS/RuK90SqapiVtIOiSUQ+iMryc/eB/wN4AqWWGuQigNrpAAAAAElFTkSuQmCC", "ś": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAkCAYAAAAHKVPcAAABfUlEQVR4nO2XsUrFMBSGv+jFi5uLk6jgJAguiqCvIDhccHRwFcTBxTdQcPUBxFkQxTcQFEFXwTdwdS2KDm3wmJvEpEmtQn8InKTpydfTk5NWzUxP0bZG2gaADuJLHYTWv4CYBD4szdSNY57ZtmyLKE+dGAXePIDLwKPo2+Csa5oDvkjYAHaB58p+oATVOg6EuByi8kRCPtkFMBD9DeFs6MmMe23Xvyk0MQdG/0rY64E+kiF8um4Soi/s+9SF6kIUwGllrwCHbUAAbANHlX1AmXDjwF5OCN/uMOWqA6/AhGdutt2hnfUt4/MRPqIhVikLkiy1hWXeS1MQt1VbAs4ow6tzQmouFQDcORFyDpxQlvGf7s+aE1L7HoBo9RzjCnc0esB7LgDwR0IBs8AOsCjGfcd7LcXUCQh/143mxIJjoSTFQjwB57lB6uyOTaOfDFJ3i5rvOQkk5aNGniMmlALuQh256kSICsviUmvAWIijpn9+bAfer0MEqYPQ+hMQn3+aQscPZWg+AAAAAElFTkSuQmCC"};
+
+/* ---------- helpers ---------- */
+const $ = id => document.getElementById(id);
+const shuffle = a => {
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+};
+
+const all = rows.flatMap(([place, items]) =>
+  items.map(([symbol, kind, feature]) => {
+    const isVowel = kind.includes('magánhangzó');
+    return {
+      symbol,
+      place,
+      kind,
+      feature: isVowel ? 'zöngés, ' + feature : feature,
+      type: isVowel ? 'vowel' : 'consonant'
+    };
+  })
+);
+
+const glyph = sym => {
+  const g = referenceGlyphs[sym];
+  return g
+    ? `<img class="ref" src="${g}" alt="${sym} devanágari betűjele">`
+    : `<span class="deva" lang="sa">${devanagari[sym]}</span>`;
+};
+
+const solutionOf = x =>
+  (x.symbol === 'e' || x.symbol === 'ai') ? 'e / ai' :
+  (x.symbol === 'o' || x.symbol === 'au') ? 'o / au' : x.symbol;
+
+const tileData = x => [
+  ['Típus', x.type === 'vowel' ? 'Magánhangzó (sonans)' : 'Mássalhangzó (consonans)'],
+  ['Képzési mód', x.kind],
+  ['Hangzás', x.feature],
+  ['Képzési hely', x.place]
+];
+
+const tilesHTML = x =>
+  `<div class="tiles">${tileData(x).map(([l, v]) =>
+    `<div class="tile"><span class="tile-l">${l}</span><span class="tile-v">${v}</span></div>`
+  ).join('')}</div>`;
+
+/* ---------- state ---------- */
+let filter = 'all';
+let reverse = false;
+let deck = [];
+let index = 0;
+let missed = [];
+let known = 0;
+let attempts = 0;
+
+const card = $('card');
+
+/* ---------- card rendering ---------- */
+function setFlipped(flipped, instant = false) {
+  if (instant) card.classList.add('no-anim');
+  card.classList.toggle('flipped', flipped);
+  if (instant) {
+    void card.offsetWidth; // force reflow so the change is not animated
+    card.classList.remove('no-anim');
+  }
+  $('flipBtn').hidden = flipped;
+  $('knownBtn').hidden = !flipped;
+  $('missBtn').hidden = !flipped;
+  $('hint').textContent = flipped
+    ? 'Ellenőrizd a választ, majd értékeld magad.'
+    : 'Próbáld fejben, majd fordítsd meg a kártyát.';
+}
+
+function renderCard() {
+  if (index >= deck.length) {
+    if (missed.length) {
+      deck = shuffle(missed.slice());
+      missed = [];
+      index = 0;
+    } else {
+      return showDone();
+    }
+  }
+
+  const x = deck[index];
+  $('done').hidden = true;
+  card.hidden = false;
+  $('stage').hidden = false;
+  document.querySelector('.actions').hidden = false;
+
+  if (reverse) {
+    $('front').innerHTML = `<span class="pl">${x.place}</span>
+      <p class="question">Melyik hang illik ide?</p>${tilesHTML(x)}
+      <span class="tap">Koppints a megfordításhoz</span>`;
+    $('back').innerHTML = `<span class="back-title">Megoldás</span>
+      <div class="back-sym">
+        <span class="sym">${solutionOf(x)}</span>
+      </div>
+      <div class="back-sym" style="margin-top:6px">${glyph(x.symbol)}</div>
+      <p class="solution-note">${x.type === 'vowel' ? 'Magánhangzó' : 'Mássalhangzó'} · ${x.place}</p>`;
+  } else {
+    $('front').innerHTML = `<span class="pl">${x.place}</span>
+      <span class="sym">${x.symbol}</span>
+      <div class="deva-wrap">${glyph(x.symbol)}</div>
+      <span class="tap">Koppints a megfordításhoz</span>`;
+    $('back').innerHTML = `<span class="back-title">Hangtani tulajdonságok</span>
+      <div style="margin-top:34px;width:100%">${tilesHTML(x)}</div>`;
+  }
+
+  setFlipped(false, true);
+  updateMeta();
+}
+
+function updateMeta() {
+  const total = deck.length || 1;
+  const pos = Math.min(index + 1, deck.length);
+  $('stats').textContent = `Kártya ${pos}/${deck.length} · Tudtam: ${known} · Ismétlendő: ${missed.length}`;
+  $('counter').textContent = `${Math.min(index, total)}/${total}`;
+  $('bar').style.width = (index / total * 100) + '%';
+}
+
+function showDone() {
+  card.hidden = true;
+  document.querySelector('.actions').hidden = true;
+  $('hint').textContent = '';
+  $('done').hidden = false;
+  $('doneText').textContent = `Sikeresen megtanult hangok: ${known} · Összes próbálkozás: ${attempts}`;
+  $('bar').style.width = '100%';
+  $('counter').textContent = `${deck.length}/${deck.length}`;
+  $('stats').textContent = `Kész · Tudtam: ${known}`;
+}
+
+/* ---------- actions ---------- */
+function buildDeck() {
+  deck = shuffle(all.filter(x => filter === 'all' || x.type === filter));
+  index = 0;
+  missed = [];
+  known = 0;
+  attempts = 0;
+  renderCard();
+  renderList();
+}
+
+function flip() {
+  if (!deck[index] || $('done').hidden === false) return;
+  setFlipped(!card.classList.contains('flipped'));
+}
+
+function mark(ok) {
+  attempts++;
+  if (ok) known++;
+  else missed.push(deck[index]);
+  index++;
+  renderCard();
+}
+
+/* ---------- list view ---------- */
+function renderList() {
+  const list = filter === 'all' ? all : all.filter(x => x.type === filter);
+  $('groups').innerHTML = rows
+    .map(([place, items]) => {
+      const sub = items.filter(([s]) => list.some(x => x.symbol === s));
+      if (!sub.length) return '';
+      return `<div class="group">
+        <h2>${place}</h2>
+        <div class="sounds">${sub.map(([s, kind, feature]) => {
+          const isVowel = kind.includes('magánhangzó');
+          const f = isVowel ? 'zöngés, ' + feature : feature;
+          return `<div class="sound">
+            <span class="s">${s}</span>
+            <span class="d">${glyph(s)}</span>
+            <span class="f">${f}</span>
+          </div>`;
+        }).join('')}</div>
+      </div>`;
+    })
+    .join('');
+}
+
+/* ---------- views & navigation ---------- */
+function showView(name) {
+  const study = name === 'study';
+  $('viewStudy').hidden = !study;
+  $('viewList').hidden = study;
+  $('navStudy').setAttribute('aria-current', study ? 'page' : 'false');
+  $('navList').setAttribute('aria-current', study ? 'false' : 'page');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ---------- events ---------- */
+card.addEventListener('click', flip);
+card.addEventListener('keydown', e => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    flip();
+  }
+});
+$('flipBtn').addEventListener('click', flip);
+$('knownBtn').addEventListener('click', () => mark(true));
+$('missBtn').addEventListener('click', () => mark(false));
+
+document.querySelectorAll('.chip').forEach(btn => {
+  btn.addEventListener('click', () => {
+    filter = btn.dataset.filter;
+    document.querySelectorAll('.chip').forEach(c =>
+      c.setAttribute('aria-selected', c === btn ? 'true' : 'false'));
+    buildDeck();
+  });
+});
+
+$('reverseSwitch').addEventListener('click', () => {
+  reverse = !reverse;
+  $('reverseSwitch').setAttribute('aria-checked', reverse ? 'true' : 'false');
+  buildDeck();
+});
+
+$('navStudy').addEventListener('click', () => showView('study'));
+$('navList').addEventListener('click', () => showView('list'));
+$('navShuffle').addEventListener('click', () => {
+  showView('study');
+  buildDeck();
+});
+
+/* ---------- start ---------- */
+buildDeck();
+</script>
+</body>
+</html>
