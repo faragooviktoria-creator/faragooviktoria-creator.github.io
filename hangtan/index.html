@@ -243,6 +243,64 @@
   .nav-btn{font-size:.62rem;padding:6px 0;min-width:0}
   .ico{width:40px}
 
+  #viewRules .card:focus-visible{outline:2px solid var(--sage-2);outline-offset:3px}
+  #viewRules .dots{display:flex;gap:6px;justify-content:center;margin-top:18px;flex-wrap:wrap}
+  #viewRules .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.2);transition:background .2s,transform .2s}
+  #viewRules .dot.on{background:var(--sage);transform:scale(1.3)}
+  #viewRules .stage{margin-top:18px;perspective:1200px;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+  #viewRules .card{position:relative;height:min(62vh,460px);min-height:360px;cursor:pointer}
+  #viewRules .card-inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;
+    transition:transform .65s cubic-bezier(.4,.2,.2,1);}
+  #viewRules .card.flipped .card-inner{transform:rotateY(180deg)}
+  #viewRules .card.no-anim .card-inner{transition:none}
+  #viewRules .face{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    padding:58px 22px 52px;border-radius:30px;text-align:center;
+    background:
+      radial-gradient(circle at 85% 8%,rgba(169,201,161,.22),transparent 45%),
+      linear-gradient(160deg,var(--card-1),var(--card-2));
+    box-shadow:0 22px 44px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.07);
+    backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden;}
+  #viewRules .face.back{transform:rotateY(180deg)}
+  #viewRules .kicker{position:absolute;top:24px;left:26px;right:26px;text-align:left;
+    font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);}
+  #viewRules .tap{position:absolute;bottom:20px;left:0;right:0;font-size:.78rem;color:var(--muted)}
+  #viewRules .q{font-size:1.45rem;font-weight:600;line-height:1.3;margin:0}
+  #viewRules .def{font-size:1.1rem;line-height:1.55;margin:0}
+  #viewRules .def u{text-decoration:underline;text-decoration-color:var(--sage);text-underline-offset:4px}
+  #viewRules .def b{color:var(--sage-2);font-weight:600}
+  #viewRules .combos{display:flex;flex-direction:column;gap:10px;width:100%;max-width:280px}
+  #viewRules .combo{border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:11px 14px;
+    font-size:1.25rem;letter-spacing:.02em;background:rgba(255,255,255,.04);}
+  #viewRules .combo .res{color:var(--sage-2);font-weight:600}
+  #viewRules .combo.red{border-color:var(--red)}
+  #viewRules .examples{display:flex;flex-direction:column;gap:10px;width:100%;max-width:310px;text-align:left}
+  #viewRules .ex{padding:11px 14px;border-radius:16px;background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.06);font-size:1rem;}
+  #viewRules .ex .w{font-style:italic;color:var(--muted)}
+  #viewRules .ex .r{font-style:italic;font-weight:600;color:var(--text)}
+  #viewRules .note{margin:14px 0 0;font-size:.8rem;color:var(--muted);line-height:1.4}
+  #viewRules .sounds-list{font-size:1.5rem;line-height:1.7;letter-spacing:.04em;margin:0}
+  #viewRules .sounds-list span{color:var(--sage-2)}
+  #viewRules .sub{font-size:.85rem;color:var(--muted);margin-top:12px;line-height:1.4}
+  #viewRules .nav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:22px}
+  #viewRules .nav-round{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    border:1px solid rgba(255,255,255,.26);background:transparent;}
+  #viewRules .nav-round:disabled{opacity:.35;cursor:default}
+  #viewRules .nav-round svg{width:22px;height:22px;stroke:var(--text);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  #viewRules .flip-btn{flex:1;max-width:220px;padding:15px 20px;border-radius:999px;font-size:1rem;font-weight:600;
+    background:var(--sage);color:var(--ink);}
+  #viewRules .hint{margin:14px 0 0;text-align:center;font-size:.8rem;color:var(--muted)}
+  #viewRules .reset{display:block;margin:22px auto 0;padding:10px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.22);color:var(--muted);font-size:.85rem}
+  #viewRules .word{font-size:2.6rem;font-weight:600;font-style:italic;margin:0;letter-spacing:.02em;line-height:1.2}
+  #viewRules .pair{font-size:1.6rem;font-style:italic;margin:0;line-height:1.5}
+  #viewRules .pair .w{color:var(--text)}
+  #viewRules .pair .plus{color:var(--muted);font-style:normal;margin:0 6px}
+  @media (min-width:600px){ #viewRules .card{height:480px} }
+  .nav-btn{hyphens:auto}
+  .rchip{flex:0 0 auto;padding:9px 15px;border-radius:999px;border:1px solid rgba(255,255,255,.2);color:var(--muted);font-size:.9rem;margin-right:8px}
+  .rchip[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--text)}
+  .tblock{margin-top:8px}
+  .sub-title{font-size:1.05rem;font-weight:600;margin:24px 2px 4px}
   @media (min-width:600px){
     .app{max-width:520px;padding-top:32px}
     h1{font-size:1.9rem}
@@ -314,11 +372,14 @@
     <p class="hint" id="hint"></p>
   </section>
 
-  <!-- GRADE VIEW -->
-  <section id="viewGrade" hidden>
-    <h2 class="page-title">Hangfokozás</h2>
-    <p class="page-sub">Az i, u, r és l hangok alapfok, guṇa és vṛddhi alakjai.</p>
-    <div class="tbl-wrap">
+  <!-- TABLES VIEW (Fokozás + Táblázat, with filter) -->
+  <section id="viewTables" hidden>
+    <h2 class="page-title">Táblázatok</h2>
+
+    <div class="tblock">
+      <h3 class="sub-title">Hangfokozás</h3>
+      <p class="page-sub">Az i, u, r és l hangok alapfok, guṇa és vṛddhi alakjai.</p>
+      <div class="tbl-wrap">
       <table class="grade">
         <thead>
           <tr>
@@ -332,13 +393,12 @@
         </tbody>
       </table>
     </div>
-  </section>
+    </div>
 
-  <!-- TABLE VIEW -->
-  <section id="viewTable" hidden>
-    <h2 class="page-title">Hangtan táblázat</h2>
-    <p class="page-sub">A szanszkrit hangok és magyaros átírásuk. Félkövérrel a hang, az egyenlőségjel után a magyaros kiejtése (pl. c = cs).</p>
-    <div class="tbl-wrap">
+    <div class="tblock">
+      <h3 class="sub-title">Hangtan táblázat</h3>
+      <p class="page-sub">A szanszkrit hangok és magyaros átírásuk. Félkövérrel a hang, az egyenlőségjel után a magyaros kiejtése (pl. c = cs).</p>
+      <div class="tbl-wrap">
       <table class="ph">
         <thead>
           <tr>
@@ -394,7 +454,50 @@
         </tbody>
       </table>
     </div>
-    <p class="foot">A Ḷ a hagyományos ábécé része, de valódi szóban nem fordul elő, ezért a táblázat nem tartalmazza.</p>
+      <p class="foot">A Ḷ a hagyományos ábécé része, de valódi szóban nem fordul elő, ezért a táblázat nem tartalmazza.</p>
+    </div>
+
+  </section>
+
+  <!-- RULES VIEW (K24 hangváltozás) -->
+  <section id="viewRules" hidden>
+    <h2 class="page-title">Hangváltozások</h2>
+    <div class="chips" role="tablist" aria-label="Szabályok szűrése">
+      <button class="rchip" role="tab" data-rfilter="all" aria-selected="true">Összes</button>
+      <button class="rchip" role="tab" data-rfilter="k24" aria-selected="false">K24</button>
+      <button class="rchip" role="tab" data-rfilter="k25" aria-selected="false">K25</button>
+    </div>
+    <p class="page-sub">K24-es szabály: hosszúban összeolvadás</p>
+
+    <p class="hint" id="k24Empty" hidden>A K25 szabály kártyái hamarosan érkeznek.</p>
+
+    <div id="k24Body">
+
+    <div class="dots" id="k24Dots"></div>
+
+    <div class="stage" id="k24Stage">
+      <div class="card" id="k24Card" tabindex="0" role="button" aria-label="Kártya megfordítása">
+        <div class="card-inner">
+          <div class="face front" id="k24Front"></div>
+          <div class="face back" id="k24Back"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav">
+      <button class="nav-round" id="k24Prev" aria-label="Előző kártya">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      </button>
+      <button class="flip-btn" id="k24Flip">Megfordítás</button>
+      <button class="nav-round" id="k24Next" aria-label="Következő kártya">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+    </div>
+
+    <p class="hint" id="k24Counter"></p>
+    <p class="hint">Koppints a kártyára a megfordításhoz · húzd balra vagy jobbra a léptetéshez</p>
+    <button class="reset" id="k24Reset">Vissza az elejére</button>
+    </div>
   </section>
 
   <!-- LIST VIEW -->
@@ -417,17 +520,17 @@
     </span>
     Hangok
   </button>
-  <button class="nav-btn" id="navGrade">
-    <span class="ico">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19h4v-4h4v-4h4V7h4"/></svg>
-    </span>
-    Fokozás
-  </button>
-  <button class="nav-btn" id="navTable">
+  <button class="nav-btn" id="navTables">
     <span class="ico">
       <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16M4 14.5h16M10 5v14"/></svg>
     </span>
-    Táblázat
+    Táblázatok
+  </button>
+  <button class="nav-btn" id="navRules">
+    <span class="ico">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10l-3-3M17 17H7l3 3"/></svg>
+    </span>
+    Hangváltozások
   </button>
   <button class="nav-btn" id="navShuffle">
     <span class="ico">
@@ -710,8 +813,8 @@ function renderList() {
 const VIEWS = {
   study: ['viewStudy', 'navStudy'],
   list:  ['viewList', 'navList'],
-  grade: ['viewGrade', 'navGrade'],
-  table: ['viewTable', 'navTable']
+  tables: ['viewTables', 'navTables'],
+  rules: ['viewRules', 'navRules']
 };
 function showView(name) {
   for (const [key, [viewId, navId]] of Object.entries(VIEWS)) {
@@ -747,8 +850,9 @@ $('reverseSwitch').addEventListener('click', () => {
 
 $('navStudy').addEventListener('click', () => showView('study'));
 $('navList').addEventListener('click', () => showView('list'));
-$('navGrade').addEventListener('click', () => showView('grade'));
-$('navTable').addEventListener('click', () => showView('table'));
+$('navTables').addEventListener('click', () => showView('tables'));
+
+$('navRules').addEventListener('click', () => showView('rules'));
 $('navShuffle').addEventListener('click', () => {
   order = shuffle(all.slice());
   knownSet = new Set();
@@ -760,6 +864,185 @@ $('navShuffle').addEventListener('click', () => {
 order = shuffle(all.slice());
 renderCard();
 renderList();
+
+/* ---------- K24 hangváltozás kártyák ---------- */
+(() => {
+
+/* ---------- card content ---------- */
+const groups = [
+  ['Ṛ-csoport', [
+    ['kartṛ', 'ṛnam', 'kartṝṇam']
+  ]],
+  ['U-csoport', [
+    ['sādhu', 'uktam', 'sādhūktam'],
+    ['khalu', 'ūcuḥ', 'khalūcuḥ'],
+    ['vadhū', 'utsava', 'vadhūtsava'],
+    ['bhū', 'ūṣa', 'bhūṣa']
+  ]],
+  ['I-csoport', [
+    ['api', 'iha', 'apīha'],
+    ['iti', 'īdṛk', 'itīdṛk'],
+    ['nadī', 'ivam', 'nadīvam'],
+    ['yogī', 'īdṛk', 'yogīdṛk']
+  ]],
+  ['A-csoport', [
+    ['atra', 'asti', 'atrāsti'],
+    ['atha', 'ātmā', 'athātmā'],
+    ['bālā', 'atra', 'bālātra'],
+    ['dhīrā', 'ādhīḥ', 'dhīrādhīḥ']
+  ]]
+];
+
+const groupCards = groups.flatMap(([kicker, items]) =>
+  items.map(([a, b, result]) => ({
+    front: `<p class="word">${result}</p>`,
+    backLabel: 'K24-es Szabály',
+    back: `<p class="pair"><span class="w">${a}</span><span class="plus">+</span><span class="w">${b}</span></p>`
+  }))
+);
+
+const cards = [
+  {
+    kicker: 'Definíció',
+    front: `<p class="q">Mi a K24-es szabály definíciója?</p>`,
+    back: `<p class="def">Két azonos, vagy csak hosszúságában eltérő szóvégi és szóeleji
+      <u>egyeshangzó</u> egy <b>hosszúban</b> olvad össze.</p>`
+  },
+  ...groupCards,
+  {
+    kicker: 'Egyeshangzók',
+    front: `<p class="q">Sorold fel az egyeshangzókat.</p>
+      <p class="sub">Próbáld ki fejben, majd fordítsd meg.</p>`,
+    back: `<p class="sounds-list"><span>a, ā, i, ī, u, ū, r</span><br>(<span>r̄, ḷ, ḹ</span>)</p>
+      <p class="note">A zárójelben lévő hangok a szabályban igazak, de ritkák.</p>`
+  },
+  {
+    kicker: 'Memória-trükk',
+    front: `<p class="q">Mikor olvad össze két hang hosszúvá?</p>`,
+    back: `<p class="def">Ha a két hang <b>ugyanaz</b>, vagy <b>csak a hosszúságban</b> különbözik,
+      csak egy <b>hosszú</b> hangot hallasz.</p>
+      <p class="note">Gondolj úgy rá: két egyforma egy hosszú lesz.</p>`
+  },
+  {
+    kicker: 'Gyakorlás',
+    front: `<div class="combos">
+      <div class="combo">ā + a → ?</div>
+      <div class="combo">ū + ū → ?</div>
+      <div class="combo">i + ī → ?</div>
+    </div>`,
+    back: `<div class="combos">
+      <div class="combo">ā + a → <span class="res">ā</span></div>
+      <div class="combo">ū + ū → <span class="res">ū</span></div>
+      <div class="combo">i + ī → <span class="res">ī</span></div>
+    </div>`
+  }
+]
+
+/* ---------- state & rendering ---------- */
+const $ = id => document.getElementById(id);
+const card = $('k24Card');
+let idx = 0;
+let activeCards = cards;
+let flipped = false;
+
+function setFlipped(v, instant = false) {
+  if (instant) card.classList.add('no-anim');
+  card.classList.toggle('flipped', v);
+  flipped = v;
+  if (instant) {
+    void card.offsetWidth;
+    card.classList.remove('no-anim');
+  }
+}
+
+function renderDots() {
+  $('k24Dots').innerHTML = activeCards.map((_, i) =>
+    `<span class="dot${i === idx ? ' on' : ''}"></span>`).join('');
+}
+
+function render(instant = true) {
+  if (!activeCards.length) {
+    $('k24Body').hidden = true;
+    $('k24Empty').hidden = false;
+    $('k24Counter').textContent = '';
+    $('k24Dots').innerHTML = '';
+    return;
+  }
+  $('k24Body').hidden = false;
+  $('k24Empty').hidden = true;
+  const c = activeCards[idx];
+  const label = c.kicker ? `<span class="kicker">${c.kicker}</span>` : '';
+  $('k24Front').innerHTML = `${label}${c.front}<span class="tap">Koppints a megfordításhoz</span>`;
+  const backLabel = c.backLabel ? `<span class="kicker">${c.backLabel}</span>` : label;
+  $('k24Back').innerHTML = `${backLabel}${c.back}<span class="tap">Koppints a visszafordításhoz</span>`;
+  setFlipped(false, instant);
+  $('k24Counter').textContent = `${idx + 1}/${activeCards.length}`;
+  $('k24Prev').disabled = idx === 0;
+  $('k24Next').disabled = idx === activeCards.length - 1;
+  $('k24Flip').textContent = 'Megfordítás';
+  renderDots();
+}
+
+function go(dir) {
+  const next = idx + dir;
+  if (next < 0 || next >= activeCards.length) return;
+  idx = next;
+  render(true);
+}
+
+function flip() {
+  setFlipped(!flipped);
+  $('k24Flip').textContent = flipped ? 'Vissza a kérdésre' : 'Megfordítás';
+}
+
+/* ---------- swipe ---------- */
+let sx = 0, sy = 0, swiped = false;
+const stage = $('k24Stage');
+
+stage.addEventListener('pointerdown', e => {
+  sx = e.clientX; sy = e.clientY; swiped = false;
+});
+stage.addEventListener('pointerup', e => {
+  const dx = e.clientX - sx, dy = e.clientY - sy;
+  if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.3) {
+    swiped = true;
+    go(dx < 0 ? 1 : -1);
+  }
+});
+
+card.addEventListener('click', () => {
+  if (swiped) { swiped = false; return; }
+  flip();
+});
+card.addEventListener('keydown', e => {
+  if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flip(); }
+});
+document.addEventListener('keydown', e => {
+  if ($('viewRules').hidden) return;
+  if (e.key === 'ArrowRight') go(1);
+  if (e.key === 'ArrowLeft') go(-1);
+});
+
+/* ---------- buttons ---------- */
+$('k24Flip').addEventListener('click', flip);
+$('k24Prev').addEventListener('click', () => go(-1));
+$('k24Next').addEventListener('click', () => go(1));
+$('k24Reset').addEventListener('click', () => { idx = 0; render(true); });
+
+/* chips: Összes / K24 show the K24 cards, K25 is empty for now */
+function setRuleFilter(f) {
+  activeCards = f === 'k25' ? [] : cards;
+  idx = 0;
+  document.querySelectorAll('.rchip').forEach(c =>
+    c.setAttribute('aria-selected', c.dataset.rfilter === f ? 'true' : 'false'));
+  render(true);
+}
+document.querySelectorAll('.rchip').forEach(btn =>
+  btn.addEventListener('click', () => setRuleFilter(btn.dataset.rfilter)));
+
+render(true);
+
+})();
 </script>
 </body>
 </html>
