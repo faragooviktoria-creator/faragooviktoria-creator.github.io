@@ -160,7 +160,14 @@
   }
 
   /* Known button (centered) */
-  .actions{display:flex;justify-content:center;margin-top:22px}
+  .actions{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:22px}
+  .arrow-btn{
+    width:54px;height:54px;border-radius:50%;flex:0 0 auto;display:flex;align-items:center;justify-content:center;
+    border:1px solid rgba(255,255,255,.26);background:transparent;transition:background .2s,transform .15s;
+  }
+  .arrow-btn:hover{background:rgba(255,255,255,.08)}
+  .arrow-btn:active{transform:scale(.96)}
+  .arrow-btn svg{width:22px;height:22px;stroke:var(--text);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
   .btn-known{
     min-width:200px;padding:15px 28px;border-radius:999px;font-size:1rem;font-weight:600;
     border:1px solid rgba(255,255,255,.28);color:var(--text);background:transparent;
@@ -297,6 +304,8 @@
   #viewRules .pair .plus{color:var(--muted);font-style:normal;margin:0 6px}
   @media (min-width:600px){ #viewRules .card{height:480px} }
   .nav-btn{hyphens:auto}
+  #viewRules .rv-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+  #viewRules .rv-actions .reset{margin:0}
   .rchip{flex:0 0 auto;padding:9px 15px;border-radius:999px;border:1px solid rgba(255,255,255,.2);color:var(--muted);font-size:.9rem;margin-right:8px}
   .rchip[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--text)}
   .tblock{margin-top:8px}
@@ -367,7 +376,13 @@
     </div>
 
     <div class="actions" id="actions">
+      <button class="arrow-btn" id="prevBtn" aria-label="Előző kártya">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      </button>
       <button class="btn-known" id="knownBtn" aria-pressed="false">Tudtam</button>
+      <button class="arrow-btn" id="nextBtn" aria-label="Következő kártya">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
     </div>
     <p class="hint" id="hint"></p>
   </section>
@@ -467,13 +482,14 @@
       <button class="rchip" role="tab" data-rfilter="k24" aria-selected="false">K24</button>
       <button class="rchip" role="tab" data-rfilter="k25" aria-selected="false">K25</button>
     </div>
-    <p class="page-sub">K24-es szabály: hosszúban összeolvadás</p>
+    <p class="page-sub">K24–K25: összeolvadás szabályai</p>
 
     <p class="hint" id="k24Empty" hidden>A K25 szabály kártyái hamarosan érkeznek.</p>
 
     <div id="k24Body">
 
-    <div class="dots" id="k24Dots"></div>
+    <div class="meta"><span id="k24Counter"></span></div>
+    <div class="progress"><div class="bar" id="k24Bar"></div></div>
 
     <div class="stage" id="k24Stage">
       <div class="card" id="k24Card" tabindex="0" role="button" aria-label="Kártya megfordítása">
@@ -494,9 +510,11 @@
       </button>
     </div>
 
-    <p class="hint" id="k24Counter"></p>
     <p class="hint">Koppints a kártyára a megfordításhoz · húzd balra vagy jobbra a léptetéshez</p>
-    <button class="reset" id="k24Reset">Vissza az elejére</button>
+    <div class="rv-actions">
+      <button class="reset" id="k24Shuffle">Keverés</button>
+      <button class="reset" id="k24Reset">Vissza az elejére</button>
+    </div>
     </div>
   </section>
 
@@ -514,6 +532,12 @@
     </span>
     Kártyák
   </button>
+  <button class="nav-btn" id="navRules">
+    <span class="ico">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10l-3-3M17 17H7l3 3"/></svg>
+    </span>
+    Hangváltozások
+  </button>
   <button class="nav-btn" id="navList">
     <span class="ico">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
@@ -525,18 +549,6 @@
       <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16M4 14.5h16M10 5v14"/></svg>
     </span>
     Táblázatok
-  </button>
-  <button class="nav-btn" id="navRules">
-    <span class="ico">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10l-3-3M17 17H7l3 3"/></svg>
-    </span>
-    Hangváltozások
-  </button>
-  <button class="nav-btn" id="navShuffle">
-    <span class="ico">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h3c4 0 5 10 9 10h4M4 17h3c1.6 0 2.6-1.6 3.4-3.6M14.6 9.6C15.4 7.6 16.4 7 17 7h3"/><path d="M18 4.5 20.5 7 18 9.5M18 14.5l2.5 2.5-2.5 2.5"/></svg>
-    </span>
-    Újrakever
   </button>
 </nav>
 
@@ -826,6 +838,8 @@ function showView(name) {
 
 /* ---------- controls ---------- */
 $('knownBtn').addEventListener('click', toggleKnown);
+$('prevBtn').addEventListener('click', () => navigate(-1));
+$('nextBtn').addEventListener('click', () => navigate(1));
 
 document.querySelectorAll('.chip').forEach(btn => {
   btn.addEventListener('click', () => {
@@ -853,12 +867,6 @@ $('navList').addEventListener('click', () => showView('list'));
 $('navTables').addEventListener('click', () => showView('tables'));
 
 $('navRules').addEventListener('click', () => showView('rules'));
-$('navShuffle').addEventListener('click', () => {
-  order = shuffle(all.slice());
-  knownSet = new Set();
-  showView('study');
-  resetPosition();
-});
 
 /* ---------- start ---------- */
 order = shuffle(all.slice());
@@ -941,8 +949,71 @@ const cards = [
 /* ---------- state & rendering ---------- */
 const $ = id => document.getElementById(id);
 const card = $('k24Card');
+/* ---- K25 cards ---- */
+const szovegi = [
+  ['iha', 'eva', 'ihaiva'],
+  ['tathā', 'eva', 'tathaiva'],
+  ['atha', 'ailaḥ', 'athailaḥ'],
+  ['tathā', 'aikyam', 'tathaikyam'],
+  ['iva', 'ojaḥ', 'ivaujaḥ'],
+  ['tathā', 'ojaḥ', 'tathaujaḥ'],
+  ['tava', 'auravaḥ', 'tavauravaḥ'],
+  ['mā', 'audakam', 'maudakam']
+];
+
+const fokozas = [
+  ['atha', 'iva', 'atheva'],
+  ['icchā', 'iva', 'iccheva'],
+  ['tava', 'īpsā', 'tavepsā'],
+  ['kalā', 'īdṛk', 'kaledṛk'],
+  ['karma', 'uta', 'karmota'],
+  ['sā', 'uvāca', 'sovāca'],
+  ['eva', 'ūcuḥ', 'evocuḥ'],
+  ['tathā', 'ūce', 'tathoce'],
+  ['eva', 'ṛtam', 'evartam'],
+  ['vā', 'ṛtam', 'vartam']
+];
+
+const exampleCards = [...szovegi, ...fokozas].map(([a, b, result]) => ({
+  front: `<p class="word">${result}</p>`,
+  backLabel: 'K25-ös Szabály',
+  back: `<p class="pair"><span class="w">${a}</span><span class="plus">+</span><span class="w">${b}</span></p>`
+}));
+
+const cards25 = [
+  {
+    kicker: 'Definíció',
+    front: `<p class="q">Mi a K25-ös szabály definíciója?</p>`,
+    back: `<p class="def">Szóvégi <u>-a és -ā</u> hang szóeleji <u>másmilyen mgh-val az utóbbi eggyel magasabb fokában</u> olvad össze.</p>`
+  },
+  ...exampleCards,
+  {
+    kicker: 'NB',
+    front: `<p class="q">Mi történik, ha a szóeleji hang vṛddhi fokú?</p>`,
+    back: `<p class="def">Nem változik, csak az a/ā olvad bele.</p>`
+  },
+  {
+    kicker: 'Gyakorlás',
+    front: `<div class="combos">
+      <div class="combo">ā + u → ?</div>
+      <div class="combo">a + ṛ → ?</div>
+      <div class="combo">a + au → ?</div>
+    </div>`,
+    back: `<div class="combos">
+      <div class="combo">ā + u → <span class="res">o</span></div>
+      <div class="combo">a + ṛ → <span class="res">ar</span></div>
+      <div class="combo">a + au → <span class="res">au</span></div>
+    </div>`
+  }
+];
+
+const allCards = [
+  ...cards.map(c => ({ ...c, rule: 'k24' })),
+  ...cards25.map(c => ({ ...c, rule: 'k25' }))
+];
+
 let idx = 0;
-let activeCards = cards;
+let activeCards = allCards;
 let flipped = false;
 
 function setFlipped(v, instant = false) {
@@ -956,8 +1027,7 @@ function setFlipped(v, instant = false) {
 }
 
 function renderDots() {
-  $('k24Dots').innerHTML = activeCards.map((_, i) =>
-    `<span class="dot${i === idx ? ' on' : ''}"></span>`).join('');
+  $('k24Bar').style.width = activeCards.length ? ((idx + 1) / activeCards.length * 100) + '%' : '0%';
 }
 
 function render(instant = true) {
@@ -965,7 +1035,7 @@ function render(instant = true) {
     $('k24Body').hidden = true;
     $('k24Empty').hidden = false;
     $('k24Counter').textContent = '';
-    $('k24Dots').innerHTML = '';
+    $('k24Bar').style.width = '0%';
     return;
   }
   $('k24Body').hidden = false;
@@ -1029,9 +1099,22 @@ $('k24Prev').addEventListener('click', () => go(-1));
 $('k24Next').addEventListener('click', () => go(1));
 $('k24Reset').addEventListener('click', () => { idx = 0; render(true); });
 
+/* Keverés: random order of the cards currently shown (Összes / K24 / K25) */
+function shuffleCards() {
+  const a = [...activeCards];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  activeCards = a;
+  idx = 0;
+  render(true);
+}
+$('k24Shuffle').addEventListener('click', shuffleCards);
+
 /* chips: Összes / K24 show the K24 cards, K25 is empty for now */
 function setRuleFilter(f) {
-  activeCards = f === 'k25' ? [] : cards;
+  activeCards = f === 'all' ? allCards : allCards.filter(c => c.rule === f);
   idx = 0;
   document.querySelectorAll('.rchip').forEach(c =>
     c.setAttribute('aria-selected', c.dataset.rfilter === f ? 'true' : 'false'));
