@@ -212,6 +212,37 @@
   .nav-btn[aria-current="page"] .ico{background:var(--sage);color:var(--ink)}
   .ico{width:44px;height:30px;border-radius:999px;display:flex;align-items:center;justify-content:center;transition:background .2s}
 
+  /* Reference views */
+  .page-title{font-size:1.3rem;margin:24px 2px 4px;font-weight:600}
+  .page-sub{margin:0 2px 10px;color:var(--muted);font-size:.85rem;line-height:1.4}
+  .tbl-wrap{
+    overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:12px;
+    border-radius:18px;background:var(--panel);box-shadow:0 10px 24px rgba(0,0,0,.2);
+  }
+  .grade{width:100%;border-collapse:collapse;min-width:300px}
+  .grade th,.grade td{padding:14px 6px;text-align:center;font-size:1.1rem;border-bottom:1px solid rgba(255,255,255,.08)}
+  .grade thead th{font-weight:500}
+  .grade .corner{text-align:left;font-size:.95rem}
+  .grade .corner small{display:block;color:var(--muted);font-size:.7rem;font-weight:400;margin-top:2px}
+  .grade tbody th{text-align:left;font-size:.95rem;color:var(--sage-2);font-weight:500;padding-left:12px}
+  .grade tbody tr.vrd td{background:rgba(169,201,161,.12)}
+  .grade tbody tr.guna td{background:rgba(255,255,255,.03)}
+  .grade tr:last-child th,.grade tr:last-child td{border-bottom:0}
+
+  .ph{border-collapse:collapse;min-width:680px;font-size:.78rem}
+  .ph th,.ph td{border:1px solid rgba(255,255,255,.1);padding:8px 5px;text-align:center;vertical-align:middle;line-height:1.35}
+  .ph thead th{color:var(--sage-2);font-weight:500;background:rgba(0,0,0,.22)}
+  .ph thead th em{color:var(--muted);font-weight:400;font-size:.92em}
+  .ph tbody th{color:var(--sage-2);font-weight:500;background:rgba(0,0,0,.22);font-size:.8rem}
+  .ph tbody th em{color:var(--muted);font-weight:400}
+  .ph td{color:var(--muted)}
+  .ph td b{color:var(--text);font-size:1.1em;font-weight:700}
+  .ph td.hl{outline:2px solid var(--amber);outline-offset:-3px}
+  .foot{font-size:.74rem;color:var(--muted);font-style:italic;margin:10px 2px 0;line-height:1.4}
+
+  .nav-btn{font-size:.62rem;padding:6px 0;min-width:0}
+  .ico{width:40px}
+
   @media (min-width:600px){
     .app{max-width:520px;padding-top:32px}
     h1{font-size:1.9rem}
@@ -283,6 +314,89 @@
     <p class="hint" id="hint"></p>
   </section>
 
+  <!-- GRADE VIEW -->
+  <section id="viewGrade" hidden>
+    <h2 class="page-title">Hangfokozás</h2>
+    <p class="page-sub">Az i, u, r és l hangok alapfok, guṇa és vṛddhi alakjai.</p>
+    <div class="tbl-wrap">
+      <table class="grade">
+        <thead>
+          <tr>
+            <th class="corner">Alapfok<small>(leggyengébb fok)</small></th>
+            <th>i / ī</th><th>u / ū</th><th>ṛ / ṝ</th><th>ḷ / ḹ</th><th>Ø</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="guna"><th>Guṇa fok</th><td>e</td><td>o</td><td>ar</td><td>al</td><td>a</td></tr>
+          <tr class="vrd"><th>Vṛddhi fok</th><td>ai</td><td>au</td><td>ār</td><td>āl</td><td>ā</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- TABLE VIEW -->
+  <section id="viewTable" hidden>
+    <h2 class="page-title">Hangtan táblázat</h2>
+    <p class="page-sub">A szanszkrit hangok és magyaros átírásuk. Félkövérrel a hang, az egyenlőségjel után a magyaros kiejtése (pl. c = cs).</p>
+    <div class="tbl-wrap">
+      <table class="ph">
+        <thead>
+          <tr>
+            <th rowspan="3">képzéshely</th>
+            <th colspan="7">mássalhangzók <em>consonans</em></th>
+            <th colspan="3">magánhangzók <em>sonans [zöngés]</em></th>
+          </tr>
+          <tr>
+            <th colspan="4">zárhang <em>explosiva</em></th>
+            <th>orrhang <em>nasalis</em></th>
+            <th>folyékony <em>liquida</em></th>
+            <th>réshang <em>spirans</em></th>
+            <th colspan="2">egyes <em>monophthongus</em></th>
+            <th>kettős <em>diphthongus</em></th>
+          </tr>
+          <tr>
+            <th>zöngétlen</th><th>zöngétlen hehezetes</th><th>zöngés</th><th>zöngés hehezetes</th>
+            <th>zöngés</th><th>zöngés</th><th>zöngétlen</th>
+            <th>rövid</th><th>hosszú</th><th>hosszú</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>torok<br><em>velaris</em></th>
+            <td><b>k</b> = k</td><td><b>kh</b> = kh</td><td><b>g</b> = g</td><td><b>gh</b> = gh</td>
+            <td><b>ṅ</b> = n</td><td class="hl"><b>h</b> = h</td><td class="hl"><b>ḥ</b> = h</td>
+            <td><b>a</b> = a</td><td><b>ā</b> = á</td><td></td>
+          </tr>
+          <tr>
+            <th>íny<br><em>palatalis</em></th>
+            <td><b>c</b> = cs</td><td><b>ch</b> = csh</td><td><b>j</b> = dzs</td><td><b>jh</b> = dzsh</td>
+            <td><b>ñ</b> = n(y)</td><td><b>y</b> = j</td><td><b>ś</b> = s</td>
+            <td><b>i</b> = i</td><td><b>ī</b> = í</td><td><b>e</b> = é<br><b>ai</b> = ai</td>
+          </tr>
+          <tr>
+            <th>nyelvcsúcs<br><em>cerebralis</em></th>
+            <td><b>ṭ</b> = t</td><td><b>ṭh</b> = th</td><td><b>ḍ</b> = d</td><td><b>ḍh</b> = dh</td>
+            <td><b>ṇ</b> = n</td><td><b>r</b> = r</td><td><b>ṣ</b> = s</td>
+            <td><b>ṛ</b> = ri</td><td><b>ṝ</b> = rí</td><td></td>
+          </tr>
+          <tr>
+            <th>fog<br><em>dentalis</em></th>
+            <td><b>t</b> = t</td><td><b>th</b> = th</td><td><b>d</b> = d</td><td><b>dh</b> = dh</td>
+            <td><b>n</b> = n</td><td><b>l</b> = l</td><td><b>s</b> = sz</td>
+            <td><b>ḷ</b> = li</td><td></td><td></td>
+          </tr>
+          <tr>
+            <th>ajak<br><em>labialis</em></th>
+            <td><b>p</b> = p</td><td><b>ph</b> = ph</td><td><b>b</b> = b</td><td><b>bh</b> = bh</td>
+            <td><b>m</b> = m</td><td class="hl"><b>v</b> = v</td><td></td>
+            <td><b>u</b> = u</td><td><b>ū</b> = ú</td><td><b>o</b> = ó<br><b>au</b> = au</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="foot">A Ḷ a hagyományos ábécé része, de valódi szóban nem fordul elő, ezért a táblázat nem tartalmazza.</p>
+  </section>
+
   <!-- LIST VIEW -->
   <section id="viewList" hidden>
     <div id="groups"></div>
@@ -302,6 +416,18 @@
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
     </span>
     Hangok
+  </button>
+  <button class="nav-btn" id="navGrade">
+    <span class="ico">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19h4v-4h4v-4h4V7h4"/></svg>
+    </span>
+    Fokozás
+  </button>
+  <button class="nav-btn" id="navTable">
+    <span class="ico">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16M4 14.5h16M10 5v14"/></svg>
+    </span>
+    Táblázat
   </button>
   <button class="nav-btn" id="navShuffle">
     <span class="ico">
@@ -581,12 +707,17 @@ function renderList() {
 }
 
 /* ---------- views & navigation ---------- */
+const VIEWS = {
+  study: ['viewStudy', 'navStudy'],
+  list:  ['viewList', 'navList'],
+  grade: ['viewGrade', 'navGrade'],
+  table: ['viewTable', 'navTable']
+};
 function showView(name) {
-  const study = name === 'study';
-  $('viewStudy').hidden = !study;
-  $('viewList').hidden = study;
-  $('navStudy').setAttribute('aria-current', study ? 'page' : 'false');
-  $('navList').setAttribute('aria-current', study ? 'false' : 'page');
+  for (const [key, [viewId, navId]] of Object.entries(VIEWS)) {
+    $(viewId).hidden = key !== name;
+    $(navId).setAttribute('aria-current', key === name ? 'page' : 'false');
+  }
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -616,6 +747,8 @@ $('reverseSwitch').addEventListener('click', () => {
 
 $('navStudy').addEventListener('click', () => showView('study'));
 $('navList').addEventListener('click', () => showView('list'));
+$('navGrade').addEventListener('click', () => showView('grade'));
+$('navTable').addEventListener('click', () => showView('table'));
 $('navShuffle').addEventListener('click', () => {
   order = shuffle(all.slice());
   knownSet = new Set();
