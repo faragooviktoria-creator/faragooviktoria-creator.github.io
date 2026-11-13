@@ -309,6 +309,12 @@
   .rchip{flex:0 0 auto;padding:9px 15px;border-radius:999px;border:1px solid rgba(255,255,255,.2);color:var(--muted);font-size:.9rem;margin-right:8px}
   .rchip[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--text)}
   .tblock{margin-top:8px}
+  .rule-tbl{width:100%;border-collapse:collapse;min-width:260px;font-size:1rem}
+  .rule-tbl th,.rule-tbl td{padding:11px 12px;border-bottom:1px solid rgba(255,255,255,.08);text-align:left;color:var(--text)}
+  .rule-tbl thead th{color:var(--sage-2);font-weight:500;background:rgba(0,0,0,.22)}
+  .rule-tbl tbody th{color:var(--sage-2);font-weight:500;vertical-align:middle;background:rgba(0,0,0,.12)}
+  .rule-tbl td.res{color:var(--sage-2);font-weight:600}
+  .rule-tbl tr:last-child td,.rule-tbl tr:last-child th{border-bottom:0}
   .sub-title{font-size:1.05rem;font-weight:600;margin:24px 2px 4px}
   @media (min-width:600px){
     .app{max-width:520px;padding-top:32px}
@@ -408,6 +414,24 @@
         </tbody>
       </table>
     </div>
+    </div>
+
+    <h3 class="sub-title">K24 · Hosszúban összeolvadás</h3>
+    <p class="page-sub">Két azonos, vagy csak hosszúságában eltérő szóvégi és szóeleji egyeshangzó egy hosszúban olvad össze.</p>
+    <div class="tbl-wrap">
+      <table class="rule-tbl">
+        <thead><tr><th>Csoport</th><th>Kombináció</th><th>Eredmény</th></tr></thead>
+        <tbody><tr><th rowspan="1">Ṛ-csoport</th><td>ṛ + ṛ</td><td class="res">ṝ</td></tr><tr><th rowspan="4">U-csoport</th><td>u + u</td><td class="res">ū</td></tr><tr><td>u + ū</td><td class="res">ū</td></tr><tr><td>ū + u</td><td class="res">ū</td></tr><tr><td>ū + ū</td><td class="res">ū</td></tr><tr><th rowspan="4">I-csoport</th><td>i + i</td><td class="res">ī</td></tr><tr><td>i + ī</td><td class="res">ī</td></tr><tr><td>ī + i</td><td class="res">ī</td></tr><tr><td>ī + ī</td><td class="res">ī</td></tr><tr><th rowspan="4">A-csoport</th><td>a + a</td><td class="res">ā</td></tr><tr><td>a + ā</td><td class="res">ā</td></tr><tr><td>ā + a</td><td class="res">ā</td></tr><tr><td>ā + ā</td><td class="res">ā</td></tr></tbody>
+      </table>
+    </div>
+
+    <h3 class="sub-title">K25 · Fokozásban összeolvadás</h3>
+    <p class="page-sub">Szóvégi -a és -ā hang szóeleji másmilyen mgh-val az utóbbi eggyel magasabb fokában olvad össze.</p>
+    <div class="tbl-wrap">
+      <table class="rule-tbl">
+        <thead><tr><th>Kombináció</th><th>Eredmény</th></tr></thead>
+        <tbody><tr><td>a/ā + i/ī</td><td class="res">e</td></tr><tr><td>a/ā + u/ū</td><td class="res">o</td></tr><tr><td>a/ā + ṛ/ṝ</td><td class="res">ar</td></tr><tr><td>a/ā + e</td><td class="res">ai</td></tr><tr><td>a/ā + o</td><td class="res">au</td></tr><tr><td>a/ā + ai</td><td class="res">ai</td></tr><tr><td>a/ā + au</td><td class="res">au</td></tr></tbody>
+      </table>
     </div>
 
     <div class="tblock">
@@ -530,7 +554,7 @@
     <span class="ico">
       <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="3"/><path d="M8 3.5h8"/></svg>
     </span>
-    Kártyák
+    Hangtan kártyák
   </button>
   <button class="nav-btn" id="navRules">
     <span class="ico">
@@ -980,12 +1004,21 @@ const exampleCards = [...szovegi, ...fokozas].map(([a, b, result]) => ({
   back: `<p class="pair"><span class="w">${a}</span><span class="plus">+</span><span class="w">${b}</span></p>`
 }));
 
+/* K25 quick-rule cards: front shows the two sounds, back shows the result after the arrow */
+const ruleCards = [
+  ['i/ī', 'e'], ['u/ū', 'o'], ['ṛ/ṝ', 'ar'], ['e', 'ai'], ['o', 'au'], ['ai', 'ai'], ['au', 'au']
+].map(([second, res]) => ({
+  front: `<p class="word">a/ā + ${second} →</p>`,
+  back: `<p class="word">a/ā + ${second} → <span style="color:var(--sage-2)">${res}</span></p>`
+}));
+
 const cards25 = [
   {
     kicker: 'Definíció',
     front: `<p class="q">Mi a K25-ös szabály definíciója?</p>`,
     back: `<p class="def">Szóvégi <u>-a és -ā</u> hang szóeleji <u>másmilyen mgh-val az utóbbi eggyel magasabb fokában</u> olvad össze.</p>`
   },
+  ...ruleCards,
   ...exampleCards,
   {
     kicker: 'NB',
