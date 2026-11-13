@@ -434,6 +434,15 @@
       </table>
     </div>
 
+    <h3 class="sub-title">K26 · Félhangzós párrá válás</h3>
+    <p class="page-sub">A szóvégi i, ī, u, ū, ṛ és ṝ magánhangzó másmilyen magánhangzóval kezdődő szó előtt a képzéshelyének megfelelő félhangzóvá válik.</p>
+    <div class="tbl-wrap">
+      <table class="rule-tbl">
+        <thead><tr><th>Kombináció</th><th>Eredmény</th></tr></thead>
+        <tbody><tr><td>i/ī + mgh</td><td class="res">y (msh)</td></tr><tr><td>u/ū + mgh</td><td class="res">v (msh)</td></tr><tr><td>ṛ + mgh</td><td class="res">r (msh)</td></tr></tbody>
+      </table>
+    </div>
+
     <div class="tblock">
       <h3 class="sub-title">Hangtan táblázat</h3>
       <p class="page-sub">A szanszkrit hangok és magyaros átírásuk. Félkövérrel a hang, az egyenlőségjel után a magyaros kiejtése (pl. c = cs).</p>
@@ -505,8 +514,9 @@
       <button class="rchip" role="tab" data-rfilter="all" aria-selected="true">Összes</button>
       <button class="rchip" role="tab" data-rfilter="k24" aria-selected="false">K24</button>
       <button class="rchip" role="tab" data-rfilter="k25" aria-selected="false">K25</button>
+      <button class="rchip" role="tab" data-rfilter="k26" aria-selected="false">K26</button>
     </div>
-    <p class="page-sub">K24–K25: összeolvadás szabályai</p>
+    <p class="page-sub">K24–K26: hangváltozási szabályok</p>
 
     <p class="hint" id="k24Empty" hidden>A K25 szabály kártyái hamarosan érkeznek.</p>
 
@@ -1040,9 +1050,55 @@ const cards25 = [
   }
 ];
 
+/* ---- K26 cards ---- */
+const rules26 = [
+  ['i/ī', 'y'], ['u/ū', 'v'], ['ṛ', 'r']
+];
+
+const ruleCards26 = rules26.map(([vowel, res]) => ({
+  front: `<p class="word">${vowel} + mgh →</p>`,
+  back: `<p class="word">${vowel} + mgh → <span style="color:var(--sage-2)">${res}</span> <span class="sub">(msh)</span></p>`
+}));
+
+const examples26 = [
+  ['iti', 'evam', 'ityevam'],
+  ['aṇu', 'asti', 'aṇvasti'],
+  ['kartṛ', 'iha', 'kartriha']
+];
+
+const exampleCards26 = examples26.map(([a, b, result]) => ({
+  front: `<p class="word">${result}</p>`,
+  backLabel: 'K26-os Szabály',
+  back: `<p class="pair"><span class="w">${a}</span><span class="plus">+</span><span class="w">${b}</span></p>`
+}));
+
+const cards26 = [
+  {
+    kicker: 'Definíció',
+    front: `<p class="q">Mi a K26-os szabály definíciója?</p>`,
+    back: `<p class="def">A szóvégi <u>i, ī, u, ū, ṛ és ṝ</u> magánhangzó másmilyen magánhangzóval kezdődő szó előtt a képzéshelyének megfelelő <u>félhangzóvá válik</u>.</p>`
+  },
+  ...ruleCards26,
+  ...exampleCards26,
+  {
+    kicker: 'Gyakorlás',
+    front: `<div class="combos">
+      <div class="combo">ī + a → ?</div>
+      <div class="combo">u + ā → ?</div>
+      <div class="combo">ṛ + a → ?</div>
+    </div>`,
+    back: `<div class="combos">
+      <div class="combo">ī + a → <span class="res">y</span></div>
+      <div class="combo">u + ā → <span class="res">v</span></div>
+      <div class="combo">ṛ + a → <span class="res">r</span></div>
+    </div>`
+  }
+];
+
 const allCards = [
   ...cards.map(c => ({ ...c, rule: 'k24' })),
-  ...cards25.map(c => ({ ...c, rule: 'k25' }))
+  ...cards25.map(c => ({ ...c, rule: 'k25' })),
+  ...cards26.map(c => ({ ...c, rule: 'k26' }))
 ];
 
 let idx = 0;
