@@ -245,6 +245,8 @@
   .ph tbody th{color:var(--sage-2);font-weight:500;background:rgba(0,0,0,.22);font-size:.8rem}
   .ph tbody th em{color:var(--muted);font-weight:400}
   .ph td{color:var(--muted)}
+  /* first column of the Hangtan táblázat stays visible when scrolling sideways */
+  .ph th.sc{position:sticky;left:0;z-index:2;background:#232a24}
   .ph td b{color:var(--text);font-size:1.1em;font-weight:700}
   .ph td.hl{outline:2px solid var(--amber);outline-offset:-3px}
   .foot{font-size:.74rem;color:var(--muted);font-style:italic;margin:10px 2px 0;line-height:1.4}
@@ -394,7 +396,19 @@
 #viewList .opts button{padding:14px 22px;border-radius:999px;font-size:1rem;font-weight:600;min-width:150px;
   border:1px solid rgba(255,255,255,.28);background:transparent;color:#eef3ec;transition:background .2s,color .2s,border-color .2s}
 #viewList .opts button[aria-pressed="true"]{background:#a9c9a1;border-color:#a9c9a1;color:#1d221e}
-#viewList .stage{margin-top:0}
+#viewList .stage{margin-top:18px;padding:0;flex:none;display:flex;justify-content:center}
+#viewList .card{height:min(60vh,430px);max-height:none;min-height:0}
+#viewList .app{display:block;height:auto;min-height:0;max-width:none;margin:0;padding:0}
+/* toggles in Dévanágari: same colours as the Hangtan kártyák toggles */
+#viewList .switch{background:#d9ddd5}
+#viewList .switch[aria-checked="true"]{background:#a9c9a1}
+#viewList .switch .knob{background:#1d221e}
+#viewList .dv-top{display:flex;justify-content:space-between;margin:14px 2px 8px;font-size:.82rem;color:#a3ae9f;font-variant-numeric:tabular-nums}
+#viewList .dv-hint{margin:14px 0 0;text-align:center;font-size:.8rem;color:#a3ae9f;min-height:1.2em}
+#viewList .done{margin-top:18px;padding:30px 22px;border-radius:30px;text-align:center;background:linear-gradient(160deg,#3b433d,#262b27);box-shadow:0 22px 44px rgba(0,0,0,.35)}
+#viewList .done h2{margin:0 0 10px;font-size:1.4rem;font-weight:600;color:#eef3ec}
+#viewList .done p{margin:0;color:#a3ae9f;line-height:1.5}
+#viewList .stage{margin-top:18px}
   #viewList .card{min-height:0}
   #viewList .meta{display:block}
   #viewList .hint{margin:0;min-height:0}
@@ -428,7 +442,7 @@
 
   <header class="top">
     <div>
-      <p class="eyebrow">Szanszkrit hangtan</p>
+      <p class="eyebrow">Szanszkrit</p>
       <h1>Tanulókártyák</h1>
     </div>
     <div class="counter" id="counter">0/0</div>
@@ -436,6 +450,7 @@
 
   <!-- STUDY VIEW -->
   <section id="viewStudy">
+    <h2 class="page-title">Hangtan</h2>
 
     <div class="panel">
       <div class="row">
@@ -568,7 +583,7 @@
       <table class="ph">
         <thead>
           <tr>
-            <th rowspan="3">képzéshely</th>
+            <th rowspan="3" class="sc">képzéshely</th>
             <th colspan="7">mássalhangzók <em>consonans</em></th>
             <th colspan="3">magánhangzók <em>sonans [zöngés]</em></th>
           </tr>
@@ -588,31 +603,31 @@
         </thead>
         <tbody>
           <tr>
-            <th>torok<br><em>velaris</em></th>
+            <th class="sc">torok<br><em>velaris</em></th>
             <td><b>k</b> = k</td><td><b>kh</b> = kh</td><td><b>g</b> = g</td><td><b>gh</b> = gh</td>
             <td><b>ṅ</b> = n</td><td class="hl"><b>h</b> = h</td><td class="hl"><b>ḥ</b> = h</td>
             <td><b>a</b> = a</td><td><b>ā</b> = á</td><td></td>
           </tr>
           <tr>
-            <th>íny<br><em>palatalis</em></th>
+            <th class="sc">íny<br><em>palatalis</em></th>
             <td><b>c</b> = cs</td><td><b>ch</b> = csh</td><td><b>j</b> = dzs</td><td><b>jh</b> = dzsh</td>
             <td><b>ñ</b> = n(y)</td><td><b>y</b> = j</td><td><b>ś</b> = s</td>
             <td><b>i</b> = i</td><td><b>ī</b> = í</td><td><b>e</b> = é<br><b>ai</b> = ai</td>
           </tr>
           <tr>
-            <th>nyelvcsúcs<br><em>cerebralis</em></th>
+            <th class="sc">nyelvcsúcs<br><em>cerebralis</em></th>
             <td><b>ṭ</b> = t</td><td><b>ṭh</b> = th</td><td><b>ḍ</b> = d</td><td><b>ḍh</b> = dh</td>
             <td><b>ṇ</b> = n</td><td><b>r</b> = r</td><td><b>ṣ</b> = s</td>
             <td><b>ṛ</b> = ri</td><td><b>ṝ</b> = rí</td><td></td>
           </tr>
           <tr>
-            <th>fog<br><em>dentalis</em></th>
+            <th class="sc">fog<br><em>dentalis</em></th>
             <td><b>t</b> = t</td><td><b>th</b> = th</td><td><b>d</b> = d</td><td><b>dh</b> = dh</td>
             <td><b>n</b> = n</td><td><b>l</b> = l</td><td><b>s</b> = sz</td>
             <td><b>ḷ</b> = li</td><td></td><td></td>
           </tr>
           <tr>
-            <th>ajak<br><em>labialis</em></th>
+            <th class="sc">ajak<br><em>labialis</em></th>
             <td><b>p</b> = p</td><td><b>ph</b> = ph</td><td><b>b</b> = b</td><td><b>bh</b> = bh</td>
             <td><b>m</b> = m</td><td class="hl"><b>v</b> = v</td><td></td>
             <td><b>u</b> = u</td><td><b>ū</b> = ú</td><td><b>o</b> = ó<br><b>au</b> = au</td>
@@ -654,50 +669,72 @@
       </div>
     </div>
 
-    <div class="nav">
-      <button class="nav-round" id="k24Prev" aria-label="Előző kártya">
+    <div class="actions">
+      <button class="arrow-btn" id="k24Prev" aria-label="Előző kártya">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
       </button>
-      <button class="flip-btn" id="k24Flip">Megfordítás</button>
-      <button class="nav-round" id="k24Next" aria-label="Következő kártya">
+      <button class="arrow-btn" id="k24Next" aria-label="Következő kártya">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
       </button>
     </div>
 
     <p class="hint">Koppints a kártyára a megfordításhoz · húzd balra vagy jobbra a léptetéshez</p>
-    <div class="rv-actions">
-      <button class="reset" id="k24Shuffle">Keverés</button>
-      <button class="reset" id="k24Reset">Vissza az elejére</button>
-    </div>
     </div>
   </section>
 
   <!-- LIST VIEW -->
   <section id="viewList" hidden>
     <h2 class="page-title">Hangok</h2>
+
+    <div class="panel">
+      <div class="row">
+        <span class="label">Csak amit még nem tudok
+          <small>A „Tudtam” jelöltek elrejtése</small>
+        </span>
+        <button class="switch" id="dvUnknownSwitch" role="switch" aria-checked="false" aria-label="Csak amit még nem tudok">
+          <span class="knob"></span>
+        </button>
+      </div>
+      <div class="row">
+        <span class="label">Fordított mód
+          <small>Átírás elöl</small>
+        </span>
+        <button class="switch" id="dvReverseSwitch" role="switch" aria-checked="false" aria-label="Fordított mód">
+          <span class="knob"></span>
+        </button>
+      </div>
+    </div>
+
     <div class="chips" role="tablist" aria-label="Hangok típusa">
       <button class="dchip" role="tab" data-deck="abc" aria-selected="true">Ábécé</button>
       <button class="dchip" role="tab" data-deck="mat" aria-selected="false">Magánhangzójelek</button>
     </div>
+
     <div class="app" id="dvApp">
+      <div class="dv-top"><span id="dvCounter"></span></div>
+      <div class="progress"><div class="bar" id="dvBar"></div></div>
+
       <div class="stage" id="dvStage">
-        <div class="card" id="dvCard" role="button" tabindex="0" aria-label="Kártya, koppints a megfordításhoz">
+        <div class="card" id="dvCard" role="button" tabindex="0" aria-label="Kártya megfordítása">
           <div class="inner"><div class="face front" id="dvFront"></div><div class="face back" id="dvBack"></div></div>
         </div>
       </div>
-      <div class="nav" id="dvNavbar">
+
+      <div class="done" id="dvDone" hidden>
+        <h2 id="dvDoneTitle">Gratulálok!</h2>
+        <p id="dvDoneText"></p>
+      </div>
+
+      <div class="actions" id="dvActions">
         <button class="arrow-btn" id="dvPrev" aria-label="Előző">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
         </button>
-        <span class="count" id="dvCount"></span>
+        <button class="btn-known" id="dvKnown" aria-pressed="false">Tudtam</button>
         <button class="arrow-btn" id="dvNext" aria-label="Következő">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
         </button>
       </div>
-      <div class="opts" id="dvOptbar">
-        <button id="dvShuffle" aria-pressed="false">Keverés</button>
-        <button id="dvReverse" aria-pressed="false">Átírás elöl</button>
-      </div>
+      <p class="dv-hint" id="dvHint">Koppints a megfordításhoz · húzd balra vagy jobbra a léptetéshez</p>
     </div>
   </section>
 
@@ -1390,7 +1427,6 @@ function render(instant = true) {
   $('k24Counter').textContent = `${idx + 1}/${activeCards.length}`;
   $('k24Prev').disabled = idx === 0;
   $('k24Next').disabled = idx === activeCards.length - 1;
-  $('k24Flip').textContent = 'Megfordítás';
   renderDots();
 }
 
@@ -1403,7 +1439,6 @@ function go(dir) {
 
 function flip() {
   setFlipped(!flipped);
-  $('k24Flip').textContent = flipped ? 'Vissza a kérdésre' : 'Megfordítás';
 }
 
 /* ---------- swipe ---------- */
@@ -1435,23 +1470,9 @@ document.addEventListener('keydown', e => {
 });
 
 /* ---------- buttons ---------- */
-$('k24Flip').addEventListener('click', flip);
 $('k24Prev').addEventListener('click', () => go(-1));
 $('k24Next').addEventListener('click', () => go(1));
-$('k24Reset').addEventListener('click', () => { idx = 0; render(true); });
 
-/* Keverés: random order of the cards currently shown (Összes / K24 / K25) */
-function shuffleCards() {
-  const a = [...activeCards];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  activeCards = a;
-  idx = 0;
-  render(true);
-}
-$('k24Shuffle').addEventListener('click', shuffleCards);
 
 /* chips: Összes / K24 show the K24 cards, K25 is empty for now */
 function setRuleFilter(f) {
@@ -1474,7 +1495,6 @@ const INFO={t:'info'};
 DATA.mat.push(INFO);
 const $ = id => document.getElementById(id);
 const store = {get(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
-let deck='abc', order=[], pos=0, shuffled=false, reversed=false;
 
 function glyph(c){
   const h=c.dbl?66:44;
@@ -1511,32 +1531,85 @@ function matBack(c){
 }
 
 
-function build(){
-  const n=DATA[deck].length; order=[...Array(n).keys()];
-  if(shuffled){for(let i=n-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[order[i],order[j]]=[order[j],order[i]]}}
+let deck='abc', perm=[], order=[], pos=0, pinned=null;
+let shuffled=false, reversed=false, unknownOnly=false;
+const known=new Set();
+const kkey=i=>deck+':'+i;
+function shuffleArr(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function makePerm(){const n=DATA[deck].length; perm=[...Array(n).keys()]; if(shuffled) shuffleArr(perm)}
+function refresh(){order=perm.filter(i=>!unknownOnly||!known.has(kkey(i))||i===pinned)}
+function updateMeta(){
+  const total=DATA[deck].length;
+  const k=perm.filter(i=>known.has(kkey(i))).length;
+  $('dvCounter').textContent=order.length?`${pos+1}/${order.length} · Tudtam: ${k}/${total}`:`Tudtam: ${k}/${total}`;
+  $('dvBar').style.width=(total?k/total*100:0)+'%';
+}
+function updateKnown(){
+  const on=pinned!==null && known.has(kkey(pinned));
+  $('dvKnown').setAttribute('aria-pressed',on?'true':'false');
+  $('dvKnown').textContent=on?'✓ Tudtam':'Tudtam';
+}
+function showDone(){
+  $('dvStage').hidden=true; $('dvActions').hidden=true; $('dvHint').textContent='';
+  const total=DATA[deck].length, k=perm.filter(i=>known.has(kkey(i))).length;
+  $('dvDoneTitle').textContent=k===total?'Gratulálok, végigértél!':'Nincs több hang';
+  $('dvDoneText').textContent=`Tudtam: ${k}/${total}`;
+  $('dvDone').hidden=false;
+  updateMeta();
 }
 function render(dir){
-  const c=DATA[deck][order[pos]], card=$('dvCard');
+  if(!order.length){pinned=null; return showDone()}
+  $('dvDone').hidden=true; $('dvStage').hidden=false; $('dvActions').hidden=false;
+  if(pos>=order.length) pos=order.length-1;
+  if(pos<0) pos=0;
+  pinned=order[pos];
+  const card=$('dvCard');
+  const c=DATA[deck][pinned];
   let f,b; if(deck==='abc'){f=abcFront(c);b=abcBack(c)}else{f=matFront(c);b=matBack(c)}
   if(reversed){[f,b]=[b,f]}
   card.classList.remove('flipped');
   $('dvFront').innerHTML=f; $('dvBack').innerHTML=b;
-  $('dvCount').textContent=`${pos+1} / ${order.length}`;
   if(dir){card.classList.remove('slide-l','slide-r');void card.offsetWidth;card.classList.add(dir>0?'slide-l':'slide-r')}
-  store.set('dvn-state',{deck,pos:shuffled?0:pos});
+  updateKnown(); updateMeta();
+  store.set('dvn-state',{deck,pos});
 }
-function go(d){pos=(pos+d+order.length)%order.length;render(d)}
+function go(d){
+  if(!order.length) return;
+  const cur=pinned; pinned=null; refresh();
+  if(!order.length){ return showDone() }
+  let np=order.indexOf(cur);
+  np = np===-1 ? (d>0 ? pos : pos-1) : np+d;
+  pos=((np%order.length)+order.length)%order.length;
+  render(d);
+}
 function flip(){$('dvCard').classList.toggle('flipped')}
+function toggleKnown(){
+  if(pinned===null) return;
+  const kk=kkey(pinned);
+  known.has(kk)?known.delete(kk):known.add(kk);
+  updateKnown(); updateMeta();
+}
+function toggleUnknown(){
+  unknownOnly=!unknownOnly;
+  $('dvUnknownSwitch').setAttribute('aria-checked',unknownOnly?'true':'false');
+  pos=0; pinned=null; refresh(); render();
+}
+function toggleReverse(){
+  reversed=!reversed;
+  $('dvReverseSwitch').setAttribute('aria-checked',reversed?'true':'false');
+  render();
+}
 function setDeck(d){
-  deck=d;
-  document.querySelectorAll('#viewList .dchip').forEach(b=>b.setAttribute('aria-selected', b.dataset.deck===d ? 'true' : 'false'));
-  pos=0; build(); render();
+  deck=d; pos=0; pinned=null;
+  document.querySelectorAll('#viewList .dchip').forEach(b=>b.setAttribute('aria-selected', b.dataset.deck===d?'true':'false'));
+  makePerm(); refresh(); render();
 }
 
 document.querySelectorAll('#viewList .dchip').forEach(b=>b.addEventListener('click',()=>setDeck(b.dataset.deck)));
+$('dvUnknownSwitch').addEventListener('click',toggleUnknown);
+$('dvReverseSwitch').addEventListener('click',toggleReverse);
+$('dvKnown').addEventListener('click',toggleKnown);
 $('dvPrev').onclick=()=>go(-1); $('dvNext').onclick=()=>go(1);
-$('dvShuffle').onclick=e=>{shuffled=!shuffled;e.currentTarget.setAttribute('aria-pressed',shuffled);pos=0;build();render()};
-$('dvReverse').onclick=e=>{reversed=!reversed;e.currentTarget.setAttribute('aria-pressed',reversed);render()};
 document.addEventListener('keydown',e=>{
   if($('viewList').hidden) return;
   if(e.key==='ArrowRight')go(1);
