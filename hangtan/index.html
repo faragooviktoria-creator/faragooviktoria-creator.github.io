@@ -90,9 +90,9 @@
   .progress-row .progress{flex:1;min-width:0}
   .tudtam-count{font-size:.82rem;color:#a3ae9f;white-space:nowrap;font-variant-numeric:tabular-nums}
   .shuffle-row{display:flex;justify-content:flex-start;margin-top:14px}
-  .shuffle-btn{padding:8px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.28);background:transparent;color:#eef3ec;font-size:.9rem;font-weight:600}
+  .shuffle-btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .shuffle-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.28);background:transparent;color:#eef3ec;font-size:.9rem;font-weight:600}
   .shuffle-btn:active{transform:scale(.97)}
-  #viewList .shuffle-row{margin-top:10px}
   .progress{height:8px;border-radius:999px;background:rgba(255,255,255,.1);overflow:hidden}
   .bar{height:100%;width:0;border-radius:999px;background:var(--sage);transition:width .4s ease}
 
@@ -420,7 +420,7 @@
   #viewList .meta{display:block}
   #viewList .hint{margin:0;min-height:0}
   #viewList .dchip{flex:0 0 auto;padding:9px 15px;border-radius:999px;border:1px solid rgba(255,255,255,.2);color:#a3ae9f;font-size:.9rem;background:transparent}
-  #viewList .dchip[aria-selected="true"]{background:#a9c9a1;border-color:#a9c9a1;color:#1d221e}
+  #viewList .dchip[aria-selected="true"]{background:#1d221e;border-color:#1d221e;color:#eef3ec}
   
   #viewRules .line{font-size:1.3rem;font-style:italic;margin:0;line-height:1.5}
   #viewRules .rd{color:#e8735f;font-style:italic;font-weight:600}
@@ -442,6 +442,20 @@
     h1{font-size:1.9rem}
     .card{height:460px}
   }
+  /* hover states: same as the card arrows (soft white tint) */
+  .arrow-btn:hover,
+  .shuffle-btn:hover,
+  .btn-known:hover:not([aria-pressed="true"]),
+  .chip:hover:not([aria-selected="true"]),
+  .rchip:hover:not([aria-selected="true"]),
+  .dchip:hover:not([aria-selected="true"]),
+  #viewList .dchip:hover:not([aria-selected="true"]),
+  .nav-btn:hover:not([aria-current="page"]){
+    background:rgba(255,255,255,.08);
+  }
+  .switch:hover{filter:brightness(.95)}
+  .switch[aria-checked="true"]:hover{filter:brightness(1.05)}
+  .arrow-btn:active,.shuffle-btn:active,.btn-known:active{transform:scale(.97)}
 </style>
 </head>
 <body>
@@ -488,7 +502,7 @@
       <span class="tudtam-count" id="tudtamCount"></span>
     </div>
 
-    <div class="shuffle-row"><button class="shuffle-btn" id="shuffleBtn">Keverés</button></div>
+    <div class="shuffle-row"><button class="shuffle-btn" id="shuffleBtn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h3c4 0 5 10 9 10h4M4 17h3c1.6 0 2.6-1.6 3.4-3.6M14.6 9.6C15.4 7.6 16.4 7 17 7h3"/><path d="M18 4.5 20.5 7 18 9.5M18 14.5l2.5 2.5-2.5 2.5"/></svg>Keverés</button></div>
     <div class="stage" id="stage">
       <div class="card" id="card" tabindex="0" role="button" aria-label="Kártya megfordítása">
         <div class="card-inner">
@@ -723,7 +737,7 @@
         <span class="tudtam-count" id="dvTudtamCount"></span>
       </div>
 
-      <div class="shuffle-row"><button class="shuffle-btn" id="dvShuffle">Keverés</button></div>
+      <div class="shuffle-row"><button class="shuffle-btn" id="dvShuffle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h3c4 0 5 10 9 10h4M4 17h3c1.6 0 2.6-1.6 3.4-3.6M14.6 9.6C15.4 7.6 16.4 7 17 7h3"/><path d="M18 4.5 20.5 7 18 9.5M18 14.5l2.5 2.5-2.5 2.5"/></svg>Keverés</button></div>
       <div class="stage" id="dvStage">
         <div class="card" id="dvCard" role="button" tabindex="0" aria-label="Kártya megfordítása">
           <div class="inner"><div class="face front" id="dvFront"></div><div class="face back" id="dvBack"></div></div>
