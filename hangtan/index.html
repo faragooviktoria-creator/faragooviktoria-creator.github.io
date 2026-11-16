@@ -493,7 +493,6 @@
     </div>
 
     <div class="chips" role="tablist" aria-label="Hangok szűrése">
-      <button class="chip" role="tab" data-filter="all" aria-selected="true">Összes</button>
       <button class="chip" role="tab" data-filter="consonant" aria-selected="false">Mássalhangzók</button>
       <button class="chip" role="tab" data-filter="vowel" aria-selected="false">Magánhangzók</button>
     </div>
@@ -853,7 +852,7 @@ const tilesHTML = x =>
 /* ---------- state ---------- */
 let order = [];          // shuffled full list of sounds (one session)
 let knownSet = new Set(); // symbols marked "Tudtam"
-let filterType = 'all';
+let selectedTypes = new Set();   // empty = show everything
 let unknownOnly = false;
 let reverse = false;
 let idx = 0;
@@ -862,7 +861,7 @@ let pinned = null;       // keeps the current card visible in "unknown only" mod
 
 const card = $('card');
 
-const inFilter = x => filterType === 'all' || x.type === filterType;
+const inFilter = x => selectedTypes.size === 0 || selectedTypes.has(x.type);
 
 function getDeck() {
   return order.filter(x =>
@@ -1057,9 +1056,11 @@ $('nextBtn').addEventListener('click', () => navigate(1));
 
 document.querySelectorAll('.chip').forEach(btn => {
   btn.addEventListener('click', () => {
-    filterType = btn.dataset.filter;
+    const t = btn.dataset.filter;
+    selectedTypes.has(t) ? selectedTypes.delete(t) : selectedTypes.add(t);
+    if (selectedTypes.size === 2) selectedTypes.clear(); // both chips = same as none
     document.querySelectorAll('.chip').forEach(c =>
-      c.setAttribute('aria-selected', c === btn ? 'true' : 'false'));
+      c.setAttribute('aria-selected', selectedTypes.has(c.dataset.filter) ? 'true' : 'false'));
     resetPosition();
   });
 });
