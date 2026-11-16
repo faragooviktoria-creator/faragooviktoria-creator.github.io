@@ -423,11 +423,11 @@
   #viewList .dchip{flex:0 0 auto;padding:9px 15px;border-radius:999px;border:1px solid rgba(255,255,255,.2);color:#a3ae9f;font-size:.9rem;background:transparent}
   #viewList .dchip[aria-selected="true"]{background:#1d221e;border-color:#1d221e;color:#eef3ec}
   
-  #viewRules .line{font-size:1.3rem;font-style:italic;margin:0;line-height:1.5}
+  #viewRules .line{font-size:1.9rem;font-style:italic;margin:0;line-height:1.5}
   #viewRules .rd{color:#e8735f;font-style:italic;font-weight:600}
   #viewRules .rv-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
   #viewRules .rv-actions .reset{margin:0}
-  #viewRules .chips{margin-bottom:18px}
+  #viewRules .chips{margin-bottom:18px;flex-wrap:wrap;overflow:visible;gap:8px}
   .rchip{flex:0 0 auto;padding:9px 15px;border-radius:999px;border:1px solid rgba(255,255,255,.2);color:var(--muted);font-size:.9rem;margin-right:8px}
   .rchip[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--text)}
   .tblock{margin-top:8px}
@@ -664,14 +664,12 @@
   <section id="viewRules" hidden>
     <h2 class="page-title">Hangváltozások</h2>
     <div class="chips" role="tablist" aria-label="Szabályok szűrése">
-      <button class="rchip" role="tab" data-rfilter="all" aria-selected="true">Összes</button>
       <button class="rchip" role="tab" data-rfilter="k24" aria-selected="false">K24</button>
       <button class="rchip" role="tab" data-rfilter="k25" aria-selected="false">K25</button>
       <button class="rchip" role="tab" data-rfilter="k26" aria-selected="false">K26</button>
       <button class="rchip" role="tab" data-rfilter="k38" aria-selected="false">K38</button>
       <button class="rchip" role="tab" data-rfilter="k39" aria-selected="false">K39</button>
     </div>
-    <p class="page-sub">K24–K39: hangváltozási szabályok</p>
 
     <p class="hint" id="k24Empty" hidden>A K25 szabály kártyái hamarosan érkeznek.</p>
 
@@ -1124,6 +1122,30 @@ const groupCards = groups.flatMap(([kicker, items]) =>
   }))
 );
 
+/* K24 practice: front shows the two (or three) words, back shows the result */
+const practiceRows24 = [
+  ['janma + aṣṭami', 'janmāṣṭamī'],
+  ['prabhā + asmi', 'prabhāsmi'],
+  ['dāva + anala', 'dāvānala'],
+  ['sarvāṇi + indriyāṇi', 'sarvāṇīndriyāṇi'],
+  ['bheda + abheda', 'bhedābheda'],
+  ['niyama + agraha', 'niyamāgraha'],
+  ['niyama + āgraha', 'niyamāgraha'],
+  ['bahu + udara', 'bahūdara'],
+  ['jñāna + agni', 'jñānāgni'],
+  ['parama + ātmā', 'paramātmā'],
+  ['brahmati + iva', 'brahmatīva'],
+  ['mahā + ātmā', 'mahātmā'],
+  ['brahma jānāti + iti brāhmaṇa', 'brahma jānātīti brāhmaṇa'],
+  ['eva + anukampā + artham', 'evānukampārtham'],
+  ['indriyāṇi + indriya + arthedyaḥ', 'indriyāṇīndriyārthedyaḥ']
+];
+const practiceCards24 = practiceRows24.map(([pair, result]) => ({
+  kicker: 'Gyakorlás',
+  front: `<p class="line">${pair}</p>`,
+  back: `<p class="pair">${pair}</p><p class="word">${result}</p>`
+}));
+
 const cards = [
   {
     kicker: 'Definíció',
@@ -1132,6 +1154,7 @@ const cards = [
       <u>egyeshangzó</u> egy <b>hosszúban</b> olvad össze.</p>`
   },
   ...groupCards,
+  ...practiceCards24,
   {
     kicker: 'Egyeshangzók',
     front: `<p class="q">Sorold fel az egyeshangzókat.</p>
@@ -1203,6 +1226,49 @@ const ruleCards = [
   back: `<p class="word">a/ā + ${second} → <span style="color:var(--sage-2)">${res}</span></p>`
 }));
 
+/* K25 practice: front shows the two words, back shows the result */
+const practiceRows25 = [
+  ['yoga + īśvaraḥ', 'yogeśvaraḥ'],
+  ['rājā + ṛṣayas', 'rājarṣayas'],
+  ['kṣīra + udaka', 'kṣīrodaka'],
+  ['na + eva', 'naiva'],
+  ['śīta + uṣṇa', 'śītoṣṇa'],
+  ['hṛṣīka + īśa', 'hṛṣīkeśa'],
+  ['bhoga + aiśvarya', 'bhogaiśvarya'],
+  ['puruṣa + ṛṣabha', 'puruṣarṣabha'],
+  ['gaja + indra', 'gajendra'],
+  ['uttama + ojās', 'uttamaujās'],
+  ['sadā + eva', 'sadaiva'],
+  ['karma + indriyāṇi', 'karmendriyāṇi'],
+  ['aṣṭa + uttara śata', 'aṣṭottara śata'],
+  ['mahā + īśvaram', 'maheśvaram'],
+  ['dāma + udara', 'dāmodara'],
+  ['tvayā + eka', 'tvayaika'],
+  ['sarva + īśvara', 'sarveśvara'],
+  ['yathā + uktam', 'yathoktam'],
+  ['ca + eva', 'caiva'],
+  ['nara + uttama', 'narottama'],
+  ['ātma + aupamyena', 'ātmaupamyena'],
+  ['vṛndāvana + īśvarī', 'vṛndāvaneśvarī'],
+  ['uttama + ojās', 'uttamaujās'],
+  ['mahā + īśa', 'maheśa'],
+  ['puruṣa + ṛṣabha', 'puruṣarṣabha'],
+  ['puruṣa + uttamaḥ', 'puruṣottamaḥ'],
+  ['ca + auṣadhiḥ', 'cauṣadhiḥ'],
+  ['tadā + ucyate', 'tadocyate'],
+  ['īśa + upaniṣad', 'īśopaniṣad'],
+  ['ātma + aupamyena', 'ātmaupamyena'],
+  ['mahā + utsava', 'mahotsava'],
+  ['kṛtvā + eva', 'kṛtvaiva'],
+  ['uttama + ojās', 'uttamaujās'],
+  ['ātma + aupamyena', 'ātmaupamyena']
+];
+const practiceCards25 = practiceRows25.map(([pair, result]) => ({
+  kicker: 'Gyakorlás',
+  front: `<p class="line">${pair}</p>`,
+  back: `<p class="pair">${pair}</p><p class="word">${result}</p>`
+}));
+
 const cards25 = [
   {
     kicker: 'Definíció',
@@ -1211,6 +1277,7 @@ const cards25 = [
   },
   ...ruleCards,
   ...exampleCards,
+  ...practiceCards25,
   {
     kicker: 'NB',
     front: `<p class="q">Mi történik, ha a szóeleji hang vṛddhi fokú?</p>`,
@@ -1253,6 +1320,30 @@ const exampleCards26 = examples26.map(([a, b, result]) => ({
   back: `<p class="pair"><span class="w">${a}</span><span class="plus">+</span><span class="w">${b}</span></p>`
 }));
 
+/* K26 practice: front shows the words, back shows the result */
+const practiceRows26 = [
+  ['yadi + api', 'yady api'],
+  ['su + alpam', 'sv alpam'],
+  ['kartṛ + ātmā', 'kartr ātmā'],
+  ['bhakti + upahṛtam', 'bhakty upahṛtam'],
+  ['guru + aṣṭakam', 'gurv aṣṭakam'],
+  ['daivī hi + eṣā', 'daivī hy eṣā'],
+  ['rāmabhātṛ + udayaḥ', 'rāmabhātr udayaḥ'],
+  ['āsuriṣu + eva', 'āsuriṣv eva'],
+  ['duḥkheṣu + anudvigna', 'duḥkheṣv anudvigna'],
+  ['mayi + āsakta', 'mayy āsakta'],
+  ['manu + antara', 'manv antara'],
+  ['rāmabhātṛ + aiśvaryam', 'rāmabhātr aiśvaryam'],
+  ['vahāmi + aham', 'vahāmy aham'],
+  ['yadi + api + ete', 'yady api'],
+  ['jñānī tu + ātmā + eva', 'jñānī tv ātmaiva']
+];
+const practiceCards26 = practiceRows26.map(([pair, result]) => ({
+  kicker: 'Gyakorlás',
+  front: `<p class="line">${pair}</p>`,
+  back: `<p class="pair">${pair}</p><p class="word">${result}</p>`
+}));
+
 const cards26 = [
   {
     kicker: 'Definíció',
@@ -1261,6 +1352,7 @@ const cards26 = [
   },
   ...ruleCards26,
   ...exampleCards26,
+  ...practiceCards26,
   {
     kicker: 'Gyakorlás',
     front: `<div class="combos">
@@ -1312,6 +1404,26 @@ const exampleCards38 = [
   }
 ];
 
+/* 38 practice: front shows the words, back shows the words and the result */
+const practiceRows38 = [
+  ['yoginas + karma', 'yoginaḥ karma'],
+  ['śabdas + khe', 'śabdaḥ khe'],
+  ['punar + kim', 'punaḥ kim'],
+  ['mattas + sarvam', 'mattaḥ sarvam'],
+  ['dhenus + sarvabhūtānām', 'dhenuḥ sarvabhūtānām'],
+  ['vāsudevas + sarvam', 'vāsudevaḥ sarvam'],
+  ['nityas + śāśvatas', 'nityaḥ śāśvatas'],
+  ['kavis + kṣatriyās', 'kaviḥ kṣatriyās'],
+  ['nityasyoktās + śarīrinas', 'nityasyoktāḥ śarīrinas'],
+  ['paṇḍitās + samadarśinas', 'paṇḍitāḥ samadarśinas'],
+  ['īśvaras + paramas + kṛṣṇaḥ', 'īśvaraḥ paramaḥ kṛṣṇaḥ']
+];
+const practiceCards38 = practiceRows38.map(([pair, result]) => ({
+  kicker: 'Gyakorlás',
+  front: `<p class="line">${pair}</p>`,
+  back: `<p class="pair">${pair}</p><p class="word">${result}</p>`
+}));
+
 const cards38 = [
   {
     kicker: 'Definíció',
@@ -1320,6 +1432,7 @@ const cards38 = [
   },
   ...groupCards38,
   ...exampleCards38,
+  ...practiceCards38,
   {
     kicker: 'Mondat vége',
     front: `<p class="q">Mi történik az s/r hanggal mondat, félvers vagy vers végén?</p>`,
@@ -1378,6 +1491,24 @@ const exampleCards39 = [
   }
 ];
 
+/* 39 practice: front shows the words, back shows the words and the result */
+const practiceRows39 = [
+  ['vedais + ca', 'vedaiś ca'],
+  ['jñāninas + tattvadarśinaḥ', 'jñāninas tattvadarśinaḥ'],
+  ['namas + te', 'namas te'],
+  ['gīr + ṭuḥ', 'gīṣ ṭuḥ'],
+  ['duryodhanas + tadā', 'duryodhanas tadā'],
+  ['virāṭas + ca', 'virāṭaś ca'],
+  ['ananyās + cintayantaḥ', 'anayāś cintayantaḥ'],
+  ['mātūr + tīram', 'mātūs tīram'],
+  ['rajasās + tamasās + ca', 'rajasās tamasāś ca']
+];
+const practiceCards39 = practiceRows39.map(([pair, result]) => ({
+  kicker: 'Gyakorlás',
+  front: `<p class="line">${pair}</p>`,
+  back: `<p class="pair">${pair}</p><p class="word">${result}</p>`
+}));
+
 const cards39 = [
   {
     kicker: 'Definíció',
@@ -1386,6 +1517,7 @@ const cards39 = [
   },
   ...groupCards39,
   ...exampleCards39,
+  ...practiceCards39,
   {
     kicker: 'Zárhangok',
     front: `<p class="q">Sorold fel a palatális, cerebrális és dentális zárhangokat!</p>
@@ -1513,11 +1645,15 @@ function shuffleActive() {
 $('k24Shuffle').addEventListener('click', shuffleActive);
 
 /* chips: Összes / K24 show the K24 cards, K25 is empty for now */
+const ALL_RULES = ['k24', 'k25', 'k26', 'k38', 'k39'];
+let selectedRules = new Set();   // empty = show everything
 function setRuleFilter(f) {
-  activeCards = f === 'all' ? allCards : allCards.filter(c => c.rule === f);
+  selectedRules.has(f) ? selectedRules.delete(f) : selectedRules.add(f);
+  if (selectedRules.size === ALL_RULES.length) selectedRules.clear(); // all chips = same as none
+  activeCards = selectedRules.size === 0 ? allCards : allCards.filter(c => selectedRules.has(c.rule));
   idx = 0;
   document.querySelectorAll('.rchip').forEach(c =>
-    c.setAttribute('aria-selected', c.dataset.rfilter === f ? 'true' : 'false'));
+    c.setAttribute('aria-selected', selectedRules.has(c.dataset.rfilter) ? 'true' : 'false'));
   render(true);
 }
 document.querySelectorAll('.rchip').forEach(btn =>
