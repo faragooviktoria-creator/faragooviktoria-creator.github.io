@@ -1583,15 +1583,13 @@ function render(instant = true) {
   $('k24Back').innerHTML = `${backLabel}${c.back}<span class="tap">Koppints a visszafordításhoz</span>`;
   setFlipped(false, instant);
   $('k24Counter').textContent = `${idx + 1}/${activeCards.length}`;
-  $('k24Prev').disabled = idx === 0;
-  $('k24Next').disabled = idx === activeCards.length - 1;
   renderDots();
 }
 
 function go(dir) {
-  const next = idx + dir;
-  if (next < 0 || next >= activeCards.length) return;
-  idx = next;
+  if (!activeCards.length) return;
+  // wrap around: after the last card comes the first one, and before the first comes the last
+  idx = (idx + dir + activeCards.length) % activeCards.length;
   render(true);
 }
 
