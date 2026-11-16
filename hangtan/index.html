@@ -410,6 +410,7 @@
 #viewList .switch{background:#d9ddd5}
 #viewList .switch[aria-checked="true"]{background:#a9c9a1}
 #viewList .switch .knob{background:#1d221e}
+#viewList .dv-pos{display:flex;justify-content:space-between;margin:14px 2px 8px;font-size:.82rem;color:#a3ae9f;font-variant-numeric:tabular-nums}
 #viewList .dv-top{display:flex;justify-content:space-between;margin:14px 2px 8px;font-size:.82rem;color:#a3ae9f;font-variant-numeric:tabular-nums}
 #viewList .dv-hint{margin:14px 0 0;text-align:center;font-size:.8rem;color:#a3ae9f;min-height:1.2em}
 #viewList .done{margin-top:18px;padding:30px 22px;border-radius:30px;text-align:center;background:linear-gradient(160deg,#3b433d,#262b27);box-shadow:0 22px 44px rgba(0,0,0,.35)}
@@ -497,10 +498,8 @@
       <button class="chip" role="tab" data-filter="vowel" aria-selected="false">Magánhangzók</button>
     </div>
 
-    <div class="progress-row">
-      <div class="progress"><div class="bar" id="bar"></div></div>
-      <span class="tudtam-count" id="tudtamCount"></span>
-    </div>
+    <div class="meta"><span id="posCount"></span></div>
+    <div class="progress"><div class="bar" id="bar"></div></div>
 
     <div class="shuffle-row"><button class="shuffle-btn" id="shuffleBtn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h3c4 0 5 10 9 10h4M4 17h3c1.6 0 2.6-1.6 3.4-3.6M14.6 9.6C15.4 7.6 16.4 7 17 7h3"/><path d="M18 4.5 20.5 7 18 9.5M18 14.5l2.5 2.5-2.5 2.5"/></svg>Keverés</button></div>
     <div class="stage" id="stage">
@@ -680,6 +679,7 @@
 
     <div class="meta"><span id="k24Counter"></span></div>
     <div class="progress"><div class="bar" id="k24Bar"></div></div>
+    <div class="shuffle-row"><button class="shuffle-btn" id="k24Shuffle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h3c4 0 5 10 9 10h4M4 17h3c1.6 0 2.6-1.6 3.4-3.6M14.6 9.6C15.4 7.6 16.4 7 17 7h3"/><path d="M18 4.5 20.5 7 18 9.5M18 14.5l2.5 2.5-2.5 2.5"/></svg>Keverés</button></div>
 
     <div class="stage" id="k24Stage">
       <div class="card" id="k24Card" tabindex="0" role="button" aria-label="Kártya megfordítása">
@@ -732,10 +732,8 @@
     </div>
 
     <div class="app" id="dvApp">
-      <div class="progress-row">
-        <div class="progress"><div class="bar" id="dvBar"></div></div>
-        <span class="tudtam-count" id="dvTudtamCount"></span>
-      </div>
+      <div class="dv-pos"><span id="dvPos"></span></div>
+      <div class="progress"><div class="bar" id="dvBar"></div></div>
 
       <div class="shuffle-row"><button class="shuffle-btn" id="dvShuffle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h3c4 0 5 10 9 10h4M4 17h3c1.6 0 2.6-1.6 3.4-3.6M14.6 9.6C15.4 7.6 16.4 7 17 7h3"/><path d="M18 4.5 20.5 7 18 9.5M18 14.5l2.5 2.5-2.5 2.5"/></svg>Keverés</button></div>
       <div class="stage" id="dvStage">
@@ -898,7 +896,7 @@ function updateKnownBtn() {
 function updateMeta(deck) {
   const total = all.filter(inFilter).length;
   const known = all.filter(x => inFilter(x) && knownSet.has(x.symbol)).length;
-  $('tudtamCount').textContent = `Tudtam: ${known}/${total}`;
+  $('posCount').textContent = (deck.length ? `${idx + 1}/${deck.length}` : '0/0') + ` · Tudtam: ${known}/${total}`;
   $('bar').style.width = (deck.length ? (idx + 1) / deck.length * 100 : 0) + '%';
 }
 
@@ -912,7 +910,7 @@ function showDone() {
   const known = all.filter(x => inFilter(x) && knownSet.has(x.symbol)).length;
   $('doneTitle').textContent = known === total ? 'Gratulálok, végigértél!' : 'Nincs több hang';
   $('doneText').textContent = `Minden kiválasztott hangot megjelöltél. Tudtam: ${known}/${total}`;
-  $('tudtamCount').textContent = `Tudtam: ${known}/${total}`;
+  $('posCount').textContent = `Tudtam: ${known}/${total}`;
   $('bar').style.width = '100%';
 }
 
@@ -1501,6 +1499,19 @@ $('k24Prev').addEventListener('click', () => go(-1));
 $('k24Next').addEventListener('click', () => go(1));
 
 
+/* Keverés: random order of the cards currently shown, starting from the first */
+function shuffleActive() {
+  const a = [...activeCards];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  activeCards = a;
+  idx = 0;
+  render(true);
+}
+$('k24Shuffle').addEventListener('click', shuffleActive);
+
 /* chips: Összes / K24 show the K24 cards, K25 is empty for now */
 function setRuleFilter(f) {
   activeCards = f === 'all' ? allCards : allCards.filter(c => c.rule === f);
@@ -1568,7 +1579,7 @@ function refresh(){order=perm.filter(i=>!unknownOnly||!known.has(kkey(i))||i===p
 function updateMeta(){
   const total=DATA[deck].length;
   const k=perm.filter(i=>known.has(kkey(i))).length;
-  $('dvTudtamCount').textContent=`Tudtam: ${k}/${total}`;
+  $('dvPos').textContent=(order.length?`${pos+1}/${order.length}`:'0/0')+` · Tudtam: ${k}/${total}`;
   $('dvBar').style.width=(order.length?(pos+1)/order.length*100:0)+'%';
 }
 function updateKnown(){
